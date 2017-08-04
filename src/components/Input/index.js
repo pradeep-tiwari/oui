@@ -24,6 +24,11 @@ class Input extends React.Component {
       noteLabel = <div className="oui-form-note">{ opts.note }</div>;
     }
 
+    let hasAlignStyle = false;
+    if (opts.textAlign) {
+      hasAlignStyle = true;
+    }
+
     let wrapperClasses = classNames({
       'oui-form-bad-news': opts.displayError,
       'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
@@ -31,6 +36,7 @@ class Input extends React.Component {
 
     let classes = classNames({
       'oui-text-input': true,
+      [`text--${opts.textAlign}`]: hasAlignStyle,
       'oui-text-input--search': opts.isFilter,
     });
 
@@ -125,6 +131,8 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   /** Hook for automated JavaScript tests */
   testSection: PropTypes.string,
+  /** Align text inside input. Default is left. */
+  textAlign: PropTypes.oneOf(['left', 'right']),
   /** Supported input types */
   type: PropTypes.oneOf([
     'text',

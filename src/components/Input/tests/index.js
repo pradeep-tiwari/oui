@@ -19,6 +19,22 @@ describe('components/Input', () => {
     expect(component.hasClass('oui-form-bad-news')).toBe(true);
   });
 
+  it('should render proper text align class when prop is set', () => {
+    const component = shallow(
+      <Input type="text" textAlign="right" />
+    );
+
+    expect(component.find('input').hasClass('text--right')).toBe(true);
+  });
+
+  it('should render proper text align class when prop is set', () => {
+    const component = shallow(
+      <Input type="text" textAlign="left" />
+    );
+
+    expect(component.find('input').hasClass('text--left')).toBe(true);
+  });
+
   it('should render a "number" input when type="number" is passed', () => {
     const component = shallow(
       <Input type="number" />
