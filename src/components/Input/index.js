@@ -17,6 +17,7 @@ class Input extends React.Component {
     }
   }
 
+<<<<<<< HEAD
   renderInput({
     isFilter,
     hasError,
@@ -41,6 +42,29 @@ class Input extends React.Component {
       {'oui-text-input--search': isFilter},
       {'oui-form-bad-news': hasError}
     );
+=======
+  renderInput(opts) {
+    let noteLabel = null;
+    if (opts.note) {
+      noteLabel = <div className="oui-form-note">{ opts.note }</div>;
+    }
+
+    let hasAlignStyle = false;
+    if (opts.textAlign) {
+      hasAlignStyle = true;
+    }
+
+    let wrapperClasses = classNames({
+      'oui-form-bad-news': opts.displayError,
+      'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
+    });
+
+    let classes = classNames({
+      'oui-text-input': true,
+      [`text--${opts.textAlign}`]: hasAlignStyle,
+      'oui-text-input--search': opts.isFilter,
+    });
+>>>>>>> Add input prop to control text align. Closes
 
     return (
       /* eslint-disable react/jsx-no-bind */
@@ -140,6 +164,8 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   /** Hook for automated JavaScript tests */
   testSection: PropTypes.string,
+  /** Align text inside input. Default is left. */
+  textAlign: PropTypes.oneOf(['left', 'right']),
   /** Supported input types */
   type: PropTypes.oneOf([
     'text',
