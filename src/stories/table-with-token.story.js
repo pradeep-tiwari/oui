@@ -6,8 +6,10 @@ import  { withKnobs, text, boolean, number, select } from '@storybook/addon-knob
 
 import Table from '../components/Table';
 import Button from '../components/Button';
+import ButtonRow from '../components/ButtonRow';
 import Token from '../components/Token';
 import Input from '../components/Input';
+import Label from '../components/Label';
 
 const stories = storiesOf('Table With Tokens', module);
 stories
@@ -19,56 +21,41 @@ stories
   ));
 
 stories
-    .add('mutex part 1', () => <div>
-        <Table density="loose" style="rule" tableLayoutAlgorithm="fixed">
-            <Table.THead>
-                <Table.TR>
-                    <Table.TH> Experiment </Table.TH>
-                    <Table.TH isNumerical> Traffic Allocation </Table.TH>
-                    <Table.TH> Status </Table.TH>
-                </Table.TR>
-            </Table.THead>
-            <Table.TBody>
-                <Table.TR>
-                    <Table.TD> 
-                        <Token
-                            isDismissible
-                            name={ text('exp a', 'Without rearrange change #1 [BUG] WEB-1845') }
-                            onDismiss={function (){alert("Hello!")}}
-                            style="primary"
-                            testSection="goose"
-                        /> 
-                    </Table.TD>
-                    <Table.TD isNumerical > 
-                        <Input 
-                            defaultValue={20} 
-                            type="number"
-                        />% 
-                    </Table.TD>
-                    <Table.TD> Not Started </Table.TD>
-                </Table.TR>
-                <Table.TR>
-                    <Table.TD>  
-                        <Token
-                            isDismissible
-                            name={ text('exp b', 'P13N Sidebar resize') }
-                            onDismiss={function (){alert("Hello!")}}
-                            style="primary"
-                            testSection="goose"
-                        />
-                    </Table.TD>
-                    <Table.TD isNumerical> 
-                        <Input 
-                            defaultValue={15} 
-                            type="number"
-                        />% 
-                    </Table.TD>
-                    <Table.TD> Not Started </Table.TD>
-                </Table.TR>
-            </Table.TBody>
-        </Table>
-    </div>)
-    .add('Mutex original', () => <Table
+    .add('Mutex original', () => <div data-test-section='oasis-group-dialog'>
+        <div className='beta push-quad--bottom'>title</div>
+        <fieldset>
+          <ol className="lego-form-fields">
+            <li className="lego-form-field__item">
+              <p>Experiments assigned to this exclusion group are mutually exclusive, which means that visitors to your site will only see one experiment from this exclusion group.</p>
+            </li>
+          </ol>
+        </fieldset>
+        <fieldset>
+          <ol className='lego-form-fields'>
+            <li className='lego-form-field__item'>
+              <Label>Exclusion Group Name</Label>
+              <Input
+                type='text'
+                testSection='oasis-group-dialog-name'
+                defaultValue="default value"
+                onInput={ () => alert('boo') }
+              />
+            </li>
+            <li className='lego-form-field__item'>
+              <Label isOptional={ true }>
+                Description
+              </Label>
+              <textarea
+                className='lego-textarea'
+                data-test-section='oasis-group-dialog-description'
+                value="value"
+                onChange={ () => alert('boo') }>
+              </textarea>
+            </li>
+          </ol>
+        </fieldset>
+        <fieldset>
+<Table
             density="tight"
             style="rule"
             tableLayoutAlgorithm="auto"
@@ -154,4 +141,29 @@ stories
             </Table.TD>
             </Table.TR>
         </Table.TBody>
-        </Table>)
+        </Table>
+        </fieldset>
+        <div className='lego-form__footer'>
+          <ButtonRow
+            rightGroup={
+              [
+                <Button
+                  key='btn-cancel'
+                  style='plain'
+                  testSection='oasis-group-dialog-cancel'
+                  onClick={ () => alert('boo') }>
+                  Cancel
+                </Button>,
+                <Button
+                  key='btn-save'
+                  style='highlight'
+                  isDisabled={ true }
+                  testSection='oasis-group-dialog-save'
+                  onClick={ () => alert('boo') }>
+                  button title
+                </Button>,
+              ]
+            }
+          />
+        </div>
+      </div>)
