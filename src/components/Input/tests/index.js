@@ -8,12 +8,14 @@ describe('components/Input', () => {
       <Input type="text" />
     );
 
-    expect(component.find('input').is('[type="text"]')).toBe(true);
+    expect(component.type()).toBe('input');
+    expect(component.hasClass('oui-text-input')).toBe(true);
+    expect(component.is('[type="text"]')).toBe(true);
   });
 
-  it('should render error class when displayError prop is true', () => {
+  it('should render error class when hasError prop is true', () => {
     const component = shallow(
-      <Input type="text" displayError={ true } />
+      <Input type="text" hasError={ true } />
     );
 
     expect(component.hasClass('oui-form-bad-news')).toBe(true);
@@ -40,8 +42,7 @@ describe('components/Input', () => {
       <Input type="number" />
     );
 
-    const input = component.find('input');
-    expect(input.is('[type="number"]')).toBe(true);
+    expect(component.is('[type="number"]')).toBe(true);
   });
 
   it('should output an error if an invalid "type" is passed', () => {
@@ -74,8 +75,7 @@ describe('components/Input', () => {
       <Input type="text" value="foo" onChange={ handler.onChange } />
     );
 
-    const input = component.find('input');
-    input.simulate('change');
+    component.simulate('change');
 
     expect(handler.onChange).toHaveBeenCalled();
   });
@@ -90,8 +90,7 @@ describe('components/Input', () => {
       <Input type="text" value="foo" onFocus={ handler.onFocus } />
     );
 
-    const input = component.find('input');
-    input.simulate('focus');
+    component.simulate('focus');
 
     expect(handler.onFocus).toHaveBeenCalled();
   });
@@ -106,8 +105,7 @@ describe('components/Input', () => {
       <Input type="text" value="foo" onBlur={ handler.onBlur } />
     );
 
-    const input = component.find('input');
-    input.simulate('blur');
+    component.simulate('blur');
 
     expect(handler.onBlur).toHaveBeenCalled();
   });
@@ -122,8 +120,7 @@ describe('components/Input', () => {
       <Input type="text" value="foo" onKeyDown={ handler.onKeyDown } />
     );
 
-    const input = component.find('input');
-    input.simulate('keydown');
+    component.simulate('keydown');
 
     expect(handler.onKeyDown).toHaveBeenCalled();
   });
@@ -138,8 +135,7 @@ describe('components/Input', () => {
       <Input type="text" value="foo" onInput={ handler.onInput } />
     );
 
-    const input = component.find('input');
-    input.simulate('input');
+    component.simulate('input');
 
     expect(handler.onInput).toHaveBeenCalled();
   });
@@ -162,8 +158,7 @@ describe('components/Input', () => {
       <Input type="text" testSection="foo" />
     );
 
-    const input = component.find('input');
-    expect(input.is('[data-test-section="foo"]')).toBe(true);
+    expect(component.is('[data-test-section="foo"]')).toBe(true);
   });
 
   it('should add a `max` attribute when `max` is provided', () => {
@@ -171,8 +166,7 @@ describe('components/Input', () => {
       <Input type="number" max={ 10 } />
     );
 
-    const input = component.find('input');
-    expect(input.is('[max=10]')).toBe(true);
+    expect(component.is('[max=10]')).toBe(true);
   });
 
   it('should add a `min` attribute when `min` is provided', () => {
@@ -180,26 +174,23 @@ describe('components/Input', () => {
       <Input type="number" min={ 10 } />
     );
 
-    const input = component.find('input');
-    expect(input.is('[min=10]')).toBe(true);
+    expect(component.is('[min=10]')).toBe(true);
   });
 
-  it('should have a test section declared', () => {
+  it('should have a properly set test section', () => {
     const component = shallow(
       <Input type="text" testSection="foo" />
     );
 
-    const input = component.find('input');
-    expect(input.is('[data-test-section="foo"]')).toBe(true);
+    expect(component.is('[data-test-section="foo"]')).toBe(true);
   });
 
   it('should render a label if label is passed', () => {
     const component = mount(
-      <Input type="text" testSection="foo-label" label="Input Label" />
+      <Input type="text" testSection="foo" label="Input Label" />
     );
 
-    const input = component.find('input');
-    expect(input.find('[data-test-section="foo-label"]').length).toBe(1);
+    expect(component.find('[data-test-section="foo-label"]').length).toBe(1);
   });
 
   it('should render a label with optional text if label and isOptional is passed', () => {

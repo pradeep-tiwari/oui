@@ -7,6 +7,12 @@ This file is similar to the format suggested by [Keep a CHANGELOG](https://githu
 ## Unreleased
 - [Feature] Add Input prop to control textAlign left/right. (#764)
 
+## 26.2.3 - 2017-08-09
+- [Patch] Revert recent Input component div wrapping changes that were breaking tests. (#767)
+
+## 26.2.2 - 2017-08-07
+- [Patch] Revert `jest` version `20.0.4` back to `18.0.0` for testing broken app builds.
+
 ## 26.2.1 - 2017-08-01
 - [Patch] Update React component highlighting (#761)
 - [Patch] Remove react-test-renderer dependency (#760)
