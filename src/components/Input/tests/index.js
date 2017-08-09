@@ -13,9 +13,9 @@ describe('components/Input', () => {
     expect(component.is('[type="text"]')).toBe(true);
   });
 
-  it('should render error class when hasError prop is true', () => {
+  it('should render error class when displayError prop is true', () => {
     const component = shallow(
-      <Input type="text" hasError={ true } />
+      <Input type="text" displayError={ true } />
     );
 
     expect(component.hasClass('oui-form-bad-news')).toBe(true);
