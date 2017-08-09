@@ -36,7 +36,11 @@ class Input extends React.Component {
     max,
     testSection,
     focus }) {
-    let classes = classnames('oui-text-input', {'oui-text-input--search': isFilter}, {'oui-form-bad-news': hasError});
+    let classes = classNames(
+      'oui-text-input',
+      {'oui-text-input--search': isFilter},
+      {'oui-form-bad-news': hasError}
+    );
 
     return (
       /* eslint-disable react/jsx-no-bind */
@@ -70,7 +74,7 @@ class Input extends React.Component {
       return (
         <div
           data-oui-component={ true }
-          className={ classnames({'oui-form-bad-news': this.props.hasError}) }>
+          className={ classNames({'oui-form-bad-news': this.props.hasError}) }>
           <Label testSection={ this.props.testSection && this.props.testSection + '-label' }>
             <div className="oui-label">
               { this.props.label }

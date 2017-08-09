@@ -9,7 +9,7 @@ describe('components/Label', () => {
   });
 
   it('should render nothing when label is empty', () => {
-    const component = mount(<Label></Label>);
+    const component = shallow(<Label></Label>);
     expect(!component);
   });
 
