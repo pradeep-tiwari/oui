@@ -5,7 +5,28 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file is similar to the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
-- [Feature] Add flex-grow--none and update flex-shrink--none helpers.
+
+## 26.3.0 - 2017-08-11
+- [Feature] Add focus styles to buttons. (#771)
+- [Feature] Add Input prop to control textAlign left/right. (#764)
+
+## 26.2.3 - 2017-08-09
+- [Patch] Revert recent Input component div wrapping changes that were breaking tests. (#767)
+
+## 26.2.2 - 2017-08-07
+- [Patch] Revert `jest` version `20.0.4` back to `18.0.0` for testing broken app builds.
+
+## 26.2.1 - 2017-08-01
+- [Patch] Update React component highlighting (#761)
+- [Patch] Remove react-test-renderer dependency (#760)
+
+## 26.2.0 - 2017-07-28
+- [Feature] Add ProgressBar component. (#758)
+- [Feature] Add flex-grow--none and update flex-shrink--none helpers. (#744)
+
+## 26.1.1 - 2017-07-27
+- [Feature] Add `yarn.lock` file to OUI to keep a more reliable dependency managament than `npm`.
+- [Patch] Upgrade `jest` framework from version `18.0.0` to `20.0.4`.
 
 ## 26.1.0 - 2017-07-25
 - [Feature] Add data attribute `data-oui-component` to all outer React components for tracking. Also add URL target to display borders in the docs/app via url `#oui-showreact`. (#751)
