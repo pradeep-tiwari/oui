@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '../Button';
-import CloseIcon from '../Icon/CloseIcon';
+import Icon from 'react-oui-icons';
 import classNames from 'classnames';
 import { getAssistiveTextFromColorClass } from '../../utils/accessibility';
 
@@ -13,7 +13,7 @@ const renderDismissButton = (testSection) => {
         size="small"
         ariaLabel="Close alert"
         testSection={ testSection + '-dismiss' }>
-        <CloseIcon size={ 16 } />
+        <Icon name='close' />
       </Button>
     </div>
   );

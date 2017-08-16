@@ -13,7 +13,9 @@ stories
   .addDecorator(withKnobs)
   .addDecorator(story => (
     <div id="root-preview">
-      {story()}
+        <div className="flexboxCenter">
+            {story()}
+        </div>
     </div>
   ));
 
