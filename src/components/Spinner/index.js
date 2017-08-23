@@ -7,22 +7,31 @@ import classNames from 'classnames';
  * @returns {ReactElement}
  */
 const Spinner = ({
-  size
+  size,
+  hasOverlay,
+  testSection,
 }) => {
-  const styles = {
-    container: {
-      textAlign: 'center'
-    }
-  }
-  const spinnerClasses = classNames(
+  const classes = classNames(
     'lego-spinner',
     {[`lego-spinner--${size}`]: size}
-  )
-  return (
-    <div style={styles.container}>
-      <div className={spinnerClasses}></div>
-    </div>
   );
+  if (hasOverlay) {
+    return (
+      <div testSection={ testSection } className="lego-overlay">
+        <div className={ classes }></div>
+      </div>
+    );
+  }
+  return <div testSection={ testSection } className={ classes }></div>
+};
+
+Spinner.propTypes = {
+  /** boolean class for establish overlay */
+  hasOverlay: PropTypes.boolean,
+  /** various sizes */
+  size: PropTypes.oneOf(['small', 'tiny']),
+  /** Hook for automated JavaScript tests */
+  testSection: PropTypes.string,
 };
 
 Spinner.displayName = 'Spinner';
