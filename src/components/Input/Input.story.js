@@ -18,13 +18,13 @@ stories
 
 stories
   .addWithInfo('input with knobs', () => {
-    return (<Input 
+    return (<Input
               defaultValue={text('defaultValue', 'some default value')}
-              displayError={ boolean('displayError', false) }    
+              displayError={ boolean('displayError', false) }
               isFilter={boolean('isFilter', false)}
               isDropdown={boolean('isDropdown', true)}
               isOptional={boolean('isOptional', false)}
-              label={text('Label', '')}              
+              label={text('Label', '')}
               note={ text('note', '')}
               max={number('max', 50)}
               min={number('min', 10)}
@@ -35,11 +35,19 @@ stories
               required={ boolean('required', false) }
               type={select('type', ['text', 'password', 'number', 'date'], 'text')}
           /> );
-  }).add('error input', () => {
-    return (<Input 
-             label="Some label"
+  }).add('Input', () => {
+    return (<Input
+             label="Field label"
+             note="A short description or note about this field."
+             placeholder="Just a placeholder"
+             type="text"
+          /> );
+  }).add('Error state', () => {
+    return (<Input
+             label="Field label"
              displayError={true}
-             note="some error note that should be red"
+             note="A short description or note about this field."
+             placeholder="Just a placeholder"
              type="text"
           /> );
   });;
