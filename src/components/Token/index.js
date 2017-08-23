@@ -10,14 +10,23 @@ import classNames from 'classnames';
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}
  */
-const Token = (props) => {
+const Token = ({
+  description,
+  isDismissible,
+  isDraggable,
+  name,
+  onDismiss,
+  order,
+  style,
+  testSection,
+}) => {
   const classes = classNames({
     'oui-token-wrap': true,
     'flex': true,
     'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
   });
   const tokenToolsClasses = classNames({
-    'oui-token-tool': props.isDraggable,
+    'oui-token-tool': isDraggable,
   });
 
   return (
@@ -25,34 +34,34 @@ const Token = (props) => {
     <div
       data-oui-component={ true }
       className={ classes }
-      data-test-section={ props.testSection }>
+      data-test-section={ testSection }>
       <div
         className={ tokenToolsClasses }
         data-token-handle>
-        { props.order &&
+        { order &&
           <span className="oui-token__number">
-            { props.order }
+            { order }
           </span>
         }
-        { props.isDraggable &&
+        { isDraggable &&
           <div className="oui-icon oui-token__move">
             <Icon name="ellipsis" fill="#c7c7c7" />
           </div>
         }
       </div>
-      <div className={ 'oui-token oui-token--' + props.style }>
+      <div className={ `oui-token oui-token--${style}` }>
         <div>
-          { props.name }
-          { props.description &&
+          { name }
+          { description &&
             <div className="oui-token__description">
-              { props.description }
+              { description }
             </div>
           }
         </div>
-        { (props.isDismissible && props.onDismiss) &&
+        { (isDismissible && onDismiss) &&
           <DismissButton
-            onClick={ props.onDismiss }
-            testSection={ props.testSection }
+            onClick={ onDismiss }
+            testSection={ testSection }
           />
         }
       </div>
