@@ -9,16 +9,29 @@ import classNames from 'classnames';
 const Spinner = ({
   size,
   hasOverlay,
+  testSection,
 }) => {
-  const spinner = classNames(
+  const classes = classNames(
     'lego-spinner',
     {[`lego-spinner--${size}`]: size}
-  )
-  return (
-    <div className="lego-overlay" >
-      <div className={spinner}></div>
-    </div>
   );
+  if (hasOverlay) {
+    return (
+      <div testSection={ testSection } className="lego-overlay">
+        <div className={ classes }></div>
+      </div>
+    );
+  }
+  return <div testSection={ testSection } className={ classes }></div>
+};
+
+Spinner.propTypes = {
+  /** boolean class for establish overlay */
+  hasOverlay: PropTypes.bool,
+  /** various sizes */
+  size: PropTypes.oneOf(['small', 'tiny']),
+  /** Hook for automated JavaScript tests */
+  testSection: PropTypes.string,
 };
 
 Spinner.displayName = 'Spinner';
