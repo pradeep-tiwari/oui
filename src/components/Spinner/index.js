@@ -27,7 +27,7 @@ const Spinner = ({
 
 Spinner.propTypes = {
   /** boolean class for establish overlay */
-  hasOverlay: PropTypes.boolean,
+  hasOverlay: PropTypes.bool,
   /** various sizes */
   size: PropTypes.oneOf(['small', 'tiny']),
   /** Hook for automated JavaScript tests */

@@ -2,8 +2,7 @@ import React from 'react';
 
 import { storiesOf, addDecorator } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import  { withKnobs, text, boolean, number, select } from '@storybook/addon-knobs';
-import { WithNotes } from '@storybook/addon-notes';
+import { withKnobs, text, boolean, number, select } from '@storybook/addon-knobs';
 
 import Attention from '../Attention';
 

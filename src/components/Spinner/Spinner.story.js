@@ -18,7 +18,7 @@ stories
 
 stories.addWithInfo('default', () => {
     return (
-        <Spinner />
+        <Spinner testSection="test-spinner" />
     )
 })
 
