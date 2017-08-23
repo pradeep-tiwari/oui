@@ -11,7 +11,7 @@ const ProgressDots = ({
     testSection,
 }) => {
   return (
-    <ul testSection={testSection} className="lego-progress-dots">
+    <ul testSection={ testSection } className="lego-progress-dots">
       <li></li>
       <li></li>
       <li></li>
