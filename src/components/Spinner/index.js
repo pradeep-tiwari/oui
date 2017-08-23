@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 /**
+ * Generates an `spinner` element with/without overlay and optinaly 
+ * using props for sizes small or tiny for smaller sizes.
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}
  */
+
 const Spinner = ({
   size,
   hasOverlay,
