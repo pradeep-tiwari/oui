@@ -47,74 +47,149 @@ stories
 
 stories
     .add('default state', () => <div style={styles.container}>
-      <div>
-        <Input 
-          label='Email'
-          type='text'
-        />
-        <Input
-          label='Password'
-          type='password'
-        />
-        <a href="#">Need help loggin in?</a>
-        <Checkbox label='Keep me logged in' />
-        <Button 
-          style='highlight'
-          width='full'
-        >Log In</Button>
-        <a href="#" style={styles.center}>Log in using SSO</a>
-      </div>
-      <div>
+      <div className="signin-form lego-grid__cell soft-double flex flex--column">
+      <form className="flex--1">
+        <ol className="lego-form-fields">
+          <li className="lego-form-fields__item">
+            <Input 
+              label='Email'
+              type='text'
+              displayError={ boolean('displayError [email]', false) }
+              note={ text('err note email', '') }
+            />
+          </li>
+          <li className="lego-form-fields__item">
+            <Input
+              label='Password'
+              type='password'
+              displayError={ boolean('displayError [pass]', false) }
+              note={ text('err note pass', '') }
+            />
+          </li>
+          <li className="lego-form-fields__item">
+            <a href="#">Need help loggin in?</a>
+          </li>
+          <li className="lego-form-fields__item">
+            <Checkbox label='Keep me logged in' />
+          </li>
+          </ol>
+          <div style={ {border: 'none'} } className="lego-form__footer text--center">
+            <div className="position--relative height--50 flex flex--column flex-align--center">
+              <Button 
+                  className="lego-button lego-button--highlight lego-button--full push--bottom"
+                  style='highlight'
+                  width='full'>
+                    Log In
+              </Button>
+            </div>
+            <a className="display--block" href="#" style={styles.center}>Log in using SSO</a>
+          </div>
+      </form> 
+      <div className="flex--1">
         <Or>or</Or>
         <Button 
+          className="lego-button lego-button--outline lego-button--full"
           style='outline'
           width='full'
         >Try It Free</Button>
       </div>
+      </div>
     </div>)
+  stories
     .add('loading', () => <div style={styles.container}>
-    <div>
-      <Input 
-        label='Email'
-        type='text'
-      />
-      <Input
-        label='Password'
-        type='password'
-      />
-      <a href="#">Need help loggin in?</a>
-      <Checkbox label='Keep me logged in' />
-
-      <Spinner 
-        size={ select('size', {small: 'small', tiny: 'tiny'}, 'small') }
-      />
-
-      <a href="#" style={styles.center}>Log in using SSO</a>
-    </div>
-    <div>
-      <Or>or</Or>
-      <Button 
-        style='outline'
-        width='full'
-      >Try It Free</Button>
-    </div>
-  </div>)
+      <div className="signin-form lego-grid__cell soft-double flex flex--column">
+      <form className="flex--1">
+        <ol className="lego-form-fields">
+          <li className="lego-form-fields__item">
+            <Input 
+              label='Email'
+              type='text'
+            />
+          </li>
+          <li className="lego-form-fields__item">
+            <Input
+              label='Password'
+              type='password'
+            />
+          </li>
+          <li className="lego-form-fields__item">
+            <a href="#">Need help loggin in?</a>
+          </li>
+          <li className="lego-form-fields__item">
+            <Checkbox label='Keep me logged in' />
+          </li>
+          </ol>
+          <div style={ {border: 'none'} } className="lego-form__footer text--center">
+            <div className="position--relative height--50 flex flex--column flex-align--center">
+              <Spinner 
+                size={ select('size', {small: 'small', tiny: 'tiny'}, 'small') }
+              />
+            </div>
+            <a className="display--block" href="#" style={styles.center}>Log in using SSO</a>
+          </div>
+      </form> 
+      <div className="flex--1">
+        <Or>or</Or>
+        <Button 
+          className="lego-button lego-button--outline lego-button--full"
+          style='outline'
+          width='full'
+        >Try It Free</Button>
+      </div>
+      </div>
+    </div>)
+stories
+    .add('error', () => <div style={styles.container}>
+      <div className="signin-form lego-grid__cell soft-double flex flex--column">
+      <form className="flex--1">
+        <ol className="lego-form-fields">
+          <li className="lego-form-fields__item">
+            <Input 
+              label='Email'
+              type='text'
+              defaultValue="wrong@email.com"
+              note="this is not a valid account email"
+              displayError
+            />
+          </li>
+          <li className="lego-form-fields__item">
+            <Input
+              label='Password'
+              type='password'
+            />
+          </li>
+          <li className="lego-form-fields__item">
+            <a href="#">Need help loggin in?</a>
+          </li>
+          <li className="lego-form-fields__item">
+            <Checkbox label='Keep me logged in' />
+          </li>
+          </ol>
+          <div style={ {border: 'none'} } className="lego-form__footer text--center">
+            <div className="position--relative height--50 flex flex--column flex-align--center">
+              <Spinner 
+                size={ select('size', {small: 'small', tiny: 'tiny'}, 'small') }
+              />
+            </div>
+            <a className="display--block" href="#" style={styles.center}>Log in using SSO</a>
+          </div>
+      </form> 
+      <div className="flex--1">
+        <Or>or</Or>
+        <Button 
+          className="lego-button lego-button--outline lego-button--full"
+          style='outline'
+          width='full'
+        >Try It Free</Button>
+      </div>
+      </div>
+    </div>)
 
 const styles = {
   container: {
     margin: '0 auto',
     background: 'white',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
     width: 300,
-    height: 490,
-    padding: 20,
-  },
-  center: {
-    display: 'block',
-    width: '100%',
-    margin: '0 auto',
-    textAlign: 'center',
-  },
+    height: 480,
+  }
 }

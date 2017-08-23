@@ -13,7 +13,7 @@ const renderDismissButton = (testSection) => {
         size="small"
         ariaLabel="Close alert"
         testSection={ testSection + '-dismiss' }>
-        <Icon name='close' />
+        <Icon name='close' size='small' />
       </Button>
     </div>
   );

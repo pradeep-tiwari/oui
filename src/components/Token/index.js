@@ -36,7 +36,7 @@ const Token = (props) => {
         }
         { props.isDraggable &&
           <div className="oui-icon oui-token__move">
-            <Icon name="ellipsis" />
+            <Icon name="ellipsis" fill="#c7c7c7" />
           </div>
         }
       </div>

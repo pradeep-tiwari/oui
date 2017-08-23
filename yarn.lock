@@ -7215,9 +7215,9 @@ react-onclickoutside@^5.9.0:
   dependencies:
     create-react-class "^15.5.x"
 
-react-oui-icons@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/react-oui-icons/-/react-oui-icons-0.4.0.tgz#33b2d67c5d10a50248b29503a0794788564f36f4"
+react-oui-icons@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/react-oui-icons/-/react-oui-icons-0.5.1.tgz#4d0a0e2e54d33c64eddc2d02a67918ac30165bef"
   dependencies:
     autoprefixer "7.1.1"
     babel-core "6.25.0"
@@ -7253,6 +7253,7 @@ react-oui-icons@^0.4.0:
     react-error-overlay "^1.0.9"
     style-loader "0.18.2"
     styled-components "^2.1.1"
+    svgo "^0.7.2"
     svgson "^2.1.0"
     sw-precache-webpack-plugin "0.11.3"
     url-loader "0.5.9"
@@ -8399,7 +8400,7 @@ svgo@^0.6.6:
     sax "~1.2.1"
     whet.extend "~0.9.9"
 
-svgo@^0.7.0:
+svgo@^0.7.0, svgo@^0.7.2:
   version "0.7.2"
   resolved "https://registry.yarnpkg.com/svgo/-/svgo-0.7.2.tgz#9f5772413952135c6fefbf40afe6a4faa88b4bb5"
   dependencies:
