@@ -84,7 +84,7 @@
     "docs:build:html:update": "oui_version=$(node -e \"console.log(require('./package.json').version);\") && sed -i.bak \"s/{{ oui_version }}/$oui_version/g\" dist/docs/oui/$(node -e \"console.log(require('./package.json').version);\")/index.html",
     "docs:watch": "npm-run-all docs:build:mkdir --parallel docs:build:json docs:build:html --parallel docs:watch:js",
     "docs:watch:js": "webpack-dev-server --open --progress --inline",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 9009",
     "build-storybook": "build-storybook"
   },
   "repository": {

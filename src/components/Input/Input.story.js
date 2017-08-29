@@ -25,7 +25,6 @@ stories
               isDropdown={boolean('isDropdown', true)}
               isOptional={boolean('isOptional', false)}
               label={text('Label', '')}
-              note={ text('note', '')}
               max={number('max', 50)}
               min={number('min', 10)}
               onChange={ action('on change') }

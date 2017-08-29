@@ -55,7 +55,6 @@ stories
               label='Email'
               type='text'
               displayError={ boolean('displayError [email]', false) }
-              note={ text('err note email', '') }
             />
           </li>
           <li className="lego-form-fields__item">
@@ -63,7 +62,6 @@ stories
               label='Password'
               type='password'
               displayError={ boolean('displayError [pass]', false) }
-              note={ text('err note pass', '') }
             />
           </li>
           <li className="lego-form-fields__item">
@@ -167,9 +165,12 @@ stories
           </ol>
           <div style={ {border: 'none'} } className="lego-form__footer text--center">
             <div className="position--relative height--50 flex flex--column flex-align--center">
-              <Spinner 
-                size={ select('size', {small: 'small', tiny: 'tiny'}, 'small') }
-              />
+            <Button 
+                className="lego-button lego-button--highlight lego-button--full push--bottom"
+                style='highlight'
+                width='full'>
+                  Log In
+            </Button>
             </div>
             <a className="display--block" href="#" style={styles.center}>Log in using SSO</a>
           </div>
