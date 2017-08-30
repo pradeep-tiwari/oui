@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { default as Clipboard } from 'clipboard';
 
 import Button from '../../Button';
@@ -54,9 +55,9 @@ class CopyButton extends React.Component {
 
 CopyButton.propTypes = {
   /** The code that will be copied */
-  code: React.PropTypes.string.isRequired,
+  code: PropTypes.string.isRequired,
   /** Hook for automated JavaScript tests */
-  testSection: React.PropTypes.string,
+  testSection: PropTypes.string,
 };
 
 export default CopyButton;

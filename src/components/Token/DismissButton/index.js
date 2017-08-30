@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from '../../Button';
 // import CloseIcon from '../../Icon/CloseIcon';
 import Icon from 'react-oui-icons';
@@ -27,9 +28,9 @@ const DismissButton = (props) => (
 
 DismissButton.propTypes = {
   /** Function to call that dismisses the token */
-  onClick: React.PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
   /** Hook for automated JavaScript tests */
-  testSection: React.PropTypes.string,
+  testSection: PropTypes.string,
 };
 
 DismissButton.displayName = 'DismissButton';
