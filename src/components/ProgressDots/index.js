@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 /**
- * Generates an `ProgressDots` 
+ * Generates an `ProgressDots`
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}
  */
@@ -11,7 +11,7 @@ const ProgressDots = ({
     testSection,
 }) => {
   return (
-    <ul testSection={testSection} className="lego-progress-dots">
+    <ul testSection={ testSection } className="lego-progress-dots">
       <li></li>
       <li></li>
       <li></li>

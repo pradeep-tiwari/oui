@@ -1,8 +1,7 @@
 import React from 'react';
 
-import { storiesOf, addDecorator } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import  { withKnobs, text, boolean, number, select } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
+import { withKnobs, boolean } from '@storybook/addon-knobs';
 
 import Label from './index.js';
 
@@ -17,8 +16,8 @@ stories
 
 stories
   .addWithInfo('default label', () => <div>
-        <Label
-            isRequired={boolean('isRequired', false)}
-            isOptional={boolean('isOptional', false)}>I'm a Label</Label>
-    </div>)
+    <Label
+      isRequired={ boolean('isRequired', false) }
+      isOptional={ boolean('isOptional', false) }>I'm a Label</Label>
+  </div>);
 

@@ -6,9 +6,9 @@ export default [
   {
     examples: [
       <Spinner
-        hasOverlay
+        hasOverlay={ true }
         testSection='test-section-spinner'
       />,
     ],
-  }
+  },
 ];

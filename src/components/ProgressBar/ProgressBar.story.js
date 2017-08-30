@@ -1,9 +1,7 @@
 import React from 'react';
 
-import { storiesOf, addDecorator } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import  { withKnobs, text, boolean, number, select } from '@storybook/addon-knobs';
-import { WithNotes } from '@storybook/addon-notes';
+import { storiesOf } from '@storybook/react';
+import { withKnobs, text, number } from '@storybook/addon-knobs';
 
 import ProgressBar from '../ProgressBar';
 
@@ -12,17 +10,20 @@ stories
   .addDecorator(withKnobs)
   .addDecorator(story => (
     <div id="root-preview">
-        {story()}
+      {story()}
     </div>
   ));
 
 stories
-  .addWithInfo('states of pb', () => <ProgressBar
+  .addWithInfo('states of pb', () => {
+    return (
+      <ProgressBar
         max={ number('max', 100) }
         min={ number('min', 0) }
         progress={ number('progress', 60) }
         topLabel={ text('topLabel', 'hola esto es un label') }
-        leftLabel={ text('leftLabel','Allocated traffic') }
-        rightLabel={ text('rightLabel','Available traffic') }
-    />)
+        leftLabel={ text('leftLabel', 'Allocated traffic') }
+        rightLabel={ text('rightLabel', 'Available traffic') }
+      />);
+  });
 

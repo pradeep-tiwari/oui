@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { storiesOf, addDecorator } from '@storybook/react';
-import  { withKnobs, select } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
+import { withKnobs, select } from '@storybook/addon-knobs';
 
 import ArrowsInline from '../ArrowsInline';
 
@@ -17,9 +17,9 @@ stories
 stories
   .addWithInfo('select the arrow', () => {
     return (
-        <ArrowsInline
-            direction={ select('direction', {up: 'up', down: 'down', left: 'left', right: 'right'}, 'up') }
-            testSection="arrow-test" 
-        />
+      <ArrowsInline
+        direction={ select('direction', { up: 'up', down: 'down', left: 'left', right: 'right' }, 'up') }
+        testSection="arrow-test"
+      />
     );
   });

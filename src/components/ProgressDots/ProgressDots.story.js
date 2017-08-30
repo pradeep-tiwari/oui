@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { storiesOf, addDecorator } from '@storybook/react';
-import { withKnobs, select } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
+import { withKnobs } from '@storybook/addon-knobs';
 
 import ProgressDots from './index.js';
 
@@ -15,7 +15,5 @@ stories
   ));
 
 stories.addWithInfo('default', () => {
-    return (
-        <ProgressDots testSection="test-progress-dots" />
-    )
-})
+  return <ProgressDots testSection="test-progress-dots" />;
+});

@@ -6,9 +6,9 @@ export default [
   {
     examples: [
       <ProgressDots
-        hasOverlay
+        hasOverlay={ true }
         testSection='test-section-progress-dots'
       />,
     ],
-  }
+  },
 ];

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { storiesOf, addDecorator } from '@storybook/react';
-import  { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
+import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 
 import Checkbox from '../Checkbox';
 
@@ -17,10 +17,10 @@ stories
 stories
   .add('Checkboxs states', () => {
     return (
-        <Checkbox
-            defaultChecked
-            label={ text('label', 'checkbox component') }
-            isDisabled={ boolean('isDisabled', false) }
-        />
+      <Checkbox
+        defaultChecked={ true }
+        label={ text('label', 'checkbox component') }
+        isDisabled={ boolean('isDisabled', false) }
+      />
     );
   });

@@ -84,7 +84,6 @@ describe('components/Token', () => {
 
   it('should not show ellipsis icon if the token is not draggable', () => {
     const component = shallow(<Token name="goose" isDraggable={ false } />);
-    console.log(component);
     expect(component.find('Icon').length).toBe(0);
   });
 
