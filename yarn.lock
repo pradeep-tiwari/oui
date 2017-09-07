@@ -3305,7 +3305,7 @@ file-entry-cache@^2.0.0:
     flat-cache "^1.2.1"
     object-assign "^4.0.1"
 
-file-loader@0.11.2, file-loader@^0.11.1:
+file-loader@^0.11.1:
   version "0.11.2"
   resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-0.11.2.tgz#4ff1df28af38719a6098093b88c82c71d1794a34"
   dependencies:
@@ -6288,12 +6288,6 @@ postcss-filter-plugins@^2.0.0:
     postcss "^5.0.4"
     uniqid "^4.0.0"
 
-postcss-flexbugs-fixes@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-flexbugs-fixes/-/postcss-flexbugs-fixes-3.0.0.tgz#7b31cb6c27d0417a35a67914c295f83c403c7ed4"
-  dependencies:
-    postcss "^6.0.1"
-
 postcss-flexbugs-fixes@^3.0.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/postcss-flexbugs-fixes/-/postcss-flexbugs-fixes-3.2.0.tgz#9b8b932c53f9cf13ba0f61875303e447c33dcc51"
@@ -6323,7 +6317,14 @@ postcss-load-plugins@^2.3.0:
     cosmiconfig "^2.1.1"
     object-assign "^4.1.0"
 
-postcss-loader@2.0.6, postcss-loader@^2.0.5:
+postcss-loader@^0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-0.13.0.tgz#72fdaf0d29444df77d3751ce4e69dc40bc99ed85"
+  dependencies:
+    loader-utils "^0.2.15"
+    postcss "^5.2.0"
+
+postcss-loader@^2.0.5:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-2.0.6.tgz#8c7e0055a3df1889abc6bad52dd45b2f41bbc6fc"
   dependencies:
@@ -6331,13 +6332,6 @@ postcss-loader@2.0.6, postcss-loader@^2.0.5:
     postcss "^6.0.2"
     postcss-load-config "^1.2.0"
     schema-utils "^0.3.0"
-
-postcss-loader@^0.13.0:
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-0.13.0.tgz#72fdaf0d29444df77d3751ce4e69dc40bc99ed85"
-  dependencies:
-    loader-utils "^0.2.15"
-    postcss "^5.2.0"
 
 postcss-merge-idents@^2.1.5:
   version "2.1.7"
@@ -6878,22 +6872,17 @@ react-onclickoutside@^5.9.0:
   dependencies:
     create-react-class "^15.5.x"
 
-react-oui-icons@^0.5.7:
-  version "0.5.7"
-  resolved "https://registry.yarnpkg.com/react-oui-icons/-/react-oui-icons-0.5.7.tgz#672ca511abc3a01b1eef50136b6c04a11345c351"
+react-oui-icons@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/react-oui-icons/-/react-oui-icons-0.6.0.tgz#87aa08f3ff83cc539524b5df6e6efef6f41e4790"
   dependencies:
-    file-loader "0.11.2"
     fs-extra "3.0.1"
     object-assign "4.1.1"
-    postcss-flexbugs-fixes "3.0.0"
-    postcss-loader "2.0.6"
     promise "7.1.1"
     react "^15.6.1"
     react-dev-utils "^3.0.2"
     react-dom "^15.6.1"
     react-error-overlay "^1.0.9"
-    style-loader "^0.18.2"
-    url-loader "0.5.9"
 
 react-router@^3.0.1:
   version "3.0.5"
@@ -7875,13 +7864,6 @@ style-loader@^0.17.0:
   dependencies:
     loader-utils "^1.0.2"
 
-style-loader@^0.18.2:
-  version "0.18.2"
-  resolved "https://registry.yarnpkg.com/style-loader/-/style-loader-0.18.2.tgz#cc31459afbcd6d80b7220ee54b291a9fd66ff5eb"
-  dependencies:
-    loader-utils "^1.0.2"
-    schema-utils "^0.3.0"
-
 styled-components@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-2.1.2.tgz#bb419978e1287c5d0d88fa9106b2dd75f66a324c"
@@ -8243,7 +8225,7 @@ unpipe@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
 
-url-loader@0.5.9, url-loader@^0.5.8:
+url-loader@^0.5.8:
   version "0.5.9"
   resolved "https://registry.yarnpkg.com/url-loader/-/url-loader-0.5.9.tgz#cc8fea82c7b906e7777019250869e569e995c295"
   dependencies:
