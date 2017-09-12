@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 /**
- * Generates an `select` 
+ * Generates an <select> element
  * @param {Object} props - Properties passed to component
  * @returns {ReactElement}
  */
