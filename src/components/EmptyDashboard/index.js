@@ -1,3 +1,11 @@
+/*
+
+Todo
+1. Resolve consistent widths for images and text
+2. Allow Link component
+3. Allow Dropdown as button
+
+*/
 const React = require('react');
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -59,7 +67,7 @@ EmptyDashboard.propTypes = {
   /** A button, link, or other element that is actionable */
   button: React.PropTypes.node,
   /** A string or `div` containing longer text that describes the empty state */
-  description: React.PropTypes.node,
+  description: React.PropTypes.element,
   /** Max width of description. Accepts any valid CSS width value. */
   descriptionMaxWidth: React.PropTypes.oneOfType([
     React.PropTypes.string,

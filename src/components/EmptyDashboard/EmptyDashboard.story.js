@@ -24,7 +24,7 @@ stories
         <div className='anchor--middle height--1-1 flex flex--column'>
           <EmptyDashboard
             headline={ text('headline', 'Get started with Optimizely X') }
-            description={ text('description', '<div>This is a test description about <Link>X Feature</Link> with a Google.</div>') }
+            description={ <div>This is a test description about <a href="http://google.com">X Feature</a> with a Google.</div> }
             button={(<Button style="highlight">{ text('buttonText', 'Highlight') }</Button>)}
             imagePath={select('imagePath', {
               'https://app.optimizely.com/static/img/p13n/campaign-list-empty-state.svg': 'Campaigns',
