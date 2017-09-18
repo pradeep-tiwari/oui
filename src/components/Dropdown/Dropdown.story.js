@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, number, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
-import Dropdown from './Dropdown';
+import Dropdown from './index.js';
 import BlockList from '../BlockList';
 
 const stories = storiesOf('Dropdown', module);
@@ -49,7 +49,6 @@ stories.addWithInfo('default', () => {
 stories.addWithInfo('with BlockList elements', () => {
   return (
     <Dropdown
-      icon='chevron'
       isDisabled={ boolean('isDisabled', false) }
       isOpen={ boolean('isOpen', false) }
       fullWidth={ boolean('fullWidth', false) }
