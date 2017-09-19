@@ -40,7 +40,7 @@ class Dropdown extends React.Component {
           className={ buttonClass }
           disabled={ isDisabled }
           onClick={ handleClick }
-          style={ { marginBottom: 2 } }>
+          style={{ marginBottom: 2 }}>
           <div className='flex'>
             <div className='flex--1 truncate'>{ text }</div>
             <div className='text--right'><span className={ iconClass }></span></div>

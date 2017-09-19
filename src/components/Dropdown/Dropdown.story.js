@@ -9,8 +9,9 @@ import BlockList from '../BlockList';
 
 const data = [
   {title: 'Manual', description: 'Dolcelatte cheeseburger swiss paneer cow gouda edam cheese slices'},
-  {title: 'Maximize Conventions', header: 'Automation', description: 'Bocconcini stinking bishop port-salut. Everyone loves cut the cheese cow squirty cheese emmental jarlsberg halloumi camembert de normandie.'},
-  {title: 'Faster Results', description: 'Cauliflower cheese stilton paneer hard cheese fondue.'}
+  {title: 'Maximize Conventions', header: 'Automation',
+    description: 'Everyone loves cut the cheese cow squirty cheese emmental jarlsberg halloumi camembert de normandie.'},
+  {title: 'Faster Results', description: 'Cauliflower cheese stilton paneer hard cheese fondue.'},
 ];
 
 const stories = storiesOf('Dropdown', module);
@@ -63,7 +64,7 @@ stories.addWithInfo('with BlockList elements', () => {
         default: 'default',
         highlight: 'highlight',
         danger: 'danger',
-        'danger-outline': 'danger-outline', 
+        'danger-outline': 'danger-outline',
         outline: 'outline',
         underline: 'underline'}, '') }
       text='Dropdown'
