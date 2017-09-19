@@ -50,7 +50,7 @@ class Dropdown extends React.Component {
       </div>
     );
   }
-};
+}
 
 Dropdown.propTypes = {
   children: PropTypes.node.isRequired,
