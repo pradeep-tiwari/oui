@@ -14,7 +14,6 @@ class Dropdown extends React.Component {
       style,
       text,
       width,
-      zIndex,
     } = this.props;
 
     const buttonClass = classNames(
@@ -36,7 +35,7 @@ class Dropdown extends React.Component {
         data-ui-component={ true }
         ref='dropdown'
         className='lego-dropdown-group'
-        style={{ width: width, zIndex: zIndex }}>
+        style={{ width: width }}>
         <button
           className={ buttonClass }
           disabled={ isDisabled }
@@ -70,7 +69,6 @@ Dropdown.propTypes = {
     PropTypes.string,
     PropTypes.number,
   ]),
-  zIndex: PropTypes.number,
 };
 
 export default Dropdown;
