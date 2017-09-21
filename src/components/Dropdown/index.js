@@ -34,7 +34,7 @@ class Dropdown extends React.Component {
       <div
         data-ui-component={ true }
         ref='dropdown'
-        className='ego-dropdown-group'
+        className='lego-dropdown-group'
         style={{ width: width }}>
         <button
           className={ buttonClass }

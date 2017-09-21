@@ -2,7 +2,7 @@
 
 exports[`components/Dropdown should highlight button class when style equals highlight 1`] = `
 <div
-  className="ego-dropdown-group"
+  className="lego-dropdown-group"
   data-ui-component={true}
   style={
     Object {
@@ -41,7 +41,7 @@ exports[`components/Dropdown should highlight button class when style equals hig
 
 exports[`components/Dropdown should not render children when isDisabled is true 1`] = `
 <div
-  className="ego-dropdown-group"
+  className="lego-dropdown-group"
   data-ui-component={true}
   style={
     Object {
@@ -80,7 +80,7 @@ exports[`components/Dropdown should not render children when isDisabled is true 
 
 exports[`components/Dropdown should not render children when isOpen is false 1`] = `
 <div
-  className="ego-dropdown-group"
+  className="lego-dropdown-group"
   data-ui-component={true}
   style={
     Object {
@@ -119,7 +119,7 @@ exports[`components/Dropdown should not render children when isOpen is false 1`]
 
 exports[`components/Dropdown should not use .oui-arrow-inline--down when icon isEqual to triangle 1`] = `
 <div
-  className="ego-dropdown-group"
+  className="lego-dropdown-group"
   data-ui-component={true}
   style={
     Object {
@@ -158,7 +158,7 @@ exports[`components/Dropdown should not use .oui-arrow-inline--down when icon is
 
 exports[`components/Dropdown should render children when isOpen is true 1`] = `
 <div
-  className="ego-dropdown-group"
+  className="lego-dropdown-group"
   data-ui-component={true}
   style={
     Object {
@@ -208,7 +208,7 @@ exports[`components/Dropdown should render children when isOpen is true 1`] = `
 
 exports[`components/Dropdown should use oui-button--full class when fullWidth is true 1`] = `
 <div
-  className="ego-dropdown-group"
+  className="lego-dropdown-group"
   data-ui-component={true}
   style={
     Object {
