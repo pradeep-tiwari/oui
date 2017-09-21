@@ -26,6 +26,7 @@ stories
 stories.addWithInfo('default', () => {
   return (
     <Dropdown
+      classname='chilito'
       icon='chevron'
       isDisabled={ boolean('isDisabled', false) }
       isOpen={ boolean('isOpen', false) }

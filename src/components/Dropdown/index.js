@@ -6,15 +6,18 @@ class Dropdown extends React.Component {
   render() {
     const {
       children,
+      classname,
       handleClick,
       icon = 'chevron',
-      isDisabled,
-      isOpen,
+      isDisabled = false,
+      isOpen = false,
       fullWidth,
       style,
       text,
       width,
     } = this.props;
+
+    const mainClasses = classNames('lego-dropdown-group', classname);
 
     const buttonClass = classNames(
       'oui-button',
@@ -34,7 +37,7 @@ class Dropdown extends React.Component {
       <div
         data-ui-component={ true }
         ref='dropdown'
-        className='lego-dropdown-group'
+        className={ mainClasses }
         style={{ width: width }}>
         <button
           className={ buttonClass }
@@ -54,6 +57,7 @@ class Dropdown extends React.Component {
 
 Dropdown.propTypes = {
   children: PropTypes.node.isRequired,
+  classname: PropTypes.string,
   fullWidth: PropTypes.bool,
   handleClick: PropTypes.func,
   icon: PropTypes.oneOf([
