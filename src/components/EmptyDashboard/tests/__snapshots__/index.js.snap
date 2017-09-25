@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/EmptyDashboard should render 1`] = `
+<div
+  className="flex overflow-y--scroll flex--1"
+  data-test-section="layers-empty-state"
+>
+  <div
+    className="anchor--middle height--1-1 flex flex--column"
+  >
+    <div
+      className="text--center soft-quad"
+      data-ui-component={true}
+      style={
+        Object {
+          "margin": "auto",
+          "maxWidth": "740px",
+        }
+      }
+    >
+      <div
+        className="muted push-double--bottom"
+      >
+        <img
+          alt=""
+          className="display--inline"
+          src="https://app.optimizely.com/static/img/p13n/campaign-list-empty-state.svg"
+          style={
+            Object {
+              "maxHeight": "290px",
+              "maxWidth": "450px",
+            }
+          }
+        />
+      </div>
+      <div
+        className="alpha push--bottom"
+      >
+        Get started with Optimizely X
+      </div>
+      <div
+        className="muted push--bottom anchor--middle"
+        style={
+          Object {
+            "maxWidth": undefined,
+          }
+        }
+      >
+        <div>
+          This is a test description about 
+          <Link
+            href="http://google.com"
+          >
+            X Feature
+          </Link>
+           with a Google.
+        </div>
+      </div>
+      <div
+        className="push-double--top"
+      >
+        <Button
+          style="highlight"
+        >
+          Highlight Button
+        </Button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

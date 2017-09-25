@@ -1,14 +1,4 @@
-/*
-
-Todo
-1. Resolve consistent widths for images and text
-2. Allow Link component
-3. Allow Dropdown as button
-
-*/
 const React = require('react');
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
 
 const EmptyDashboard = ({
   button,
@@ -17,48 +7,56 @@ const EmptyDashboard = ({
   description,
   descriptionMaxWidth,
   testSection,
-}) => {
+} = this.props) => {
   return (
     <div
-      data-ui-component={ true }
-      className='text--center soft-quad'
-      style={ { maxWidth: '740px', margin: 'auto' } }
-      data-test-section={ testSection }>
+      className='flex overflow-y--scroll flex--1'
+      data-test-section='layers-empty-state'>
+      <div className='anchor--middle height--1-1 flex flex--column'>
 
-      { imagePath && (
-        <div className="muted push-double--bottom">
-          <img
-            src={ imagePath }
-            className="display--inline"
-            style={ { maxWidth: '450px', maxHeight: '290px' } }
-            data-test-section={ testSection && `${testSection}-image` }
-            alt=""
-          />
-        </div>
-      ) }
-
-      { headline && (
         <div
-          className="alpha push--bottom"
-          data-test-section={ testSection && `${testSection}-headline` }>
-          { headline }
-        </div>
-      ) }
+          data-ui-component={ true }
+          className='text--center soft-quad'
+          style={{ maxWidth: '740px', margin: 'auto' }}
+          data-test-section={ testSection }>
 
-      { description && (
-        <div
-          className="muted push--bottom anchor--middle"
-          style={ { maxWidth: descriptionMaxWidth } }
-          data-test-section={ testSection && `${testSection}-description` }>
-          { description }
-        </div>
-      ) }
+          { imagePath && (
+            <div className="muted push-double--bottom">
+              <img
+                src={ imagePath }
+                className="display--inline"
+                style={{ maxWidth: '450px', maxHeight: '290px' }}
+                data-test-section={ testSection && `${testSection}-image` }
+                alt=""
+              />
+            </div>
+          ) }
 
-      { button && (
-        <div className="push-double--top">
-          { button }
+          { headline && (
+            <div
+              className="alpha push--bottom"
+              data-test-section={ testSection && `${testSection}-headline` }>
+              { headline }
+            </div>
+          ) }
+
+          { description && (
+            <div
+              className="muted push--bottom anchor--middle"
+              style={{ maxWidth: descriptionMaxWidth }}
+              data-test-section={ testSection && `${testSection}-description` }>
+              { description }
+            </div>
+          ) }
+
+          { button && (
+            <div className="push-double--top">
+              { button }
+            </div>
+          ) }
         </div>
-      ) }
+
+      </div>
     </div>
   );
 };
