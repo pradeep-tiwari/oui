@@ -3,7 +3,7 @@ import Link from '../index';
 import { shallow } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 
-describe('components/Dropdown', () => {
+describe('components/Link', () => {
   it('should render disabled', () => {
     const output = shallow(
       <Link

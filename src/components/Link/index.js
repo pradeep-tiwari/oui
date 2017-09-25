@@ -11,7 +11,7 @@ const Link = ({
   children,
   href,
   onClick,
-  isDisabled,
+  isDisabled = false,
   style,
   testSection,
 }) => {
