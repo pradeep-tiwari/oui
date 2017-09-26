@@ -7,6 +7,7 @@ This file is similar to the format suggested by [Keep a CHANGELOG](https://githu
 ## Unreleased
 - [Feature] Add new TextField component. (#798)
 - [Feature] Add toggle function and isOpen state to Dropdown component. (#795)
+- [Feature] Add Link React component (needed for EmptyDashboard component). (#799)
 
 ## 26.5.1 - 2017-09-22
 - [Patch] Ignore tests for snapshots in docs.
