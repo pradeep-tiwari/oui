@@ -6,28 +6,19 @@ export default [
   {
     examples: [
       <Dropdown
-        classname='chilito'
-        icon='chevron'
-        isDisabled={ boolean('isDisabled', false) }
-        isOpen={ boolean('isOpen', false) }
-        fullWidth={ boolean('fullWidth', false) }
-        handleClick={ action('dropdown clicked') }
-        style={ select('style', {
-          default: 'default',
-          highlight: 'highlight',
-          danger: 'danger',
-          'danger-outline': 'danger-outline',
-          outline: 'outline',
-          underline: 'underline'}, '') }
-        text={ text('text', 'Dropdown') }
-        width={ number('width', 300) }>
-        <ul className="lego-dropdown width--200" style={{display: 'block'}}>
-          <li key="1" className="lego-dropdown__item">
-            <a key="a" onClick={ action('clicked on link 1') } className="lego-dropdown__block-link">Manage Collaborators</a>
-            <a key="b" onClick={ action('clicked on link 2') } className="lego-dropdown__block-link">Manage This Thing</a>
+        isDisabled={ false }
+        isOpen={ true }
+        fullWidth={ false }
+        style='highlight'
+        text='Dropdown'
+        width='300px'>
+        <ul className="oui-dropdown width--200">
+          <li key="1" className="oui-dropdown__item">
+            <a key="a" className="oui-dropdown__block-link">Manage Collaborators</a>
+            <a key="b" className="oui-dropdown__block-link">Manage This Thing</a>
           </li>
-          <li key="2" className="lego-dropdown__item">
-            <a key="c" onClick={ action('clicked on link 3') } className="lego-dropdown__block-link">Experiment Change History</a>
+          <li key="2" className="oui-dropdown__item">
+            <a key="c" className="oui-dropdown__block-link">Experiment Change History</a>
           </li>
         </ul>
       </Dropdown>
