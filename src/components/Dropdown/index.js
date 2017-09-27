@@ -27,7 +27,7 @@ class Dropdown extends React.Component {
     const {
       buttonContent,
       children,
-      icon,
+      icon = true,
       isDisabled = false,
       fullWidth,
       style,
@@ -44,8 +44,7 @@ class Dropdown extends React.Component {
     const iconClass = classNames(
       'push-half--left',
       {
-        ['oui-arrow-inline--down']: icon === 'triangle',
-        ['lego-arrow-inline--down']: icon === 'chevron',
+        ['oui-arrow-inline--down']: icon ,
       }
     );
 
@@ -81,13 +80,10 @@ Dropdown.propTypes = {
   children: PropTypes.node.isRequired,
   fullWidth: PropTypes.bool,
   handleClick: PropTypes.func,
-  icon: PropTypes.oneOf([
-    'chevron',
-    'none',
-    'triangle',
-  ]),
+  icon: PropTypes.bool,
   isDisabled: PropTypes.bool,
   style: PropTypes.string,
+  testSection: PropTypes.string,
   width: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
