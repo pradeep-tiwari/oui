@@ -7,12 +7,12 @@ export default [
     examples: [
       <Dropdown
         isDisabled={ false }
-        isOpen={ true }
+        isOpen={ false }
         fullWidth={ false }
         style='highlight'
         text='Dropdown'
-        width='300px'>
-        <ul className="oui-dropdown width--200">
+        width='300'>
+        <ul className="oui-dropdown width--200" style={{display: 'block'}}>
           <li key="1" className="oui-dropdown__item">
             <a key="a" className="oui-dropdown__block-link">Manage Collaborators</a>
             <a key="b" className="oui-dropdown__block-link">Manage This Thing</a>
