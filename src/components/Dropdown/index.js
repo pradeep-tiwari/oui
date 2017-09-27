@@ -25,12 +25,13 @@ class Dropdown extends React.Component {
 
   render() {
     const {
+      buttonContent,
       children,
-      icon = 'chevron',
+      icon,
       isDisabled = false,
       fullWidth,
       style,
-      text,
+      testSection,
       width = 200,
     } = this.props;
 
@@ -52,8 +53,9 @@ class Dropdown extends React.Component {
       <div
         data-ui-component={ true }
         ref='dropdown'
-        className='lego-dropdown-group'
-        style={{ width: width }}>
+        className='oui-dropdown-group'
+        style={{ width: width }}
+        data-test-section={ testSection }>
         <button
           className={ buttonClass }
           disabled={ isDisabled }
@@ -61,7 +63,7 @@ class Dropdown extends React.Component {
           onBlur={ this.toggleOnBlur }
           style={{ marginBottom: 2 }}>
           <div className='flex'>
-            <div className='flex--1 truncate'>{ text }</div>
+            <div className='flex--1 truncate'>{ buttonContent }</div>
             <div className='text--right'><span className={ iconClass }></span></div>
           </div>
         </button>
@@ -72,6 +74,10 @@ class Dropdown extends React.Component {
 }
 
 Dropdown.propTypes = {
+  buttonContent: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element,
+  ]),
   children: PropTypes.node.isRequired,
   fullWidth: PropTypes.bool,
   handleClick: PropTypes.func,
@@ -82,7 +88,6 @@ Dropdown.propTypes = {
   ]),
   isDisabled: PropTypes.bool,
   style: PropTypes.string,
-  text: PropTypes.string,
   width: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
