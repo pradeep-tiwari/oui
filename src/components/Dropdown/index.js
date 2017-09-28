@@ -44,7 +44,7 @@ class Dropdown extends React.Component {
     const iconClass = classNames(
       'push-half--left',
       {
-        ['oui-arrow-inline--down']: icon ,
+        ['oui-arrow-inline--down']: icon,
       }
     );
 

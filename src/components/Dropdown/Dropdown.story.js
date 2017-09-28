@@ -97,7 +97,7 @@ stories.addWithInfo('three dots', () => {
       isDisabled={ boolean('isDisabled', false) }
       fullWidth={ boolean('fullWidth', false) }
       handleClick={ action('dropdown clicked') }
-      buttonContent={<Icon name='ellipsis' />}
+      buttonContent={ <Icon name='ellipsis' /> }
       width={ number('width', 100) }>
       <BlockList>
         <BlockList.Category >
@@ -110,13 +110,13 @@ stories.addWithInfo('three dots', () => {
           </BlockList.Item>
         </BlockList.Category>
         <BlockList.Category >
-        <BlockList.Item onClick={ action('click on complex item') }>
-          <div className="flex flex-align--center">
-            <div className="flex--1">
-              <a href='#'>otro link</a>
+          <BlockList.Item onClick={ action('click on complex item') }>
+            <div className="flex flex-align--center">
+              <div className="flex--1">
+                <a href='#'>otro link</a>
+              </div>
             </div>
-          </div>
-        </BlockList.Item>
+          </BlockList.Item>
         </BlockList.Category>
         <BlockList.Category >
           <BlockList.Item onClick={ action('click on complex item') }>
@@ -162,13 +162,13 @@ stories.addWithInfo('text behind', () => {
             </BlockList.Item>
           </BlockList.Category>
           <BlockList.Category >
-          <BlockList.Item onClick={ action('click on complex item') }>
-            <div className="flex flex-align--center">
-              <div className="flex--1">
-                <a href='#'>otro link</a>
+            <BlockList.Item onClick={ action('click on complex item') }>
+              <div className="flex flex-align--center">
+                <div className="flex--1">
+                  <a href='#'>otro link</a>
+                </div>
               </div>
-            </div>
-          </BlockList.Item>
+            </BlockList.Item>
           </BlockList.Category>
           <BlockList.Category >
             <BlockList.Item onClick={ action('click on complex item') }>
