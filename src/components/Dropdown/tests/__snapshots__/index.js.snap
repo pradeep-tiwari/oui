@@ -4,11 +4,6 @@ exports[`components/Dropdown should highlight button class when style equals hig
 <div
   className="oui-dropdown-group"
   data-ui-component={true}
-  style={
-    Object {
-      "width": 200,
-    }
-  }
 >
   <button
     className="oui-button oui-button--highlight"
@@ -38,6 +33,15 @@ exports[`components/Dropdown should highlight button class when style equals hig
       </div>
     </div>
   </button>
+  <div
+    style={
+      Object {
+        "position": "absolute",
+        "width": 200,
+        "zIndex": 999,
+      }
+    }
+  />
 </div>
 `;
 
@@ -45,11 +49,6 @@ exports[`components/Dropdown should not render children when isDisabled is true 
 <div
   className="oui-dropdown-group"
   data-ui-component={true}
-  style={
-    Object {
-      "width": 200,
-    }
-  }
 >
   <button
     className="oui-button"
@@ -79,6 +78,15 @@ exports[`components/Dropdown should not render children when isDisabled is true 
       </div>
     </div>
   </button>
+  <div
+    style={
+      Object {
+        "position": "absolute",
+        "width": 200,
+        "zIndex": 999,
+      }
+    }
+  />
 </div>
 `;
 
@@ -86,11 +94,6 @@ exports[`components/Dropdown should not use .oui-arrow-inline--down when icon is
 <div
   className="oui-dropdown-group"
   data-ui-component={true}
-  style={
-    Object {
-      "width": 200,
-    }
-  }
 >
   <button
     className="oui-button"
@@ -120,6 +123,15 @@ exports[`components/Dropdown should not use .oui-arrow-inline--down when icon is
       </div>
     </div>
   </button>
+  <div
+    style={
+      Object {
+        "position": "absolute",
+        "width": 200,
+        "zIndex": 999,
+      }
+    }
+  />
 </div>
 `;
 
@@ -127,11 +139,6 @@ exports[`components/Dropdown should render children when isOpen is true 1`] = `
 <div
   className="oui-dropdown-group"
   data-ui-component={true}
-  style={
-    Object {
-      "width": 200,
-    }
-  }
 >
   <button
     className="oui-button"
@@ -161,6 +168,15 @@ exports[`components/Dropdown should render children when isOpen is true 1`] = `
       </div>
     </div>
   </button>
+  <div
+    style={
+      Object {
+        "position": "absolute",
+        "width": 200,
+        "zIndex": 999,
+      }
+    }
+  />
 </div>
 `;
 
@@ -168,11 +184,6 @@ exports[`components/Dropdown should use oui-button--full class when fullWidth is
 <div
   className="oui-dropdown-group"
   data-ui-component={true}
-  style={
-    Object {
-      "width": 200,
-    }
-  }
 >
   <button
     className="oui-button oui-button--full soft--left text--left"
@@ -202,5 +213,14 @@ exports[`components/Dropdown should use oui-button--full class when fullWidth is
       </div>
     </div>
   </button>
+  <div
+    style={
+      Object {
+        "position": "absolute",
+        "width": 200,
+        "zIndex": 999,
+      }
+    }
+  />
 </div>
 `;

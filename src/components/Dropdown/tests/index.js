@@ -12,7 +12,7 @@ const data = [
 
 describe('components/Dropdown', () => {
   it('should render children when isOpen is true', () => {
-    const output = shallow(
+    const component = shallow(
       <Dropdown
         icon={ true }
         buttonContent='Dropdown'>
@@ -26,11 +26,11 @@ describe('components/Dropdown', () => {
         </ul>
       </Dropdown>
     );
-    expect(shallowToJson(output)).toMatchSnapshot();
+    expect(shallowToJson(component)).toMatchSnapshot();
   });
 
   it('should not render children when isDisabled is true', () => {
-    const output = shallow(
+    const component = shallow(
       <Dropdown
         icon={ true }
         buttonContent='Dropdown'
@@ -45,11 +45,11 @@ describe('components/Dropdown', () => {
         </ul>
       </Dropdown>
     );
-    expect(shallowToJson(output)).toMatchSnapshot();
+    expect(shallowToJson(component)).toMatchSnapshot();
   });
 
   it('should not use .oui-arrow-inline--down when icon isEqual to triangle', () => {
-    const output = shallow(
+    const component = shallow(
       <Dropdown
         icon={ true }
         buttonContent='Dropdown'>
@@ -63,11 +63,11 @@ describe('components/Dropdown', () => {
         </ul>
       </Dropdown>
     );
-    expect(shallowToJson(output)).toMatchSnapshot();
+    expect(shallowToJson(component)).toMatchSnapshot();
   });
 
   it('should use oui-button--full class when fullWidth is true', () => {
-    const output = shallow(
+    const component = shallow(
       <Dropdown
         icon={ true }
         buttonContent='Dropdown'
@@ -82,11 +82,11 @@ describe('components/Dropdown', () => {
         </ul>
       </Dropdown>
     );
-    expect(shallowToJson(output)).toMatchSnapshot();
+    expect(shallowToJson(component)).toMatchSnapshot();
   });
 
   it('should highlight button class when style equals highlight', () => {
-    const output = shallow(
+    const component = shallow(
       <Dropdown
         icon={ true }
         buttonContent='Dropdown'
@@ -101,7 +101,17 @@ describe('components/Dropdown', () => {
         </ul>
       </Dropdown>
     );
-    expect(shallowToJson(output)).toMatchSnapshot();
+    expect(shallowToJson(component)).toMatchSnapshot();
+  });
+
+  it('should toggle', () => {
+    const component = shallow(
+      <Dropdown buttonContent='Dropdown'>
+        <ul></ul>
+      </Dropdown>
+    );
+    const btn = component.find('button').at(0);
+    btn.simulate('click');
   });
 
 });
