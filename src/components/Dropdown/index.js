@@ -33,6 +33,7 @@ class Dropdown extends React.Component {
       style,
       testSection,
       width = 200,
+      zIndex = 999,
     } = this.props;
 
     const buttonClass = classNames(
@@ -53,7 +54,6 @@ class Dropdown extends React.Component {
         data-ui-component={ true }
         ref='dropdown'
         className='oui-dropdown-group'
-        style={{ width: width }}
         data-test-section={ testSection }>
         <button
           className={ buttonClass }
@@ -66,7 +66,9 @@ class Dropdown extends React.Component {
             <div className='text--right'><span className={ iconClass }></span></div>
           </div>
         </button>
-        { this.state.isOpen && !isDisabled && children }
+        <div style={{zIndex: zIndex, position: 'absolute', width: width}}>
+          { this.state.isOpen && !isDisabled && children }
+        </div>
       </div>
     );
   }
@@ -88,6 +90,7 @@ Dropdown.propTypes = {
     PropTypes.string,
     PropTypes.number,
   ]),
+  zIndex: PropTypes.number,
 };
 
 export default Dropdown;
