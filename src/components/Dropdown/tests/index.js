@@ -11,31 +11,11 @@ const data = [
 ];
 
 describe('components/Dropdown', () => {
-  it('should not render children when isOpen is false', () => {
-    const output = shallow(
-      <Dropdown
-        icon='chevron'
-        text='Dropdown'
-        isOpen={ false }>
-        <ul>
-          { data.map((item, index) => {
-            return (
-              <li key={ index }>{ item.title }</li>
-            );
-          })
-          }
-        </ul>
-      </Dropdown>
-    );
-    expect(shallowToJson(output)).toMatchSnapshot();
-  });
-
   it('should render children when isOpen is true', () => {
     const output = shallow(
       <Dropdown
-        icon='chevron'
-        text='Dropdown'
-        isOpen={ true }>
+        icon={ true }
+        buttonContent='Dropdown'>
         <ul>
           { data.map((item, index) => {
             return (
@@ -52,8 +32,8 @@ describe('components/Dropdown', () => {
   it('should not render children when isDisabled is true', () => {
     const output = shallow(
       <Dropdown
-        icon='chevron'
-        text='Dropdown'
+        icon={ true }
+        buttonContent='Dropdown'
         idDisabled={ true }>
         <ul>
           { data.map((item, index) => {
@@ -71,8 +51,8 @@ describe('components/Dropdown', () => {
   it('should not use .oui-arrow-inline--down when icon isEqual to triangle', () => {
     const output = shallow(
       <Dropdown
-        icon='triangle'
-        text='Dropdown'>
+        icon={ true }
+        buttonContent='Dropdown'>
         <ul>
           { data.map((item, index) => {
             return (
@@ -89,8 +69,8 @@ describe('components/Dropdown', () => {
   it('should use oui-button--full class when fullWidth is true', () => {
     const output = shallow(
       <Dropdown
-        icon='triangle'
-        text='Dropdown'
+        icon={ true }
+        buttonContent='Dropdown'
         fullWidth={ true }>
         <ul>
           { data.map((item, index) => {
@@ -108,8 +88,8 @@ describe('components/Dropdown', () => {
   it('should highlight button class when style equals highlight', () => {
     const output = shallow(
       <Dropdown
-        icon='triangle'
-        text='Dropdown'
+        icon={ true }
+        buttonContent='Dropdown'
         style='highlight'>
         <ul>
           { data.map((item, index) => {

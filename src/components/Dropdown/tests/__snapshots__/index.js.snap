@@ -2,7 +2,7 @@
 
 exports[`components/Dropdown should highlight button class when style equals highlight 1`] = `
 <div
-  className="lego-dropdown-group"
+  className="oui-dropdown-group"
   data-ui-component={true}
   style={
     Object {
@@ -43,7 +43,7 @@ exports[`components/Dropdown should highlight button class when style equals hig
 
 exports[`components/Dropdown should not render children when isDisabled is true 1`] = `
 <div
-  className="lego-dropdown-group"
+  className="oui-dropdown-group"
   data-ui-component={true}
   style={
     Object {
@@ -74,48 +74,7 @@ exports[`components/Dropdown should not render children when isDisabled is true 
         className="text--right"
       >
         <span
-          className="push-half--left lego-arrow-inline--down"
-        />
-      </div>
-    </div>
-  </button>
-</div>
-`;
-
-exports[`components/Dropdown should not render children when isOpen is false 1`] = `
-<div
-  className="lego-dropdown-group"
-  data-ui-component={true}
-  style={
-    Object {
-      "width": 200,
-    }
-  }
->
-  <button
-    className="oui-button"
-    disabled={false}
-    onBlur={[Function]}
-    onClick={[Function]}
-    style={
-      Object {
-        "marginBottom": 2,
-      }
-    }
-  >
-    <div
-      className="flex"
-    >
-      <div
-        className="flex--1 truncate"
-      >
-        Dropdown
-      </div>
-      <div
-        className="text--right"
-      >
-        <span
-          className="push-half--left lego-arrow-inline--down"
+          className="push-half--left oui-arrow-inline--down"
         />
       </div>
     </div>
@@ -125,7 +84,7 @@ exports[`components/Dropdown should not render children when isOpen is false 1`]
 
 exports[`components/Dropdown should not use .oui-arrow-inline--down when icon isEqual to triangle 1`] = `
 <div
-  className="lego-dropdown-group"
+  className="oui-dropdown-group"
   data-ui-component={true}
   style={
     Object {
@@ -166,7 +125,7 @@ exports[`components/Dropdown should not use .oui-arrow-inline--down when icon is
 
 exports[`components/Dropdown should render children when isOpen is true 1`] = `
 <div
-  className="lego-dropdown-group"
+  className="oui-dropdown-group"
   data-ui-component={true}
   style={
     Object {
@@ -197,7 +156,7 @@ exports[`components/Dropdown should render children when isOpen is true 1`] = `
         className="text--right"
       >
         <span
-          className="push-half--left lego-arrow-inline--down"
+          className="push-half--left oui-arrow-inline--down"
         />
       </div>
     </div>
@@ -207,7 +166,7 @@ exports[`components/Dropdown should render children when isOpen is true 1`] = `
 
 exports[`components/Dropdown should use oui-button--full class when fullWidth is true 1`] = `
 <div
-  className="lego-dropdown-group"
+  className="oui-dropdown-group"
   data-ui-component={true}
   style={
     Object {
