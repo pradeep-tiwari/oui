@@ -144,9 +144,10 @@ class Component extends React.Component {
             { lang === 'react' &&
               <a
                 className="oui-button oui-button--outline push-double--left push-double--top float--right"
-                href={this.componentStorybookLink}
-                target="_blank">
-                  <Badge color="draft">New</Badge>Storybook
+                href={ this.componentStorybookLink }
+                target="_blank"
+                rel="noopener noreferrer">
+                <Badge color="draft">New</Badge>Storybook
               </a>
             }
 
