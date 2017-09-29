@@ -6,6 +6,7 @@ This file is similar to the format suggested by [Keep a CHANGELOG](https://githu
 
 ## Unreleased
 - [Patch] Link to GHpages Storybook (#811)
+- [Patch] Remove onBlur Dropdown prop temporarily. (#809)
 
 ## 26.7.1 - 2017-09-29
 - [Patch] Move `/storybook-static` to `/docs/storybook` and remove from `.gitignore`
