@@ -1,0 +1,15 @@
+dist
+tmp
+node_modules
+s3
+coverage
+.bundle
+.sass-cache
+npm-debug.log
+.DS_Store
+docs/data
+docs/lite/sass.json
+docs/react/data.json
+.idea
+docs/storybook/*
+docs/storybook/static/*
