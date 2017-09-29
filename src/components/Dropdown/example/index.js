@@ -19,7 +19,7 @@ export default [
             <a key="c" className="oui-dropdown__block-link">Experiment Change History</a>
           </li>
         </ul>
-      </Dropdown>
+      </Dropdown>,
     ],
   },
 ];
