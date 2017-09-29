@@ -1,6 +1,6 @@
 {
   "name": "optimizely-oui",
-  "version": "26.6.0",
+  "version": "26.7.0",
   "description": "Optimizely's Component Library.",
   "private": false,
   "main": "dist/js/main.js",
@@ -88,7 +88,7 @@
     "docs:watch": "npm-run-all docs:build:mkdir --parallel docs:build:json docs:build:html --parallel docs:watch:js",
     "docs:watch:js": "webpack-dev-server --open --progress --inline",
     "storybook": "start-storybook -p 9009",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -c .storybook -o ./docs/storybook"
   },
   "repository": {
     "type": "git",
