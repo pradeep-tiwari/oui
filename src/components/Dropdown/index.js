@@ -9,18 +9,12 @@ class Dropdown extends React.Component {
       isOpen: false,
     };
     this.toggle = this.toggle.bind(this);
-    this.toggleOnBlur = this.toggleOnBlur.bind(this);
   }
 
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen,
     });
-  }
-
-  toggleOnBlur() {
-    if (this.state.isOpen === false) { return; }
-    this.setState({isOpen: !this.state.isOpen});
   }
 
   render() {
