@@ -11,17 +11,19 @@ const EmptyDashboard = ({
   return (
     <div
       className='flex overflow-y--scroll flex--1'
-      data-test-section='layers-empty-state'>
+      data-test-section='layers-empty-state'
+      style={{ width: '750px', margin: 'auto' }}>
       <div className='anchor--middle height--1-1 flex flex--column'>
 
         <div
           data-ui-component={ true }
           className='text--center soft-quad'
-          style={{ maxWidth: '740px', margin: 'auto' }}
           data-test-section={ testSection }>
 
           { imagePath && (
-            <div className="muted push-double--bottom">
+            <div
+              className="muted push-double--bottom"
+              style={{ width: '550px', margin: 'auto' }}>
               <img
                 src={ imagePath }
                 className="display--inline"
@@ -33,11 +35,11 @@ const EmptyDashboard = ({
           ) }
 
           { headline && (
-            <div
+            <h1
               className="alpha push--bottom"
               data-test-section={ testSection && `${testSection}-headline` }>
               { headline }
-            </div>
+            </h1>
           ) }
 
           { description && (
