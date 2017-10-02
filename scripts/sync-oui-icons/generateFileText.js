@@ -29,7 +29,7 @@ const generateFileText = (fileName, fileNameTitleCase, sizes) => {
   let text = '';
 
   text += `import React from 'react';
-  import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 /* eslint-disable max-len */
 ${generateFileTextImports(fileName, fileNameTitleCase, sizes)}
