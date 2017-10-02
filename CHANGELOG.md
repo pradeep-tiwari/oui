@@ -6,6 +6,7 @@ This file is similar to the format suggested by [Keep a CHANGELOG](https://githu
 
 ## Unreleased
 - [Patch] Add icons to React Storybook.
+- [Patch] Update Dropdown React example code in docs.
 
 ## 26.7.2 - 2017-09-29
 - [Patch] Link to GHpages Storybook (#811)
