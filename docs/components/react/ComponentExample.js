@@ -66,7 +66,7 @@ const ComponentExample = (props) => {
 };
 
 ComponentExample.propTypes = {
-  backgroundColor: React.PropTypes.oneOf([
+  backgroundColor: PropTypes.oneOf([
     'faint',
     'light',
     'muted',
