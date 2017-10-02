@@ -10,11 +10,6 @@ exports[`components/Dropdown should highlight button class when style equals hig
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
-    style={
-      Object {
-        "marginBottom": 2,
-      }
-    }
   >
     <div
       className="flex"
@@ -55,11 +50,6 @@ exports[`components/Dropdown should not render children when isDisabled is true 
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
-    style={
-      Object {
-        "marginBottom": 2,
-      }
-    }
   >
     <div
       className="flex"
@@ -100,11 +90,6 @@ exports[`components/Dropdown should not use .oui-arrow-inline--down when icon is
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
-    style={
-      Object {
-        "marginBottom": 2,
-      }
-    }
   >
     <div
       className="flex"
@@ -145,11 +130,6 @@ exports[`components/Dropdown should render children when isOpen is true 1`] = `
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
-    style={
-      Object {
-        "marginBottom": 2,
-      }
-    }
   >
     <div
       className="flex"
@@ -190,11 +170,6 @@ exports[`components/Dropdown should use oui-button--full class when fullWidth is
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
-    style={
-      Object {
-        "marginBottom": 2,
-      }
-    }
   >
     <div
       className="flex"
