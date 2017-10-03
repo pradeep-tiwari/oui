@@ -92,7 +92,7 @@ Dropdown.propTypes = {
     PropTypes.string,
     PropTypes.number,
   ]),
-  /** Dropdown menu z-index; warning: you should not have to override this normally. */
+  /** Override default dropdown menu z-index. */
   zIndex: PropTypes.number,
 };
 
