@@ -50,6 +50,8 @@
     "prop-types": "^15.5.10",
     "react": "15.1.0",
     "react-addons-test-utils": "15.1.0",
+    "react": "^15.4.0",
+    "react-addons-test-utils": "^15.1.0",
     "react-docgen": "^2.8.2",
     "react-dom": "15.1.0",
     "react-element-to-jsx-string": "^5.0.0",

@@ -24,8 +24,8 @@ const EmptyDashboard = ({
             <div
               className="muted push-double--bottom"
               style={{ width: '550px', margin: 'auto' }}>
-              <img
-                src={ imagePath }
+              <object
+                data={ imagePath }
                 className="display--inline"
                 style={{ maxWidth: '450px', maxHeight: '290px' }}
                 data-test-section={ testSection && `${testSection}-image` }
