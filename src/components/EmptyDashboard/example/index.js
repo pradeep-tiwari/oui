@@ -2,7 +2,6 @@
 import React from 'react';
 import Button from '../../Button/';
 import EmptyDashboard from '../index';
-import Link from '../../Link/';
 
 export default [
   {
@@ -14,7 +13,7 @@ export default [
         button={ (<Button style="highlight">Highlight</Button>) }
         imagePath='http://localhost:5000/campaign-list-empty-state.svg'
       />
-    ],
+    ]
   },
 
   {
@@ -26,7 +25,7 @@ export default [
         button={ (<Button style="highlight">Highlight</Button>) }
         imagePath='http://localhost:5000/extensions-empty-state.svg'
       />
-    ],
+    ]
   },
 
   {
@@ -38,7 +37,7 @@ export default [
         button={ (<Button style="highlight">Highlight</Button>) }
         imagePath='http://localhost:5000/custom-project-experiments-empty-state.svg'
       />
-    ],
+    ]
   },
 
   {
@@ -50,7 +49,7 @@ export default [
         button={ (<Button style="highlight">Highlight</Button>) }
         imagePath='http://localhost:5000/empty-rollouts.svg'
       />
-    ],
+    ]
   },
 
   {
@@ -62,7 +61,7 @@ export default [
         button={ (<Button style="highlight">Highlight</Button>) }
         imagePath='http://localhost:5000/empty-feature-flags.svg'
       />
-    ],
+    ]
   },
 
   {
@@ -74,7 +73,7 @@ export default [
         button={ (<Button style="highlight">Highlight</Button>) }
         imagePath='http://localhost:5000/audience-list-empty-state.svg'
       />
-    ],
+    ]
   },
 
   {
@@ -86,7 +85,7 @@ export default [
         button={ (<Button style="highlight">Highlight</Button>) }
         imagePath='http://localhost:5000/attribute-dashboard-empty-state.svg'
       />
-    ],
+    ]
   },
 
   {
@@ -98,7 +97,7 @@ export default [
         button={ (<Button style="highlight">Highlight</Button>) }
         imagePath='http://localhost:5000/page-list-empty-state.svg'
       />
-    ],
+    ]
   },
 
 ];
