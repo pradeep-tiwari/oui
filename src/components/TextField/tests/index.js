@@ -1,6 +1,6 @@
 import React from 'react';
 import TextField from '../index';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 
 describe('components/TextField', () => {
@@ -75,6 +75,45 @@ describe('components/TextField', () => {
       />
     );
     expect(shallowToJson(output)).toMatchSnapshot();
+  });
+
+  it('should call onChange when a change happen on input', () => {
+    const blurEvent = jest.fn();
+    const textField = mount(
+      <TextField
+        type='text'
+        onBlur={ blurEvent }
+      />
+    );
+    const input = textField.find('.oui-text-input');
+    input.simulate('blur');
+    expect(blurEvent).toHaveBeenCalled();
+  });
+
+  it('should call onBlur when clicking out of input', () => {
+    const changeEvent = jest.fn();
+    const textField = mount(
+      <TextField
+        onChange={ changeEvent }
+        type='text'
+      />
+    );
+    const input = textField.find('.oui-text-input');
+    input.simulate('change');
+    expect(changeEvent).toHaveBeenCalled();
+  });
+
+  it('should call onKeyDown when pressing keys on input', () => {
+    const keydownEvent = jest.fn();
+    const textField = mount(
+      <TextField
+        onKeyDown={ keydownEvent }
+        type='text'
+      />
+    );
+    const input = textField.find('.oui-text-input');
+    input.simulate('keyDown');
+    expect(keydownEvent).toHaveBeenCalled();
   });
 
 });
