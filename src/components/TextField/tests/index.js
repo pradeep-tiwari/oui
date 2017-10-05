@@ -77,7 +77,7 @@ describe('components/TextField', () => {
     expect(shallowToJson(output)).toMatchSnapshot();
   });
 
-  it('should call onChange when a change happen on input', () => {
+  it('should call onChange fn() prop when a change happen on input', () => {
     const blurEvent = jest.fn();
     const textField = mount(
       <TextField
@@ -90,7 +90,7 @@ describe('components/TextField', () => {
     expect(blurEvent).toHaveBeenCalled();
   });
 
-  it('should call onBlur when clicking out of input', () => {
+  it('should call onBlur fn() prop when clicking out of input', () => {
     const changeEvent = jest.fn();
     const textField = mount(
       <TextField
@@ -103,7 +103,7 @@ describe('components/TextField', () => {
     expect(changeEvent).toHaveBeenCalled();
   });
 
-  it('should call onKeyDown when pressing keys on input', () => {
+  it('should call onKeyDown fn() prop when pressing keys on input', () => {
     const keydownEvent = jest.fn();
     const textField = mount(
       <TextField
@@ -114,6 +114,19 @@ describe('components/TextField', () => {
     const input = textField.find('.oui-text-input');
     input.simulate('keyDown');
     expect(keydownEvent).toHaveBeenCalled();
+  });
+
+  it('should call onFocus fn() prop when clicking on input', () => {
+    const focusEvent = jest.fn();
+    const textField = mount(
+      <TextField
+        onFocus={ focusEvent }
+        type='text'
+      />
+    );
+    const input = textField.find('.oui-text-input');
+    input.simulate('focus');
+    expect(focusEvent).toHaveBeenCalled();
   });
 
 });
