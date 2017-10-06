@@ -12,8 +12,8 @@ export default [
         description='This is a test description about some feature you should use.'
         button={ (<Button style="highlight">Highlight</Button>) }
         imagePath='http://localhost:5000/campaign-list-empty-state.svg'
-      />
-    ]
+      />,
+    ],
   },
 
   {
@@ -24,8 +24,8 @@ export default [
         description='This is a test description about some feature you should use.'
         button={ (<Button style="highlight">Highlight</Button>) }
         imagePath='http://localhost:5000/extensions-empty-state.svg'
-      />
-    ]
+      />,
+    ],
   },
 
   {
@@ -36,8 +36,8 @@ export default [
         description='This is a test description about some feature you should use.'
         button={ (<Button style="highlight">Highlight</Button>) }
         imagePath='http://localhost:5000/custom-project-experiments-empty-state.svg'
-      />
-    ]
+      />,
+    ],
   },
 
   {
@@ -48,8 +48,8 @@ export default [
         description='This is a test description about some feature you should use.'
         button={ (<Button style="highlight">Highlight</Button>) }
         imagePath='http://localhost:5000/empty-rollouts.svg'
-      />
-    ]
+      />,
+    ],
   },
 
   {
@@ -60,8 +60,8 @@ export default [
         description='This is a test description about some feature you should use.'
         button={ (<Button style="highlight">Highlight</Button>) }
         imagePath='http://localhost:5000/empty-feature-flags.svg'
-      />
-    ]
+      />,
+    ],
   },
 
   {
@@ -72,8 +72,8 @@ export default [
         description='This is a test description about some feature you should use.'
         button={ (<Button style="highlight">Highlight</Button>) }
         imagePath='http://localhost:5000/audience-list-empty-state.svg'
-      />
-    ]
+      />,
+    ],
   },
 
   {
@@ -84,8 +84,8 @@ export default [
         description='This is a test description about some feature you should use.'
         button={ (<Button style="highlight">Highlight</Button>) }
         imagePath='http://localhost:5000/attribute-dashboard-empty-state.svg'
-      />
-    ]
+      />,
+    ],
   },
 
   {
@@ -96,8 +96,8 @@ export default [
         description='This is a test description about some feature you should use.'
         button={ (<Button style="highlight">Highlight</Button>) }
         imagePath='http://localhost:5000/page-list-empty-state.svg'
-      />
-    ]
+      />,
+    ],
   },
 
 ];

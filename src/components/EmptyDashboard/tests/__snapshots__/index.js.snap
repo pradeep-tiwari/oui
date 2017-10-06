@@ -4,6 +4,12 @@ exports[`components/EmptyDashboard should render 1`] = `
 <div
   className="flex overflow-y--scroll flex--1"
   data-test-section="layers-empty-state"
+  style={
+    Object {
+      "margin": "auto",
+      "width": "750px",
+    }
+  }
 >
   <div
     className="anchor--middle height--1-1 flex flex--column"
@@ -11,20 +17,20 @@ exports[`components/EmptyDashboard should render 1`] = `
     <div
       className="text--center soft-quad"
       data-ui-component={true}
-      style={
-        Object {
-          "margin": "auto",
-          "maxWidth": "740px",
-        }
-      }
     >
       <div
         className="muted push-double--bottom"
+        style={
+          Object {
+            "margin": "auto",
+            "width": "550px",
+          }
+        }
       >
-        <img
+        <object
           alt=""
           className="display--inline"
-          src="https://app.optimizely.com/static/img/p13n/campaign-list-empty-state.svg"
+          data="https://app.optimizely.com/static/img/p13n/campaign-list-empty-state.svg"
           style={
             Object {
               "maxHeight": "290px",
@@ -33,11 +39,11 @@ exports[`components/EmptyDashboard should render 1`] = `
           }
         />
       </div>
-      <div
+      <h1
         className="alpha push--bottom"
       >
         Get started with Optimizely X
-      </div>
+      </h1>
       <div
         className="muted push--bottom anchor--middle"
         style={
