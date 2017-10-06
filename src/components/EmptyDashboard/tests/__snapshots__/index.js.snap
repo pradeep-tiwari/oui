@@ -29,7 +29,7 @@ exports[`components/EmptyDashboard should render 1`] = `
       >
         <object
           alt=""
-          className="display--inline"
+          className="svg--non-scaling-stroke display--inline"
           data="https://app.optimizely.com/static/img/p13n/campaign-list-empty-state.svg"
           style={
             Object {
