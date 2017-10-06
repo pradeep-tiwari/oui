@@ -26,7 +26,7 @@ const EmptyDashboard = ({
               style={{ width: '550px', margin: 'auto' }}>
               <object
                 data={ imagePath }
-                className="display--inline"
+                className="svg--non-scaling-stroke display--inline"
                 style={{ maxWidth: '450px', maxHeight: '290px' }}
                 data-test-section={ testSection && `${testSection}-image` }
                 alt=""
