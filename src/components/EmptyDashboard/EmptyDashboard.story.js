@@ -42,138 +42,138 @@ stories
           headline={ text('headline', 'Get started with Optimizely X') }
           description={ <div>This is a test description about <Link href='http://google.com'>X Feature</Link> with a Google.</div> } button={ (<Button style="highlight">{ text('buttonText', 'Highlight') }</Button>) }
           imagePath={ select('imagePath', {
-            'http://localhost:5000/campaign-list-empty-state.svg': 'Campaigns',
-            'http://localhost:5000/extensions-empty-state.svg': 'Extensions',
-            'http://localhost:5000/custom-project-experiments-empty-state.svg': 'SST',
-            'http://localhost:5000/empty-rollouts.svg': 'Rollouts',
-            'http://localhost:5000/empty-feature-flags.svg': 'Feature Flags',
-            'http://localhost:5000/audience-list-empty-state.svg': 'Audiences',
-            'http://localhost:5000/attribute-dashboard-empty-state.svg': 'Attribute',
-            'http://localhost:5000/page-list-empty-state.svg': 'Page List',
-          }, 'http://localhost:5000/campaign-list-empty-state.svg') }
+            'https://app.optimizely.com/static/img/p13n/campaign-list-empty-state.svg': 'Campaigns',
+            'https://app.optimizely.com/static/img/p13n/extensions-empty-state.svg': 'Extensions',
+            'https://app.optimizely.com/static/img/p13n/custom-project-experiments-empty-state.svg': 'SST',
+            'https://app.optimizely.com/static/img/p13n/empty-rollouts.svg': 'Rollouts',
+            'https://app.optimizely.com/static/img/p13n/empty-feature-flags.svg': 'Feature Flags',
+            'https://app.optimizely.com/static/img/p13n/audience-list-empty-state.svg': 'Audiences',
+            'https://app.optimizely.com/static/img/p13n/attribute-dashboard-empty-state.svg': 'Attribute',
+            'https://app.optimizely.com/static/img/p13n/page-list-empty-state.svg': 'Page List',
+          }, 'https://app.optimizely.com/static/img/p13n/campaign-list-empty-state.svg') }
         />
         <EmptyDashboard
           headline={ text('headline', 'Get started with Optimizely X') }
           description={ <div>This is a test description about <Link href='http://google.com'>X Feature</Link> with a Google.</div> } button={ (<Button style="highlight">{ text('buttonText', 'Highlight') }</Button>) }
           imagePath={ select('imagePath', {
-            'http://localhost:5000/campaign-list-empty-state.svg': 'Campaigns',
-            'http://localhost:5000/extensions-empty-state.svg': 'Extensions',
-            'http://localhost:5000/custom-project-experiments-empty-state.svg': 'SST',
-            'http://localhost:5000/empty-rollouts.svg': 'Rollouts',
-            'http://localhost:5000/empty-feature-flags.svg': 'Feature Flags',
-            'http://localhost:5000/audience-list-empty-state.svg': 'Audiences',
-            'http://localhost:5000/attribute-dashboard-empty-state.svg': 'Attribute',
-            'http://localhost:5000/page-list-empty-state.svg': 'Page List',
-          }, 'http://localhost:5000/extensions-empty-state.svg') }
+            'https://app.optimizely.com/static/img/p13n/campaign-list-empty-state.svg': 'Campaigns',
+            'https://app.optimizely.com/static/img/p13n/extensions-empty-state.svg': 'Extensions',
+            'https://app.optimizely.com/static/img/p13n/custom-project-experiments-empty-state.svg': 'SST',
+            'https://app.optimizely.com/static/img/p13n/empty-rollouts.svg': 'Rollouts',
+            'https://app.optimizely.com/static/img/p13n/empty-feature-flags.svg': 'Feature Flags',
+            'https://app.optimizely.com/static/img/p13n/audience-list-empty-state.svg': 'Audiences',
+            'https://app.optimizely.com/static/img/p13n/attribute-dashboard-empty-state.svg': 'Attribute',
+            'https://app.optimizely.com/static/img/p13n/page-list-empty-state.svg': 'Page List',
+          }, 'https://app.optimizely.com/static/img/p13n/extensions-empty-state.svg') }
         />
         <EmptyDashboard
           headline={ text('headline', 'Get started with Optimizely X') }
           description={ <div>This is a test description about <Link href='http://google.com'>X Feature</Link> with a Google.</div> } button={ (<Button style="highlight">{ text('buttonText', 'Highlight') }</Button>) }
           imagePath={ select('imagePath', {
-            'http://localhost:5000/campaign-list-empty-state.svg': 'Campaigns',
-            'http://localhost:5000/extensions-empty-state.svg': 'Extensions',
-            'http://localhost:5000/custom-project-experiments-empty-state.svg': 'SST',
-            'http://localhost:5000/empty-rollouts.svg': 'Rollouts',
-            'http://localhost:5000/empty-feature-flags.svg': 'Feature Flags',
-            'http://localhost:5000/audience-list-empty-state.svg': 'Audiences',
-            'http://localhost:5000/attribute-dashboard-empty-state.svg': 'Attribute',
-            'http://localhost:5000/page-list-empty-state.svg': 'Page List',
-          }, 'http://localhost:5000/custom-project-experiments-empty-state.svg') }
+            'https://app.optimizely.com/static/img/p13n/campaign-list-empty-state.svg': 'Campaigns',
+            'https://app.optimizely.com/static/img/p13n/extensions-empty-state.svg': 'Extensions',
+            'https://app.optimizely.com/static/img/p13n/custom-project-experiments-empty-state.svg': 'SST',
+            'https://app.optimizely.com/static/img/p13n/empty-rollouts.svg': 'Rollouts',
+            'https://app.optimizely.com/static/img/p13n/empty-feature-flags.svg': 'Feature Flags',
+            'https://app.optimizely.com/static/img/p13n/audience-list-empty-state.svg': 'Audiences',
+            'https://app.optimizely.com/static/img/p13n/attribute-dashboard-empty-state.svg': 'Attribute',
+            'https://app.optimizely.com/static/img/p13n/page-list-empty-state.svg': 'Page List',
+          }, 'https://app.optimizely.com/static/img/p13n/custom-project-experiments-empty-state.svg') }
         />
         <EmptyDashboard
           headline={ text('headline', 'Get started with Optimizely X') }
           description={ <div>This is a test description about <Link href='http://google.com'>X Feature</Link> with a Google.</div> } button={ (<Button style="highlight">{ text('buttonText', 'Highlight') }</Button>) }
           imagePath={ select('imagePath', {
-            'http://localhost:5000/campaign-list-empty-state.svg': 'Campaigns',
-            'http://localhost:5000/extensions-empty-state.svg': 'Extensions',
-            'http://localhost:5000/custom-project-experiments-empty-state.svg': 'SST',
-            'http://localhost:5000/empty-rollouts.svg': 'Rollouts',
-            'http://localhost:5000/empty-feature-flags.svg': 'Feature Flags',
-            'http://localhost:5000/audience-list-empty-state.svg': 'Audiences',
-            'http://localhost:5000/attribute-dashboard-empty-state.svg': 'Attribute',
-            'http://localhost:5000/page-list-empty-state.svg': 'Page List',
-          }, 'http://localhost:5000/empty-rollouts.svg') }
+            'https://app.optimizely.com/static/img/p13n/campaign-list-empty-state.svg': 'Campaigns',
+            'https://app.optimizely.com/static/img/p13n/extensions-empty-state.svg': 'Extensions',
+            'https://app.optimizely.com/static/img/p13n/custom-project-experiments-empty-state.svg': 'SST',
+            'https://app.optimizely.com/static/img/p13n/empty-rollouts.svg': 'Rollouts',
+            'https://app.optimizely.com/static/img/p13n/empty-feature-flags.svg': 'Feature Flags',
+            'https://app.optimizely.com/static/img/p13n/audience-list-empty-state.svg': 'Audiences',
+            'https://app.optimizely.com/static/img/p13n/attribute-dashboard-empty-state.svg': 'Attribute',
+            'https://app.optimizely.com/static/img/p13n/page-list-empty-state.svg': 'Page List',
+          }, 'https://app.optimizely.com/static/img/p13n/empty-rollouts.svg') }
         />
         <EmptyDashboard
           headline={ text('headline', 'Get started with Optimizely X') }
           description={ <div>This is a test description about <Link href='http://google.com'>X Feature</Link> with a Google.</div> } button={ (<Button style="highlight">{ text('buttonText', 'Highlight') }</Button>) }
           imagePath={ select('imagePath', {
-            'http://localhost:5000/campaign-list-empty-state.svg': 'Campaigns',
-            'http://localhost:5000/extensions-empty-state.svg': 'Extensions',
-            'http://localhost:5000/custom-project-experiments-empty-state.svg': 'SST',
-            'http://localhost:5000/empty-rollouts.svg': 'Rollouts',
-            'http://localhost:5000/empty-feature-flags.svg': 'Feature Flags',
-            'http://localhost:5000/audience-list-empty-state.svg': 'Audiences',
-            'http://localhost:5000/attribute-dashboard-empty-state.svg': 'Attribute',
-            'http://localhost:5000/page-list-empty-state.svg': 'Page List',
-          }, 'http://localhost:5000/empty-feature-flags.svg') }
+            'https://app.optimizely.com/static/img/p13n/campaign-list-empty-state.svg': 'Campaigns',
+            'https://app.optimizely.com/static/img/p13n/extensions-empty-state.svg': 'Extensions',
+            'https://app.optimizely.com/static/img/p13n/custom-project-experiments-empty-state.svg': 'SST',
+            'https://app.optimizely.com/static/img/p13n/empty-rollouts.svg': 'Rollouts',
+            'https://app.optimizely.com/static/img/p13n/empty-feature-flags.svg': 'Feature Flags',
+            'https://app.optimizely.com/static/img/p13n/audience-list-empty-state.svg': 'Audiences',
+            'https://app.optimizely.com/static/img/p13n/attribute-dashboard-empty-state.svg': 'Attribute',
+            'https://app.optimizely.com/static/img/p13n/page-list-empty-state.svg': 'Page List',
+          }, 'https://app.optimizely.com/static/img/p13n/empty-feature-flags.svg') }
         />
         <EmptyDashboard
           headline={ text('headline', 'Get started with Optimizely X') }
           description={ <div>This is a test description about <Link href='http://google.com'>X Feature</Link> with a Google.</div> } button={ (<Button style="highlight">{ text('buttonText', 'Highlight') }</Button>) }
           imagePath={ select('imagePath', {
-            'http://localhost:5000/campaign-list-empty-state.svg': 'Campaigns',
-            'http://localhost:5000/extensions-empty-state.svg': 'Extensions',
-            'http://localhost:5000/custom-project-experiments-empty-state.svg': 'SST',
-            'http://localhost:5000/empty-rollouts.svg': 'Rollouts',
-            'http://localhost:5000/empty-feature-flags.svg': 'Feature Flags',
-            'http://localhost:5000/audience-list-empty-state.svg': 'Audiences',
-            'http://localhost:5000/attribute-dashboard-empty-state.svg': 'Attribute',
-            'http://localhost:5000/page-list-empty-state.svg': 'Page List',
-          }, 'http://localhost:5000/audience-list-empty-state.svg') }
+            'https://app.optimizely.com/static/img/p13n/campaign-list-empty-state.svg': 'Campaigns',
+            'https://app.optimizely.com/static/img/p13n/extensions-empty-state.svg': 'Extensions',
+            'https://app.optimizely.com/static/img/p13n/custom-project-experiments-empty-state.svg': 'SST',
+            'https://app.optimizely.com/static/img/p13n/empty-rollouts.svg': 'Rollouts',
+            'https://app.optimizely.com/static/img/p13n/empty-feature-flags.svg': 'Feature Flags',
+            'https://app.optimizely.com/static/img/p13n/audience-list-empty-state.svg': 'Audiences',
+            'https://app.optimizely.com/static/img/p13n/attribute-dashboard-empty-state.svg': 'Attribute',
+            'https://app.optimizely.com/static/img/p13n/page-list-empty-state.svg': 'Page List',
+          }, 'https://app.optimizely.com/static/img/p13n/audience-list-empty-state.svg') }
         />
         <EmptyDashboard
           headline={ text('headline', 'Get started with Optimizely X') }
           description={ <div>This is a test description about <Link href='http://google.com'>X Feature</Link> with a Google.</div> } button={ (<Button style="highlight">{ text('buttonText', 'Highlight') }</Button>) }
           imagePath={ select('imagePath', {
-            'http://localhost:5000/campaign-list-empty-state.svg': 'Campaigns',
-            'http://localhost:5000/extensions-empty-state.svg': 'Extensions',
-            'http://localhost:5000/custom-project-experiments-empty-state.svg': 'SST',
-            'http://localhost:5000/empty-rollouts.svg': 'Rollouts',
-            'http://localhost:5000/empty-feature-flags.svg': 'Feature Flags',
-            'http://localhost:5000/audience-list-empty-state.svg': 'Audiences',
-            'http://localhost:5000/attribute-dashboard-empty-state.svg': 'Attribute',
-            'http://localhost:5000/page-list-empty-state.svg': 'Page List',
-          }, 'http://localhost:5000/attribute-dashboard-empty-state.svg') }
+            'https://app.optimizely.com/static/img/p13n/campaign-list-empty-state.svg': 'Campaigns',
+            'https://app.optimizely.com/static/img/p13n/extensions-empty-state.svg': 'Extensions',
+            'https://app.optimizely.com/static/img/p13n/custom-project-experiments-empty-state.svg': 'SST',
+            'https://app.optimizely.com/static/img/p13n/empty-rollouts.svg': 'Rollouts',
+            'https://app.optimizely.com/static/img/p13n/empty-feature-flags.svg': 'Feature Flags',
+            'https://app.optimizely.com/static/img/p13n/audience-list-empty-state.svg': 'Audiences',
+            'https://app.optimizely.com/static/img/p13n/attribute-dashboard-empty-state.svg': 'Attribute',
+            'https://app.optimizely.com/static/img/p13n/page-list-empty-state.svg': 'Page List',
+          }, 'https://app.optimizely.com/static/img/p13n/attribute-dashboard-empty-state.svg') }
         />
         <EmptyDashboard
           headline={ text('headline', 'Get started with Optimizely X') }
           description={ <div>This is a test description about <Link href='http://google.com'>X Feature</Link> with a Google.</div> } button={ (<Button style="highlight">{ text('buttonText', 'Highlight') }</Button>) }
           imagePath={ select('imagePath', {
-            'http://localhost:5000/campaign-list-empty-state.svg': 'Campaigns',
-            'http://localhost:5000/extensions-empty-state.svg': 'Extensions',
-            'http://localhost:5000/custom-project-experiments-empty-state.svg': 'SST',
-            'http://localhost:5000/empty-rollouts.svg': 'Rollouts',
-            'http://localhost:5000/empty-feature-flags.svg': 'Feature Flags',
-            'http://localhost:5000/audience-list-empty-state.svg': 'Audiences',
-            'http://localhost:5000/attribute-dashboard-empty-state.svg': 'Attribute',
-            'http://localhost:5000/page-list-empty-state.svg': 'Page List',
-          }, 'http://localhost:5000/page-list-empty-state.svg') }
+            'https://app.optimizely.com/static/img/p13n/campaign-list-empty-state.svg': 'Campaigns',
+            'https://app.optimizely.com/static/img/p13n/extensions-empty-state.svg': 'Extensions',
+            'https://app.optimizely.com/static/img/p13n/custom-project-experiments-empty-state.svg': 'SST',
+            'https://app.optimizely.com/static/img/p13n/empty-rollouts.svg': 'Rollouts',
+            'https://app.optimizely.com/static/img/p13n/empty-feature-flags.svg': 'Feature Flags',
+            'https://app.optimizely.com/static/img/p13n/audience-list-empty-state.svg': 'Audiences',
+            'https://app.optimizely.com/static/img/p13n/attribute-dashboard-empty-state.svg': 'Attribute',
+            'https://app.optimizely.com/static/img/p13n/page-list-empty-state.svg': 'Page List',
+          }, 'https://app.optimizely.com/static/img/p13n/page-list-empty-state.svg') }
         />
         <EmptyDashboard
           headline={ text('headline', 'Get started with Optimizely X') }
           description={ <div>This is a test description about <Link href='http://google.com'>X Feature</Link> with a Google.</div> } button={ (<Button style="highlight">{ text('buttonText', 'Highlight') }</Button>) }
-          imagePath='http://localhost:5000/change-history-empty-state.svg'
+          imagePath='https://app.optimizely.com/static/img/p13n/change-history-empty-state.svg'
         />
         <EmptyDashboard
           headline={ text('headline', 'Get started with Optimizely X') }
           description={ <div>This is a test description about <Link href='http://google.com'>X Feature</Link> with a Google.</div> } button={ (<Button style="highlight">{ text('buttonText', 'Highlight') }</Button>) }
-          imagePath='http://localhost:5000/campaign-manager-empty.svg'
+          imagePath='https://app.optimizely.com/static/img/p13n/campaign-manager-empty.svg'
         />
         <EmptyDashboard
           headline={ text('headline', 'Get started with Optimizely X') }
           description={ <div>This is a test description about <Link href='http://google.com'>X Feature</Link> with a Google.</div> } button={ (<Button style="highlight">{ text('buttonText', 'Highlight') }</Button>) }
-          imagePath='http://localhost:5000/custom-snippets-empty-state.svg'
+          imagePath='https://app.optimizely.com/static/img/p13n/custom-snippets-empty-state.svg'
         />
         <EmptyDashboard
           headline={ text('headline', 'Get started with Optimizely X') }
           description={ <div>This is a test description about <Link href='http://google.com'>X Feature</Link> with a Google.</div> } button={ (<Button style="highlight">{ text('buttonText', 'Highlight') }</Button>) }
-          imagePath='http://localhost:5000/fullstack-variables-empty-state.svg'
+          imagePath='https://app.optimizely.com/static/img/p13n/fullstack-variables-empty-state.svg'
         />
         <EmptyDashboard
           headline={ text('headline', 'Get started with Optimizely X') }
           description={ <div>This is a test description about <Link href='http://google.com'>X Feature</Link> with a Google.</div> } button={ (<Button style="highlight">{ text('buttonText', 'Highlight') }</Button>) }
-          imagePath='http://localhost:5000/integrations-empty.svg'
+          imagePath='https://app.optimizely.com/static/img/p13n/integrations-empty.svg'
         />
       </div>
     );
