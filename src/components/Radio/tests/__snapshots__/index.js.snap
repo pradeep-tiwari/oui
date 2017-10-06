@@ -1,13 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/Radio label should render text 1`] = `
-<Label>
+<Label
+  data-test-section="null-label"
+>
   <div
     className="flex"
   >
     <input
       className="flex--none"
       data-oui-component={true}
+      data-test-section={null}
       name="goose"
       style={
         Object {
@@ -26,13 +29,16 @@ exports[`components/Radio label should render text 1`] = `
 `;
 
 exports[`components/Radio should add disabled attribute to radio input when disabled 1`] = `
-<Label>
+<Label
+  data-test-section="null-label"
+>
   <div
     className="flex"
   >
     <input
       className="flex--none"
       data-oui-component={true}
+      data-test-section={null}
       disabled={true}
       name="goose"
       style={
@@ -50,13 +56,16 @@ exports[`components/Radio should add disabled attribute to radio input when disa
 `;
 
 exports[`components/Radio should add disabled class to label text when disabled 1`] = `
-<Label>
+<Label
+  data-test-section="null-label"
+>
   <div
     className="flex"
   >
     <input
       className="flex--none"
       data-oui-component={true}
+      data-test-section={null}
       disabled={true}
       name="goose"
       style={
@@ -74,13 +83,16 @@ exports[`components/Radio should add disabled class to label text when disabled 
 `;
 
 exports[`components/Radio should be wrapped in a label 1`] = `
-<Label>
+<Label
+  data-test-section="null-label"
+>
   <div
     className="flex"
   >
     <input
       className="flex--none"
       data-oui-component={true}
+      data-test-section={null}
       name="goose"
       style={
         Object {
@@ -97,13 +109,16 @@ exports[`components/Radio should be wrapped in a label 1`] = `
 `;
 
 exports[`components/Radio should not add disabled attribute to radio input when not disabled 1`] = `
-<Label>
+<Label
+  data-test-section="null-label"
+>
   <div
     className="flex"
   >
     <input
       className="flex--none"
       data-oui-component={true}
+      data-test-section={null}
       disabled={false}
       name="goose"
       style={
@@ -121,13 +136,16 @@ exports[`components/Radio should not add disabled attribute to radio input when 
 `;
 
 exports[`components/Radio should not add disabled class to label text when not disabled 1`] = `
-<Label>
+<Label
+  data-test-section="null-label"
+>
   <div
     className="flex"
   >
     <input
       className="flex--none"
       data-oui-component={true}
+      data-test-section={null}
       disabled={false}
       name="goose"
       style={
@@ -145,7 +163,9 @@ exports[`components/Radio should not add disabled class to label text when not d
 `;
 
 exports[`components/Radio should render a checked radio input when \`checked\` is true 1`] = `
-<Label>
+<Label
+  data-test-section="null-label"
+>
   <div
     className="flex"
   >
@@ -153,6 +173,7 @@ exports[`components/Radio should render a checked radio input when \`checked\` i
       checked={true}
       className="flex--none"
       data-oui-component={true}
+      data-test-section={null}
       name="goose"
       onChange={[Function]}
       style={
@@ -170,13 +191,16 @@ exports[`components/Radio should render a checked radio input when \`checked\` i
 `;
 
 exports[`components/Radio should render a checked radio input when \`defaultChecked\` is true 1`] = `
-<Label>
+<Label
+  data-test-section="null-label"
+>
   <div
     className="flex"
   >
     <input
       className="flex--none"
       data-oui-component={true}
+      data-test-section={null}
       defaultChecked={true}
       name="goose"
       style={
@@ -194,13 +218,16 @@ exports[`components/Radio should render a checked radio input when \`defaultChec
 `;
 
 exports[`components/Radio should render an input of type radio 1`] = `
-<Label>
+<Label
+  data-test-section="null-label"
+>
   <div
     className="flex"
   >
     <input
       className="flex--none"
       data-oui-component={true}
+      data-test-section={null}
       name="goose"
       style={
         Object {
@@ -217,7 +244,9 @@ exports[`components/Radio should render an input of type radio 1`] = `
 `;
 
 exports[`components/Radio should render an unchecked radio input when \`checked\` is false 1`] = `
-<Label>
+<Label
+  data-test-section="null-label"
+>
   <div
     className="flex"
   >
@@ -225,6 +254,7 @@ exports[`components/Radio should render an unchecked radio input when \`checked\
       checked={false}
       className="flex--none"
       data-oui-component={true}
+      data-test-section={null}
       name="goose"
       onChange={[Function]}
       style={
@@ -242,13 +272,16 @@ exports[`components/Radio should render an unchecked radio input when \`checked\
 `;
 
 exports[`components/Radio should render an unchecked radio input when \`defaultChecked\` is false 1`] = `
-<Label>
+<Label
+  data-test-section="null-label"
+>
   <div
     className="flex"
   >
     <input
       className="flex--none"
       data-oui-component={true}
+      data-test-section={null}
       defaultChecked={false}
       name="goose"
       style={
@@ -266,13 +299,16 @@ exports[`components/Radio should render an unchecked radio input when \`defaultC
 `;
 
 exports[`components/Radio should render input with name when provided 1`] = `
-<Label>
+<Label
+  data-test-section="null-label"
+>
   <div
     className="flex"
   >
     <input
       className="flex--none"
       data-oui-component={true}
+      data-test-section={null}
       name="goose"
       style={
         Object {

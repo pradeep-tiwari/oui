@@ -83,4 +83,11 @@ describe('components/Radio', () => {
     const component = shallow(<Radio name="goose" isDisabled={ false } />);
     expect(shallowToJson(component)).toMatchSnapshot();
   });
+
+  it('should ====OJO====', () => {
+    const radioChange = jest.fn();
+    const radio = mount(<Radio onChange={ radioChange } name="goose" />);
+    radio.find('input').simulate('change');
+    expect(radioChange).toHaveBeenCalled();
+  });
 });
