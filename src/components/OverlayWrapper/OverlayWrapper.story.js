@@ -67,4 +67,19 @@ stories
         </Button>
       </OverlayWrapper>
     );
+  }))
+  .add('open on hover', withInfo()(() => {
+    return (
+      <OverlayWrapper
+        behavior="hover"
+        horizontalAttachment={ select('horizontalAttachment', alignOpts, 'center') }
+        overlay={ <Popover title="Lorem ipsum dolor sit amet">
+          <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
+        </Popover> }
+        verticalAttachment={ select('verticalAttachment', verticalAlignOpts, 'top') } >
+        <Button width="default">
+          Open Popover
+        </Button>
+      </OverlayWrapper>
+    );
   }));

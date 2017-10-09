@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/OverlayWrapper should render a Popover component inside 1`] = `
+<OverlayWrapper
+  behavior="click"
+  horizontalAttachment="left"
+  horizontalTargetAttachment="left"
+  isConstrainedToScreen={false}
+  overlay={
+    <Popover
+      title="Lorem ipsum dolor sit amet"
+    >
+      <p>
+        Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!
+      </p>
+    </Popover>
+  }
+  shouldHideOnClick={true}
+  verticalAttachment="top"
+  verticalTargetAttachment="bottom"
+>
+  <div
+    data-oui-component={true}
+    style={
+      Object {
+        "display": "inline-block",
+      }
+    }
+  >
+    <div
+      className="click-area"
+      onClick={[Function]}
+      style={
+        Object {
+          "display": "inline-block",
+        }
+      }
+    >
+      <button>
+        Open Popover
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+    >
+      <Popover
+        title="Lorem ipsum dolor sit amet"
+      >
+        <div
+          className="oui-pop--over"
+          data-oui-component={true}
+          style={
+            Object {
+              "display": "block",
+              "opacity": 1,
+              "position": "initial",
+            }
+          }
+        >
+          <div
+            className="oui-pop--over__content"
+          >
+            <div
+              className="oui-pop--over__title"
+            >
+              Lorem ipsum dolor sit amet
+            </div>
+            <p>
+              Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!
+            </p>
+          </div>
+        </div>
+      </Popover>
+    </div>
+  </div>
+</OverlayWrapper>
+`;
