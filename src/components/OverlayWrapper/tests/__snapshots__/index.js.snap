@@ -3,21 +3,11 @@
 exports[`components/OverlayWrapper should render a Popover component inside 1`] = `
 <OverlayWrapper
   behavior="click"
-  horizontalAttachment="left"
-  horizontalTargetAttachment="left"
+  horizontalAttachment="center"
   isConstrainedToScreen={false}
-  overlay={
-    <Popover
-      title="Lorem ipsum dolor sit amet"
-    >
-      <p>
-        Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!
-      </p>
-    </Popover>
-  }
+  overlay={<TestPopover />}
   shouldHideOnClick={true}
   verticalAttachment="top"
-  verticalTargetAttachment="bottom"
 >
   <div
     data-oui-component={true}
@@ -36,9 +26,13 @@ exports[`components/OverlayWrapper should render a Popover component inside 1`] 
         }
       }
     >
-      <button>
-        Open Popover
-      </button>
+      <TestButton
+        text="button"
+      >
+        <button>
+          button
+        </button>
+      </TestButton>
     </div>
     <div
       style={
@@ -47,34 +41,36 @@ exports[`components/OverlayWrapper should render a Popover component inside 1`] 
         }
       }
     >
-      <Popover
-        title="Lorem ipsum dolor sit amet"
-      >
-        <div
-          className="oui-pop--over"
-          data-oui-component={true}
-          style={
-            Object {
-              "display": "block",
-              "opacity": 1,
-              "position": "initial",
-            }
-          }
+      <TestPopover>
+        <Popover
+          title="Lorem ipsum dolor sit amet"
         >
           <div
-            className="oui-pop--over__content"
+            className="oui-pop--over"
+            data-oui-component={true}
+            style={
+              Object {
+                "display": "block",
+                "opacity": 1,
+                "position": "initial",
+              }
+            }
           >
             <div
-              className="oui-pop--over__title"
+              className="oui-pop--over__content"
             >
-              Lorem ipsum dolor sit amet
+              <div
+                className="oui-pop--over__title"
+              >
+                Lorem ipsum dolor sit amet
+              </div>
+              <p>
+                Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!
+              </p>
             </div>
-            <p>
-              Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!
-            </p>
           </div>
-        </div>
-      </Popover>
+        </Popover>
+      </TestPopover>
     </div>
   </div>
 </OverlayWrapper>
