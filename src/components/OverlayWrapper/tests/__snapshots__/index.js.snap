@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/OverlayWrapper should render a Popover component inside 1`] = `
+exports[`components/OverlayWrapper snapshots & others should render a Popover component inside 1`] = `
 <OverlayWrapper
   behavior="click"
   horizontalAttachment="center"
