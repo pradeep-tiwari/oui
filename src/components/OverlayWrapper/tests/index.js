@@ -25,7 +25,7 @@ describe('components/OverlayWrapper when componentDidMount', () => {
   it('should call function to disable Tether', () => {
     const component = mount(
       <OverlayWrapper
-        overlay={ <Popover /> }>
+        overlay={ <TestPopover /> }>
         <TestButton text='just a button' />
       </OverlayWrapper>
     );
@@ -372,7 +372,7 @@ describe('#onChildClick', () => {
 
 describe('#onEscapeKey', () => {
   it('should call function to disable Tether when escape key is pressed', () => {
-    const component = shallow(
+    const component = mount(
       <OverlayWrapper
         overlay={ <TestPopover /> }>
         <TestButton text='button' />
@@ -387,7 +387,6 @@ describe('#onEscapeKey', () => {
 
     expect(instance.disableTether.calls.count()).toBe(1);
   });
-  
 });
 
 describe('components/OverlayWrapper snapshots & others', () => {

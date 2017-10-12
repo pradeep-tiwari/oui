@@ -20,6 +20,10 @@ const verticalAlignOpts = {
   'bottom': 'bottom',
 };
 
+const ClosePopoverButton = (props, context) => {
+  return <Button onClick={ context.hideOverlay }>Close Popopver</Button>;
+};
+
 const stories = storiesOf('OverlayWrapper', module);
 stories
   .addDecorator(withKnobs)
@@ -57,7 +61,7 @@ stories
         isConstrainedToScreen={ true }
         overlay={ <Popover title="Lorem ipsum dolor sit amet">
           <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
-          <Button>Close Popopver</Button>
+          <ClosePopoverButton />
         </Popover> }
         shouldHideOnClick={ true }
         verticalAttachment="middle"
@@ -76,6 +80,20 @@ stories
         overlay={ <Popover title="Lorem ipsum dolor sit amet">
           <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
         </Popover> }
+        verticalAttachment={ select('verticalAttachment', verticalAlignOpts, 'top') } >
+        <Button width="default">
+          Open Popover
+        </Button>
+      </OverlayWrapper>
+    );
+  }))
+
+  .add('trying diff components', withInfo()(() => {
+    return (
+      <OverlayWrapper
+        behavior="hover"
+        horizontalAttachment={ select('horizontalAttachment', alignOpts, 'center') }
+        overlay={ <div>this is a box to try</div> }
         verticalAttachment={ select('verticalAttachment', verticalAlignOpts, 'top') } >
         <Button width="default">
           Open Popover
