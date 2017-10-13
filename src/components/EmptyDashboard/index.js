@@ -8,7 +8,7 @@ const EmptyDashboard = ({
   description,
   descriptionMaxWidth,
   testSection,
-} = this.props) => {
+}) => {
   return (
     <div
       className='flex overflow-y--scroll flex--1'
