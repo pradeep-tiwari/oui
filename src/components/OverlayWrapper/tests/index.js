@@ -44,18 +44,6 @@ describe('components/OverlayWrapper when componentDidMount', () => {
     expect(instance.disableTether.calls.count()).toBe(initialCallCount + 1);
   });
 
-  it('should pass the correct options when none of the layout props are provided', () => {
-    const tetherOptions = OverlayWrapper.prototype.createTether.calls.mostRecent().args[0];
-
-    expect(tetherOptions.attachment).toBe('top center');
-    expect(tetherOptions.constraints.length).toBe(1);
-    expect(tetherOptions.constraints[0]).toEqual({
-      attachment: 'together',
-      to: 'window',
-      pin: false,
-    });
-  });
-
   it('should pass the correct options when all the layout props are provided', () => {
     const component = mount(
       <OverlayWrapper
