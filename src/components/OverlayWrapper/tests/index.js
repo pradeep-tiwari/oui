@@ -1,16 +1,21 @@
 import React from 'react';
 import OverlayWrapper from '../index';
 import Popover from '../../Popover';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
+import PropTypes from 'prop-types';
 
-const TestButton = (props) => <button onClick={ props.handleClick }>{ props.text }</button>;
+const TestButton = (props) => <button>{ props.text }</button>;
 const TestPopover = (props) => {
   return (
     <Popover title="Lorem ipsum dolor sit amet">
       <p>Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!</p>
     </Popover>
   );
+};
+
+TestButton.propTypes = {
+  text: PropTypes.string,
 };
 
 describe('components/OverlayWrapper when componentDidMount', () => {
@@ -40,13 +45,6 @@ describe('components/OverlayWrapper when componentDidMount', () => {
   });
 
   it('should pass the correct options when none of the layout props are provided', () => {
-    const component = mount(
-      <OverlayWrapper
-        overlay={ <TestPopover /> }>
-        <TestButton text='button' />
-      </OverlayWrapper>
-    );
-
     const tetherOptions = OverlayWrapper.prototype.createTether.calls.mostRecent().args[0];
 
     expect(tetherOptions.attachment).toBe('top center');

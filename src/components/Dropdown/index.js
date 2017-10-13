@@ -71,7 +71,6 @@ class Dropdown extends React.Component {
     return (
       <div
         data-ui-component={ true }
-        ref='dropdown'
         className='oui-dropdown-group'
         data-test-section={ testSection }>
         <button
