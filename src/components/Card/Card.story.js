@@ -18,7 +18,7 @@ stories
     .addDecorator(withKnobs)
     .addDecorator(story => (
         <div id="root-preview">
-            {story()}
+            { story() }
         </div>
     ));
 
@@ -29,7 +29,7 @@ stories
                 title="Hello World"
                 testSection="card"
                 type={ select('type', typeOptions, 'warning') } >
-                {text('content', 'Hello! This is a short card example.')}
+                { text('content', 'Hello! This is a short card example.') }
             </Card>
         );
     }));

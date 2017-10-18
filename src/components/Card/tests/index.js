@@ -4,52 +4,49 @@ import { shallow, mount } from 'enzyme';
 
 describe('components/Card', () => {
 
+    const title = 'Hello world card';
+    const body = '<span>Basic content inside this card</span>';
+    const test = 'foo';
+
     it('should render the title passed in', () => {
-        const message = 'Hello! This is a short attention bar.';
-
         const component = shallow(
-            <Card title="Hello World">
-                { message }
+            <Card title={ title } testSection={ test }>
+                { body }
             </Card>
         );
 
-        expect(component.text()).toBe(message);
+        expect(component.find('[data-test-section="foo-title"]').text()).toBe(title);
+
     });
 
-    it('should render text passed in as children', () => {
-        const message = 'Hello! This is a short attention bar.';
-
+    it('should render element passed in as children', () => {
         const component = shallow(
-            <Card title="Hello World">
-                { message }
+            <Card title={ title } testSection={ test }>
+                { body }
             </Card>
         );
 
-        expect(component.text()).toBe(message);
-    });
-
-    it('should render dismiss button when prop is provided', () => {
-        const component = mount(
-            <Card
-                title="Hello World"
-                onClose={ () => { console.log('hello world')} }
-                testSection="foo">
-                'Hello! This is a short attention bar.'
-            </Card>
-        );
-
-        expect(component.find('[data-test-section="foo"]').length).toBe(1);
+        expect(component.find('[data-test-section="foo-body"]').text()).toBe(body);
     });
 
     it('should not render dismiss button by default', () => {
         const component = mount(
-            <Card title="Hello World"
-                testSection="foo">
+            <Card title={ title } testSection={ test }>
                 'Hello! This is a short attention bar.'
             </Card>
         );
 
-        expect(component.find('[data-test-section="foo"]').length).toBe(0);
+        expect(component.find('[data-test-section="foo-close"]').length).toBe(0);
+    });
+
+    it('should render dismiss button when prop is provided', () => {
+        const component = mount(
+            <Card title={ title } testSection={ test } onClose={ () => { console.log('hello world close clicked')} }>
+                { body }
+            </Card>
+        );
+
+        expect(component.find('[data-test-section="foo-close"]').length).toBe(1);
     });
 
 });

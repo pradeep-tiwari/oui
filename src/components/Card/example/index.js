@@ -2,6 +2,7 @@
 import React from 'react';
 import Card from '../index';
 
+const someMethod = () => console.log("clicked close");
 export default [
     {
         examples: [
@@ -12,7 +13,7 @@ export default [
             </Card>,
         ],
         examples: [
-            <Card title="this is a title" onClose={() => console.log("clicked close")} testSection="data-track-card-close">
+            <Card title="this is a title" onClose={someMethod} testSection="data-track-card-close">
                 <div>
                     Hello World with closer element
                 </div>

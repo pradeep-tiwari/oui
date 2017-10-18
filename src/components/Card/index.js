@@ -18,15 +18,21 @@ const Card = (props) => {
         children,
     } = props;
 
+    const closer = (
+        <Button style="unstyled" onClick={ onClose } data-test-section={ `${testSection}-close` }>
+            <Icon name='close'/>
+        </Button>
+    );
+
     return (
         <div className="push--bottom">
             <div className="flex background--faint soft-half border--all">
-                <div className="width--3-4 epsilon line--loose">{ title }</div>
+                <div className="width--3-4 epsilon line--loose" data-test-section={ `${testSection}-title` }>{ title }</div>
                 <div className="width--1-4 text--right push--right push-half--top">
-                    { onClose && <Button style="unstyled" onClick={ onClose } data-test-section={ testSection }><Icon name='close'/></Button> }
+                    { onClose && closer }
                 </div>
             </div>
-            <div className="soft-half--sides border--sides border--bottom soft--ends">
+            <div className="soft-half--sides border--sides border--bottom soft--ends" data-test-section={ `${testSection}-body` }>
                 { children }
             </div>
         </div>
