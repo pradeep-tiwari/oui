@@ -2,22 +2,24 @@
 import React from 'react';
 import Card from '../index';
 
-const someMethod = () => console.log("clicked close");
+const someMethod = () => { return true; };
 export default [
-    {
-        examples: [
-            <Card title="this is a title">
-                <div>
-                    Hello World
-                </div>
-            </Card>,
-        ],
-        examples: [
-            <Card title="this is a title" onClose={someMethod} testSection="data-track-card-close">
-                <div>
-                    Hello World with closer element
-                </div>
-            </Card>,
-        ],
-    },
+  {
+    examples: [
+      <Card title="this is a title">
+        <div>
+          Hello World
+        </div>
+      </Card>,
+    ],
+  },
+  {
+    examples: [
+      <Card title="this is a title" onClose={ someMethod } testSection="data-track-card-close">
+        <div>
+          Hello World with closer element
+        </div>
+      </Card>,
+    ],
+  },
 ];
