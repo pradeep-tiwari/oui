@@ -26,13 +26,13 @@ const Card = (props) => {
 
     return (
         <div className="push--bottom">
-            <div className="flex background--faint soft-half border--all">
+            <div className="flex background--faint soft border--all soft-half--ends">
                 <div className="width--3-4 epsilon line--loose" data-test-section={ `${testSection}-title` }>{ title }</div>
                 <div className="width--1-4 text--right push--right push-half--top">
                     { onClose && closer }
                 </div>
             </div>
-            <div className="soft-half--sides border--sides border--bottom soft--ends" data-test-section={ `${testSection}-body` }>
+            <div className="soft border--sides border--bottom" data-test-section={ `${testSection}-body` }>
                 { children }
             </div>
         </div>
