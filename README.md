@@ -113,7 +113,7 @@ import Button from 'optimizely-oui';
 | Table | :white_check_mark:    | Tabel/TBody | :white_check_mark:    | Tabel/TD | :white_check_mark:    |   
 | Tabel/THead | :white_check_mark:    | Tabel/TR | :white_check_mark:    | TabNav | :white_check_mark:    |   
 | TabNav/Tab | :white_check_mark:    | Textarea | :white_check_mark:    | Token | :white_check_mark:    |
-| TextField | :white_check_mark:     |          |                       |       |                       | 
+| TextField | :white_check_mark:     | Card         | :white_check_mark:    |       |                       |
 
 ***
 
