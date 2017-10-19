@@ -26,7 +26,9 @@ const Card = ({
   );
 
   return (
-    <div className="push--bottom">
+    <div
+      data-oui-component={ true }
+      className="push--bottom">
       <div className="flex background--faint soft border--all soft-half--ends">
         <div className="width--3-4 epsilon line--loose" data-test-section={ `${testSection}-title` }>
           { title }
