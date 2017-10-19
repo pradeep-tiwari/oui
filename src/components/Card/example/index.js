@@ -6,19 +6,22 @@ const someMethod = () => { return true; };
 export default [
   {
     examples: [
-      <Card title="this is a title">
-        <div>
-          Hello World
-        </div>
+      <Card title="Title">
+        Hello World
       </Card>,
     ],
   },
   {
     examples: [
-      <Card title="this is a title" onClose={ someMethod } testSection="data-track-card-close">
-        <div>
-          Hello World with closer element
-        </div>
+      <Card title="Title" onClose={ someMethod } testSection="data-track-card-close">
+        Hello World with closer element
+      </Card>,
+    ],
+  },
+  {
+    examples: [
+      <Card testSection="foo">
+        Blank card
       </Card>,
     ],
   },

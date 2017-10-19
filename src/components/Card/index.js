@@ -28,16 +28,18 @@ const Card = ({
   return (
     <div
       data-oui-component={ true }
-      className="push--bottom">
-      <div className="flex background--faint soft border--all soft-half--ends">
-        <div className="width--3-4 epsilon line--loose" data-test-section={ `${testSection}-title` }>
-          { title }
+      className="push--bottom border--all">
+      { title && (
+        <div className="flex border--bottom background--faint soft soft-half--ends">
+          <h4 className="flex--1" data-test-section={ `${testSection}-title` }>
+            { title }
+          </h4>
+          <div className="">
+            { onClose && closer }
+          </div>
         </div>
-        <div className="width--1-4 text--right push--right push-half--top">
-          { onClose && closer }
-        </div>
-      </div>
-      <div className="soft border--sides border--bottom" data-test-section={ `${testSection}-body` }>
+      ) }
+      <div className="soft" data-test-section={ `${testSection}-body` }>
         { children }
       </div>
     </div>
