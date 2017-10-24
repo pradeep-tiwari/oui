@@ -26,7 +26,7 @@ const Card = ({
       <Icon name='close'/>
     </Button>
   );
-  const shadowClassName = `oui-shadow--light`;
+  const shadowClassName = 'oui-shadow--light';
   const classes = classNames({
     'push--bottom border--all': true,
     [`${shadowClassName}`]: shadow,
@@ -58,6 +58,8 @@ Card.propTypes = {
   children: PropTypes.string.isRequired,
   /** method to invoke when a close element is clicked */
   onClose: PropTypes.func,
+  /** Display a subtle shadow around card. */
+  shadow: PropTypes.boolean,
   /** For automated testing only. */
   testSection: PropTypes.string,
   /** What is the card title */
