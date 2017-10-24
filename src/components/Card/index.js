@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 import Button from '../Button';
 import Icon from 'react-oui-icons';
@@ -18,17 +19,23 @@ const Card = ({
   onClose,
   testSection,
   children,
+  shadow = false,
 }) => {
   const closer = (
     <Button style="unstyled" onClick={ onClose } data-test-section={ `${testSection}-close` }>
       <Icon name='close'/>
     </Button>
   );
+  const shadowClassName = `oui-shadow--light`;
+  const classes = classNames({
+    'push--bottom border--all': true,
+    [`${shadowClassName}`]: shadow,
+  });
 
   return (
     <div
       data-oui-component={ true }
-      className="push--bottom border--all">
+      className={ classes }>
       { title && (
         <div className="flex border--bottom background--faint soft soft-half--ends">
           <h4 className="flex--1" data-test-section={ `${testSection}-title` }>

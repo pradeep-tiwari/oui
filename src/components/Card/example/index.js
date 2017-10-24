@@ -20,8 +20,15 @@ export default [
   },
   {
     examples: [
-      <Card testSection="foo">
+      <Card>
         Blank card
+      </Card>,
+    ],
+  },
+  {
+    examples: [
+      <Card shadow={ true }>
+        Shadow
       </Card>,
     ],
   },
