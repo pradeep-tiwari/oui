@@ -7,7 +7,6 @@ import { withInfo } from '@storybook/addon-info';
 import ButtonRow from '../ButtonRow';
 import Button from './index.js';
 import ArrowsInline from '../ArrowsInline';
-import Icon from 'react-oui-icons';
 
 const stories = storiesOf('Button', module);
 stories
@@ -51,10 +50,7 @@ stories
     return (
       <ButtonRow
         centerGroup={ [
-          <Button key="1" isActive={ boolean('isActive', false) } width="default"><Icon name="close"/>Button</Button>,
-          <Button key="1" isActive={ boolean('isActive', false) } width="default">
-            <Icon className="oui-icon display--inline" name="close"/>Button
-          </Button>,
+          <Button key="1" isActive={ boolean('isActive', false) } width="default">Button</Button>,
           <Button key="2" isActive={ boolean('isActive', false) } style="highlight" width="default">Highlight</Button>,
           <Button key="3" isActive={ boolean('isActive', false) } style="danger" width="default">Danger</Button>,
           <Button key="4" isActive={ boolean('isActive', false) } style="danger-outline" width="default">Danger Outline</Button>,
@@ -68,10 +64,7 @@ stories
     return (
       <ButtonRow
         centerGroup={ [
-          <Button key="1" isDisabled={ true } width="default"><Icon name="close"/>Button</Button>,
-          <Button key="1" isDisabled={ true } width="default">
-            <Icon className="oui-icon display--inline" name="close"/>Button
-          </Button>,
+          <Button key="1" isDisabled={ true } width="default">Button</Button>,
           <Button key="2" isDisabled={ true } style="highlight" width="default">Highlight</Button>,
           <Button key="3" isDisabled={ true } style="danger" width="default">Danger</Button>,
           <Button key="4" isDisabled={ true } style="danger-outline" width="default">Danger Outline</Button>,
