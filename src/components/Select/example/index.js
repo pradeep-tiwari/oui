@@ -1,8 +1,6 @@
 /* eslint-disable react/jsx-key */
 import React from 'react';
-import Poptip from '../index';
-import Button from '../../Button';
-import HelpIcon from '../../Icon/HelpIcon';
+import Select from '../index';
 
 export default [
   {
@@ -10,7 +8,7 @@ export default [
       <Select name='zoo' id='zoo'>
         <option value="one">This is option one</option>
         <option value="two">And this is option two</option>
-      </Select>
+      </Select>,
     ],
   },
 ];
