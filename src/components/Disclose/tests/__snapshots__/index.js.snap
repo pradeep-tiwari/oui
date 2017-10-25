@@ -21,7 +21,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <a
-          className="lego-disclose__link link--dark soft-half border--bottom flush"
+          className="lego-disclose__link link--dark soft-half flush"
           onClick={[Function]}
         >
           <div
@@ -38,6 +38,9 @@ ShallowWrapper {
         />,
       ],
       "className": "lego-disclose",
+      "style": Object {
+        "marginTop": "-1px",
+      },
     },
     "ref": null,
     "rendered": Array [
@@ -54,7 +57,7 @@ ShallowWrapper {
             />
             Title of Disclosure
           </div>,
-          "className": "lego-disclose__link link--dark soft-half border--bottom flush",
+          "className": "lego-disclose__link link--dark soft-half flush",
           "onClick": [Function],
         },
         "ref": null,
@@ -113,7 +116,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <a
-            className="lego-disclose__link link--dark soft-half border--bottom flush"
+            className="lego-disclose__link link--dark soft-half flush"
             onClick={[Function]}
           >
             <div
@@ -130,6 +133,9 @@ ShallowWrapper {
           />,
         ],
         "className": "lego-disclose",
+        "style": Object {
+          "marginTop": "-1px",
+        },
       },
       "ref": null,
       "rendered": Array [
@@ -146,7 +152,7 @@ ShallowWrapper {
               />
               Title of Disclosure
             </div>,
-            "className": "lego-disclose__link link--dark soft-half border--bottom flush",
+            "className": "lego-disclose__link link--dark soft-half flush",
             "onClick": [Function],
           },
           "ref": null,

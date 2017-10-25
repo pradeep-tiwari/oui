@@ -8,4 +8,13 @@ describe('Disclose Component', () => {
   it('renders correctly', () => {
     expect(disclose).toMatchSnapshot();
   });
+
+  it('initialize with `state` isOpen is false', () => {
+    expect(disclose.state().isOpen).toBe(false);
+  });
+
+  it('will set `state` isOpen to true when click on link', () => {
+    disclose.find('.lego-disclose__link').simulate('click');
+    expect(disclose.state().isOpen).toBe(true);
+  });
 });
