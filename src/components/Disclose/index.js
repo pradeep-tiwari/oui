@@ -19,13 +19,6 @@ class Disclose extends Component {
     });
   }
 
-  // boxed
-  // lego-disclose__link link--dark soft-half border--all background--faint display--block flush
-
-  // lego-disclose__content soft border--sides border--bottom
-
-  // border--bottom
-
   render() {
     const { children, style } = this.props;
     const contentClass = classNames(
@@ -42,7 +35,6 @@ class Disclose extends Component {
       }
     );
     const arrow = this.state.isOpen ? 'lego-disclose is-active' : 'lego-disclose';
-    
     return (
       <div className={ arrow } style={{marginTop: '-1px'}}>
         <a onClick={ this.handleToggle } className={ linkClass }>

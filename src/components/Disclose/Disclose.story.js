@@ -20,7 +20,7 @@ stories.add('default', withInfo()(() => {
     <Disclose>
       <h3>Some Title</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi id voluptas vitae eius
-      expedita alias iste deserunt rndis earum voluptatibus quae, numquam dolorum perspiciatis 
+      expedita alias iste deserunt rndis earum voluptatibus quae, numquam dolorum perspiciatis
       accusantium corporis, beatae maxime quasi. Tempora.</p>
     </Disclose>
   );
@@ -32,13 +32,13 @@ stories.add('multiple stacked', withInfo()(() => {
       <Disclose style='all'>
         <h3>Some Title</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi id voluptas vitae eius
-        expedita alias iste deserunt rndis earum voluptatibus quae, numquam dolorum perspiciatis 
+        expedita alias iste deserunt rndis earum voluptatibus quae, numquam dolorum perspiciatis
         accusantium corporis, beatae maxime quasi. Tempora.</p>
       </Disclose>
       <Disclose style='all'>
         <h3>Some Title</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi id voluptas vitae eius
-        expedita alias iste deserunt rndis earum voluptatibus quae, numquam dolorum perspiciatis 
+        expedita alias iste deserunt rndis earum voluptatibus quae, numquam dolorum perspiciatis
         accusantium corporis, beatae maxime quasi. Tempora.</p>
       </Disclose>
     </div>
@@ -51,13 +51,13 @@ stories.add('with divider', withInfo()(() => {
       <Disclose style='divider'>
         <h3>Some Title</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi id voluptas vitae eius
-        expedita alias iste deserunt rndis earum voluptatibus quae, numquam dolorum perspiciatis 
+        expedita alias iste deserunt rndis earum voluptatibus quae, numquam dolorum perspiciatis
         accusantium corporis, beatae maxime quasi. Tempora.</p>
       </Disclose>
       <Disclose style='divider'>
         <h3>Some Title</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi id voluptas vitae eius
-        expedita alias iste deserunt rndis earum voluptatibus quae, numquam dolorum perspiciatis 
+        expedita alias iste deserunt rndis earum voluptatibus quae, numquam dolorum perspiciatis
         accusantium corporis, beatae maxime quasi. Tempora.</p>
       </Disclose>
     </div>
