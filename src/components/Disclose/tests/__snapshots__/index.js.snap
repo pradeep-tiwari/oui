@@ -21,23 +21,23 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <a
-          className="lego-disclose__link link--dark soft-half flush"
+          className="oui-disclose__link link--dark soft-half flush"
           onClick={[Function]}
         >
           <div
-            className="lego-disclose__arrow"
+            className="oui-disclose__arrow"
           >
             <span
-              className="lego-disclose__symbol"
+              className="oui-disclose__symbol"
             />
             Title of Disclosure
           </div>
         </a>,
         <div
-          className="lego-disclose__content"
+          className="oui-disclose__content"
         />,
       ],
-      "className": "lego-disclose",
+      "className": "oui-disclose",
       "style": Object {
         "marginTop": "-1px",
       },
@@ -50,14 +50,14 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <div
-            className="lego-disclose__arrow"
+            className="oui-disclose__arrow"
           >
             <span
-              className="lego-disclose__symbol"
+              className="oui-disclose__symbol"
             />
             Title of Disclosure
           </div>,
-          "className": "lego-disclose__link link--dark soft-half flush",
+          "className": "oui-disclose__link link--dark soft-half flush",
           "onClick": [Function],
         },
         "ref": null,
@@ -68,11 +68,11 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <span
-                className="lego-disclose__symbol"
+                className="oui-disclose__symbol"
               />,
               "Title of Disclosure",
             ],
-            "className": "lego-disclose__arrow",
+            "className": "oui-disclose__arrow",
           },
           "ref": null,
           "rendered": Array [
@@ -81,7 +81,7 @@ ShallowWrapper {
               "key": null,
               "nodeType": "host",
               "props": Object {
-                "className": "lego-disclose__symbol",
+                "className": "oui-disclose__symbol",
               },
               "ref": null,
               "rendered": null,
@@ -99,7 +99,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": false,
-          "className": "lego-disclose__content",
+          "className": "oui-disclose__content",
         },
         "ref": null,
         "rendered": false,
@@ -116,23 +116,23 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <a
-            className="lego-disclose__link link--dark soft-half flush"
+            className="oui-disclose__link link--dark soft-half flush"
             onClick={[Function]}
           >
             <div
-              className="lego-disclose__arrow"
+              className="oui-disclose__arrow"
             >
               <span
-                className="lego-disclose__symbol"
+                className="oui-disclose__symbol"
               />
               Title of Disclosure
             </div>
           </a>,
           <div
-            className="lego-disclose__content"
+            className="oui-disclose__content"
           />,
         ],
-        "className": "lego-disclose",
+        "className": "oui-disclose",
         "style": Object {
           "marginTop": "-1px",
         },
@@ -145,14 +145,14 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <div
-              className="lego-disclose__arrow"
+              className="oui-disclose__arrow"
             >
               <span
-                className="lego-disclose__symbol"
+                className="oui-disclose__symbol"
               />
               Title of Disclosure
             </div>,
-            "className": "lego-disclose__link link--dark soft-half flush",
+            "className": "oui-disclose__link link--dark soft-half flush",
             "onClick": [Function],
           },
           "ref": null,
@@ -163,11 +163,11 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <span
-                  className="lego-disclose__symbol"
+                  className="oui-disclose__symbol"
                 />,
                 "Title of Disclosure",
               ],
-              "className": "lego-disclose__arrow",
+              "className": "oui-disclose__arrow",
             },
             "ref": null,
             "rendered": Array [
@@ -176,7 +176,7 @@ ShallowWrapper {
                 "key": null,
                 "nodeType": "host",
                 "props": Object {
-                  "className": "lego-disclose__symbol",
+                  "className": "oui-disclose__symbol",
                 },
                 "ref": null,
                 "rendered": null,
@@ -194,7 +194,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": false,
-            "className": "lego-disclose__content",
+            "className": "oui-disclose__content",
           },
           "ref": null,
           "rendered": false,

@@ -22,24 +22,24 @@ class Disclose extends Component {
   render() {
     const { children, style } = this.props;
     const contentClass = classNames(
-      'lego-disclose__content',
+      'oui-disclose__content',
       {
         ['soft border--sides border--bottom']: style === 'all',
         ['border--bottom']: style === 'divider',
       }
     );
     const linkClass = classNames(
-      'lego-disclose__link link--dark soft-half flush',
+      'oui-disclose__link link--dark soft-half flush',
       {
         ['border--all background--faint display--block']: style === 'all' || style === 'header',
       }
     );
-    const arrow = this.state.isOpen ? 'lego-disclose is-active' : 'lego-disclose';
+    const arrow = this.state.isOpen ? 'oui-disclose is-active' : 'oui-disclose';
     return (
       <div className={ arrow } style={{marginTop: '-1px'}}>
         <a onClick={ this.handleToggle } className={ linkClass }>
-          <div className='lego-disclose__arrow'>
-            <span className="lego-disclose__symbol"></span>
+          <div className='oui-disclose__arrow'>
+            <span className="oui-disclose__symbol"></span>
             Title of Disclosure
           </div>
         </a>
