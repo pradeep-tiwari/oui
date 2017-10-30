@@ -20,7 +20,11 @@ class Disclose extends Component {
   }
 
   render() {
-    const { children, style } = this.props;
+    const {
+      children,
+      style,
+      title = '',
+    } = this.props;
     const contentClass = classNames(
       'oui-disclose__content',
       {
@@ -40,7 +44,7 @@ class Disclose extends Component {
         <a onClick={ this.handleToggle } className={ linkClass }>
           <div className='oui-disclose__arrow'>
             <span className="oui-disclose__symbol"></span>
-            Title of Disclosure
+            { title }
           </div>
         </a>
         <div className={ contentClass }>
@@ -54,6 +58,7 @@ class Disclose extends Component {
 Disclose.propTypes = {
   children: PropTypes.node.isRequired,
   style: PropTypes.string,
+  title: PropTypes.string,
 };
 
 export default Disclose;
