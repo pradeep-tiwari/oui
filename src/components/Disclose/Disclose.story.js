@@ -56,7 +56,7 @@ stories.add('header style', withInfo()(() => {
         <div className='soft--left'><a>Safari</a></div>
         <div className='soft--left'><a>Chrome</a></div>
         <div className='soft--left'><a>Opera</a></div>
-        <div className='soft--left'><a>Please stop using IE</a></div>
+        <div className='soft--left'><a>IE</a></div>
       </Disclose>
       <Disclose headerStyle='header' title='Some Title' childrenStyle='border'>
         <div className='soft--left'>
