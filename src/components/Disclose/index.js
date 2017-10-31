@@ -46,7 +46,7 @@ class Disclose extends Component {
       <div className={ arrow } style={{marginTop: '-1px'}}>
         <a onClick={ this.handleToggle } className={ linkClass }>
           <div className='oui-disclose__arrow'>
-            <span className="lego-disclose__symbol push-half--right"></span>
+            <span className="oui-disclose__symbol push-half--right"></span>
             { title }
           </div>
         </a>
