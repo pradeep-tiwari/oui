@@ -17,7 +17,7 @@ stories
 
 stories.add('default', withInfo()(() => {
   return (
-    <Disclose>
+    <Disclose title='default title'>
       <h3>Some Title</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi id voluptas vitae eius
       expedita alias iste deserunt rndis earum voluptatibus quae, numquam dolorum perspiciatis
@@ -29,13 +29,13 @@ stories.add('default', withInfo()(() => {
 stories.add('multiple stacked', withInfo()(() => {
   return (
     <div>
-      <Disclose style='all' title='Some Title'>
+      <Disclose style='header-bordered' title='Some Title'>
         <h3>Some Title</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi id voluptas vitae eius
         expedita alias iste deserunt rndis earum voluptatibus quae, numquam dolorum perspiciatis
         accusantium corporis, beatae maxime quasi. Tempora.</p>
       </Disclose>
-      <Disclose style='all' title='Some Title'>
+      <Disclose style='header-bordered' title='Some Title'>
         <h3>Some Title</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi id voluptas vitae eius
         expedita alias iste deserunt rndis earum voluptatibus quae, numquam dolorum perspiciatis
@@ -49,10 +49,10 @@ stories.add('header style', withInfo()(() => {
   return (
     <div>
       <Disclose style='header' title='Browsers'>
-        <div><a>    Safari</a></div>
-        <div><a>    Chrome</a></div>
-        <div><a>    Opera</a></div>
-        <div><a>    Please stop using IE</a></div>
+        <div><a>Safari</a></div>
+        <div><a>Chrome</a></div>
+        <div><a>Opera</a></div>
+        <div><a>Please stop using IE</a></div>
       </Disclose>
       <Disclose style='header' title='Some Title'>
         <h3>Some Title</h3>
@@ -67,13 +67,13 @@ stories.add('header style', withInfo()(() => {
 stories.add('with divider', withInfo()(() => {
   return (
     <div>
-      <Disclose style='divider' title='Some Title'>
+      <Disclose childStyle='divider' title='Some Title'>
         <h3>Some Title</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi id voluptas vitae eius
         expedita alias iste deserunt rndis earum voluptatibus quae, numquam dolorum perspiciatis
         accusantium corporis, beatae maxime quasi. Tempora.</p>
       </Disclose>
-      <Disclose style='divider' title='Some Title'>
+      <Disclose childStyle='divider' title='Some Title'>
         <h3>Some Title</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi id voluptas vitae eius
         expedita alias iste deserunt rndis earum voluptatibus quae, numquam dolorum perspiciatis

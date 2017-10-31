@@ -23,19 +23,22 @@ class Disclose extends Component {
     const {
       children,
       style,
-      title = '',
+      childStyle,
+      title,
     } = this.props;
     const contentClass = classNames(
       'oui-disclose__content',
       {
-        ['soft border--sides border--bottom']: style === 'all',
-        ['border--bottom']: style === 'divider',
+        ['border--sides border--bottom']: childStyle === 'all',
+        ['border--bottom']: childStyle === 'divider' && this.state.isOpen,
+
       }
     );
     const linkClass = classNames(
       'oui-disclose__link link--dark soft-half flush',
       {
-        ['border--all background--faint display--block']: style === 'all' || style === 'header',
+        ['background--faint display--block']: style === 'header',
+        ['border--all background--faint display--block']: style === 'header-bordered',
       }
     );
     const arrow = this.state.isOpen ? 'oui-disclose is-active' : 'oui-disclose';
@@ -43,7 +46,7 @@ class Disclose extends Component {
       <div className={ arrow } style={{marginTop: '-1px'}}>
         <a onClick={ this.handleToggle } className={ linkClass }>
           <div className='oui-disclose__arrow'>
-            <span className="oui-disclose__symbol"></span>
+            <span className="lego-disclose__symbol push-half--right"></span>
             { title }
           </div>
         </a>
@@ -56,9 +59,11 @@ class Disclose extends Component {
 }
 
 Disclose.propTypes = {
+  childStyle: PropTypes.string,
   children: PropTypes.node.isRequired,
+  noBorder: PropTypes.bool,
   style: PropTypes.string,
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
 };
 
 export default Disclose;
