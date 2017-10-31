@@ -3,6 +3,9 @@ import * as storybook from '@storybook/react';
 import { setOptions } from '@storybook/addon-options';
 import infoAddon from '@storybook/addon-info';
 
+const { version } = require('../package.json');
+import '../dist/docs/oui/28.0.2/js/styles.js';
+
 setAddon(infoAddon);
 
 setOptions({
