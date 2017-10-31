@@ -28,7 +28,7 @@ ShallowWrapper {
             className="oui-disclose__arrow"
           >
             <span
-              className="lego-disclose__symbol push-half--right"
+              className="oui-disclose__symbol push-half--right"
             />
           </div>
         </a>,
@@ -52,7 +52,7 @@ ShallowWrapper {
             className="oui-disclose__arrow"
           >
             <span
-              className="lego-disclose__symbol push-half--right"
+              className="oui-disclose__symbol push-half--right"
             />
           </div>,
           "className": "oui-disclose__link link--dark soft-half flush",
@@ -66,7 +66,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <span
-                className="lego-disclose__symbol push-half--right"
+                className="oui-disclose__symbol push-half--right"
               />,
               undefined,
             ],
@@ -79,7 +79,7 @@ ShallowWrapper {
               "key": null,
               "nodeType": "host",
               "props": Object {
-                "className": "lego-disclose__symbol push-half--right",
+                "className": "oui-disclose__symbol push-half--right",
               },
               "ref": null,
               "rendered": null,
@@ -121,7 +121,7 @@ ShallowWrapper {
               className="oui-disclose__arrow"
             >
               <span
-                className="lego-disclose__symbol push-half--right"
+                className="oui-disclose__symbol push-half--right"
               />
             </div>
           </a>,
@@ -145,7 +145,7 @@ ShallowWrapper {
               className="oui-disclose__arrow"
             >
               <span
-                className="lego-disclose__symbol push-half--right"
+                className="oui-disclose__symbol push-half--right"
               />
             </div>,
             "className": "oui-disclose__link link--dark soft-half flush",
@@ -159,7 +159,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <span
-                  className="lego-disclose__symbol push-half--right"
+                  className="oui-disclose__symbol push-half--right"
                 />,
                 undefined,
               ],
@@ -172,7 +172,7 @@ ShallowWrapper {
                 "key": null,
                 "nodeType": "host",
                 "props": Object {
-                  "className": "lego-disclose__symbol push-half--right",
+                  "className": "oui-disclose__symbol push-half--right",
                 },
                 "ref": null,
                 "rendered": null,
