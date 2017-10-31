@@ -22,23 +22,23 @@ class Disclose extends Component {
   render() {
     const {
       children,
-      style,
-      childStyle,
+      headerStyle,
+      childrenStyle,
       title,
     } = this.props;
     const contentClass = classNames(
       'oui-disclose__content',
       {
-        ['border--sides border--bottom']: childStyle === 'all',
-        ['border--bottom']: childStyle === 'divider' && this.state.isOpen,
+        ['border--sides border--bottom']: childrenStyle === 'border',
+        ['border--bottom']: childrenStyle === 'divider' && this.state.isOpen,
 
       }
     );
     const linkClass = classNames(
       'oui-disclose__link link--dark soft-half flush',
       {
-        ['background--faint display--block']: style === 'header',
-        ['border--all background--faint display--block']: style === 'header-bordered',
+        ['background--faint display--block']: headerStyle === 'header',
+        ['border--all background--faint display--block']: headerStyle === 'header-bordered',
       }
     );
     const arrow = this.state.isOpen ? 'oui-disclose is-active' : 'oui-disclose';
@@ -59,10 +59,10 @@ class Disclose extends Component {
 }
 
 Disclose.propTypes = {
-  childStyle: PropTypes.string,
   children: PropTypes.node.isRequired,
+  childrenStyle: PropTypes.string,
+  headerStyle: PropTypes.string,
   noBorder: PropTypes.bool,
-  style: PropTypes.string,
   title: PropTypes.string.isRequired,
 };
 
