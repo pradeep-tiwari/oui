@@ -26,15 +26,13 @@ const PopperExample = ({placement}) => (
       <Arrow className="popper__arrow" />
     </Popper>
   </Manager>
-)
+);
 
 stories.add('with BlockList elements', withInfo()(() => {
   return (
-    <div style={{background:'#f6f6f6',width: '100vw',height: '100vh',display: 'flex',justifyContent: 'space-around',}}>
-      <div style={{ background: 'white', width: 430, height: 430, overflowX: 'scroll'}}>
-        <div style={{ width: 600, height: 650, display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-          <PopperExample placement='right'/>
-        </div>
+    <div style={{ background: 'salmon', width: 430, height: 430, overflowX: 'scroll'}}>
+      <div style={{ width: 600, height: 650, display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <PopperExample placement='bottom-start'/>
       </div>
     </div>
   );
