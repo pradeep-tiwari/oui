@@ -27,37 +27,39 @@ stories
 
 stories.add('with BlockList elements', withInfo()(() => {
   return (
-    <Dropdown
-      isDisabled={ boolean('isDisabled', false) }
-      fullWidth={ boolean('fullWidth', false) }
-      style={ select('style', {
-        default: 'default',
-        highlight: 'highlight',
-        danger: 'danger',
-        'danger-outline': 'danger-outline',
-        outline: 'outline',
-        underline: 'underline'}, '') }
-      buttonContent='Dropdown'
-      width={ text('width', '300') }>
-      <BlockList>
-        {
-          data.map((item, index) => {
-            return (
-              <BlockList.Category header={ item.header } key={ index }>
-                <BlockList.Item onClick={ action('click on complex item') }>
-                  <div className="flex flex-align--center">
-                    <div className="flex--1">
-                      <div>{ item.title }</div>
-                      <div className="muted micro">{ item.description }</div>
+    <div style={{ paddingTop: 200 }}>
+      <Dropdown
+        isDisabled={ boolean('isDisabled', false) }
+        fullWidth={ boolean('fullWidth', false) }
+        style={ select('style', {
+          default: 'default',
+          highlight: 'highlight',
+          danger: 'danger',
+          'danger-outline': 'danger-outline',
+          outline: 'outline',
+          underline: 'underline'}, '') }
+        buttonContent='Dropdown'
+        width={ number('width', 300) }>
+        <BlockList>
+          {
+            data.map((item, index) => {
+              return (
+                <BlockList.Category header={ item.header } key={ index }>
+                  <BlockList.Item onClick={ action('click on complex item') }>
+                    <div className="flex flex-align--center">
+                      <div className="flex--1">
+                        <div>{ item.title }</div>
+                        <div className="muted micro">{ item.description }</div>
+                      </div>
                     </div>
-                  </div>
-                </BlockList.Item>
-              </BlockList.Category>
-            );
-          })
-        }
-      </BlockList>
-    </Dropdown>
+                  </BlockList.Item>
+                </BlockList.Category>
+              );
+            })
+          }
+        </BlockList>
+      </Dropdown>
+    </div>
   );
 }));
 
