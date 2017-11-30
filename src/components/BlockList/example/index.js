@@ -5,7 +5,7 @@ import OverlayWrapper from '../../OverlayWrapper/index';
 import Button from '../../Button';
 import EllipsisIcon from '../../Icon/EllipsisIcon';
 
-const mockFunction = () => { console.log('you clicked');};
+const mockFunction = () => {};
 
 export default [
   {
@@ -59,9 +59,7 @@ export default [
       <BlockList>
         <BlockList.Category>
           <BlockList.Item
-            onClick={ function() {
-              console.log('`onClick` Example'); // eslint-disable-line no-console
-            } }>
+            onClick={ mockFunction }>
             onClick Example
           </BlockList.Item>
         </BlockList.Category>

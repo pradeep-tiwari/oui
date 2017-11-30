@@ -2,7 +2,7 @@
 import React from 'react';
 import TabNav from '../index';
 
-const mockFunction = () => { console.log('you clicked');};
+const mockFunction = () => {};
 
 export default [
   {

@@ -4,8 +4,8 @@ import { shallow, mount } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 
 describe('components/Radio', () => {
-  const mockFunction = () => { console.log('you clicked');};
-  
+  const mockFunction = () => jest.fn();
+
   it('should render an input of type radio', () => {
     const component = shallow(<Radio name="goose" />);
     expect(shallowToJson(component)).toMatchSnapshot();

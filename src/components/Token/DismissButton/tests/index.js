@@ -3,7 +3,7 @@ import DismissButton from '../index';
 import { shallow } from 'enzyme';
 
 describe('components/Token/DismissButton', () => {
-  const mockFunction = () => { console.log('you clicked');};
+  const mockFunction = jest.fn();
 
   it('should render `Button`', () => {
     const component = shallow(<DismissButton onClick={ mockFunction } />);

@@ -6,7 +6,7 @@ describe('components/Card', () => {
   const title = 'Hello world card';
   const body = '<span>Basic content inside this card</span>';
   const test = 'foo';
-  const mockFunction = () => {};
+  const mockFunction = jest.fn();
 
   it('should render the title passed in', () => {
     const component = shallow(

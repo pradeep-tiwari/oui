@@ -2,7 +2,7 @@
 import React from 'react';
 import Token from '../index';
 
-const mockFunction = () => { console.log('this is an event');};
+const mockFunction = () => {};
 
 export default [
   {

@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 
 describe('components/Link', () => {
-  const mockFunction = () => { console.log('you clicked');};
+  const mockFunction = jest.fn();
 
   it('should render disabled', () => {
     const output = shallow(

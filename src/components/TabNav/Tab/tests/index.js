@@ -3,7 +3,7 @@ import Tab from '../index';
 import { shallow } from 'enzyme';
 
 describe('components/TabNav/Tab', () => {
-  const mockFunction = () => { console.log('you clicked');};
+  const mockFunction = jest.fn();
 
   it('should render with correct classes', () => {
     const component = shallow(

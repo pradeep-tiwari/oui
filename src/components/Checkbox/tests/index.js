@@ -4,7 +4,7 @@ import { shallow, mount } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 
 describe('components/Checkbox', () => {
-  const mockFunction = () => {};
+  const mockFunction = jest.fn();
   
   it('should render an input of type checkbox', () => {
     const component = mount(<Checkbox />);

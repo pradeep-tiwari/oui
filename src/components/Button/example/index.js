@@ -4,7 +4,7 @@ import ArrowsInline from '../../ArrowsInline';
 import Button from '../index';
 import ClipboardIcon from '../../Icon/ClipboardIcon';
 
-const mockFunction = () => { console.log('you clicked') };
+const mockFunction = () => {};
 
 export default [
   {
