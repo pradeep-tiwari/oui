@@ -4,6 +4,8 @@ import ArrowsInline from '../../ArrowsInline';
 import Button from '../index';
 import ClipboardIcon from '../../Icon/ClipboardIcon';
 
+const mockFunction = () => {};
+
 export default [
   {
     isPadded: true,
@@ -94,10 +96,8 @@ export default [
     isPadded: true,
     examples: [
       <Button
-        onClick={ function() {
-          alert('Hello!'); //eslint-disable-line
-        } }>
-        Button with Function
+        onClick={ mockFunction }>
+        Button with a Function
       </Button>,
     ],
   },
