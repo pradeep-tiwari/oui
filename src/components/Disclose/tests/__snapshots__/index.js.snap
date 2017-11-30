@@ -5,9 +5,13 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Disclose
-    title="some title"
+    title="Some title"
   >
-    un disclose
+     
+    <div>
+      disclose this
+    </div>
+     
   </Disclose>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -32,7 +36,7 @@ ShallowWrapper {
             <span
               className="oui-disclose__symbol push-half--right"
             />
-            some title
+            Some title
           </div>
         </a>,
         <div
@@ -57,7 +61,7 @@ ShallowWrapper {
             <span
               className="oui-disclose__symbol push-half--right"
             />
-            some title
+            Some title
           </div>,
           "className": "oui-disclose__link link--dark soft-half flush",
           "onClick": [Function],
@@ -72,7 +76,7 @@ ShallowWrapper {
               <span
                 className="oui-disclose__symbol push-half--right"
               />,
-              "some title",
+              "Some title",
             ],
             "className": "oui-disclose__arrow",
           },
@@ -89,7 +93,7 @@ ShallowWrapper {
               "rendered": null,
               "type": "span",
             },
-            "some title",
+            "Some title",
           ],
           "type": "div",
         },
@@ -127,7 +131,7 @@ ShallowWrapper {
               <span
                 className="oui-disclose__symbol push-half--right"
               />
-              some title
+              Some title
             </div>
           </a>,
           <div
@@ -152,7 +156,7 @@ ShallowWrapper {
               <span
                 className="oui-disclose__symbol push-half--right"
               />
-              some title
+              Some title
             </div>,
             "className": "oui-disclose__link link--dark soft-half flush",
             "onClick": [Function],
@@ -167,7 +171,7 @@ ShallowWrapper {
                 <span
                   className="oui-disclose__symbol push-half--right"
                 />,
-                "some title",
+                "Some title",
               ],
               "className": "oui-disclose__arrow",
             },
@@ -184,7 +188,7 @@ ShallowWrapper {
                 "rendered": null,
                 "type": "span",
               },
-              "some title",
+              "Some title",
             ],
             "type": "div",
           },

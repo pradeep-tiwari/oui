@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Disclose from '../index';
 
-const disclose = shallow(<Disclose title='some title'>un disclose</Disclose>);
+const disclose = shallow(<Disclose title='Some title'> <div>disclose this</div> </Disclose>);
 
 describe('Disclose Component ', () => {
   it('renders correctly', () => {
