@@ -6,7 +6,7 @@ describe('components/BlockList/Item', () => {
   describe('#render', () => {
     describe('`onClick` is provided', () => {
       let component;
-      const func = function() {};
+      const func = () => {};
       const text = 'Goose';
 
       beforeEach(() => {
