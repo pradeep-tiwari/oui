@@ -5,7 +5,6 @@ import { shallowToJson } from 'enzyme-to-json';
 
 describe('components/Checkbox', () => {
   const mockFunction = jest.fn();
-  
   it('should render an input of type checkbox', () => {
     const component = mount(<Checkbox />);
     expect(component.find('input[type="checkbox"]').length).toBe(1);
