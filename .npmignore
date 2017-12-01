@@ -8,10 +8,8 @@ npm-debug.log
 
 docs
 dist/js/components/**/*.story.js
-dist/js/components/**/example
 dist/js/stories
 src/components/**/*.story.js
-src/components/**/example
 src/stories
 
 .bundle
