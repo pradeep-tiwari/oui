@@ -2,7 +2,6 @@
 import React from 'react';
 import Poptip from '../index';
 import Button from '../../Button';
-import HelpIcon from '../../Icon/HelpIcon';
 
 export default [
   {
@@ -26,7 +25,7 @@ export default [
           verticalAttachment="middle"
           verticalTargetAttachment="middle">
           <Button style="unstyled">
-            <HelpIcon size={ 16 } />
+            help
           </Button>
         </Poptip>
       </div>,

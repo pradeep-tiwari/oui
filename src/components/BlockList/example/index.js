@@ -3,7 +3,6 @@ import React from 'react';
 import BlockList from '../index';
 import OverlayWrapper from '../../OverlayWrapper/index';
 import Button from '../../Button';
-import EllipsisIcon from '../../Icon/EllipsisIcon';
 
 const mockFunction = () => {};
 
@@ -146,7 +145,7 @@ export default [
         verticalAttachment="top"
         verticalTargetAttachment="bottom">
         <Button style="unstyled">
-          <EllipsisIcon size={ 16 } />
+          ellipsis here (use react oui icons)
         </Button>
       </OverlayWrapper>,
     ],
