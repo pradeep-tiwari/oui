@@ -26,10 +26,10 @@ const TR = ({
 };
 
 TR.propTypes = {
-  /** Border style for each row */
-  borderStyle: PropTypes.oneOf(['bottom', 'top', 'sides', 'ends', 'none']),
   /** Background color for each row */
   backgroundColor: PropTypes.oneOf(['faint', 'light']),
+  /** Border style for each row */
+  borderStyle: PropTypes.oneOf(['bottom', 'top', 'sides', 'ends', 'none']),
   /** Expects a `Table.TD` or `Table.TH` component */
   children: PropTypes.node,
   /** If true, add active class */
