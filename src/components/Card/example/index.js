@@ -2,7 +2,6 @@
 import React from 'react';
 import Card from '../index';
 
-const someMethod = () => { return true; };
 export default [
   {
     examples: [
