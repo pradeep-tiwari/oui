@@ -51,7 +51,7 @@ stories
     </Table>
   </div>)))
   .add('custom tr borders', withInfo()(() => (<div>
-    <Table style="wall">
+    <Table>
       <Table.THead>
         <Table.TR>
           <Table.TH> Experiment </Table.TH>
@@ -60,7 +60,7 @@ stories
         </Table.TR>
       </Table.THead>
       <Table.TBody>
-        <Table.TR>
+        <Table.TR borderStyle="ends" backgroundColor="faint">
           <Table.TD> Header CTA </Table.TD>
           <Table.TD> 12% </Table.TD>
           <Table.TD> Paused </Table.TD>
