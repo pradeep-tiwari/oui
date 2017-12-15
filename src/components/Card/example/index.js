@@ -2,6 +2,8 @@
 import React from 'react';
 import Card from '../index';
 
+const someMethod = () => {} ;
+
 export default [
   {
     examples: [
