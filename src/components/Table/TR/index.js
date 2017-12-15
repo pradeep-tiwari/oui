@@ -28,7 +28,7 @@ const TR = ({
 TR.propTypes = {
   /** Border style for each row */
   borderStyle: PropTypes.oneOf(['bottom', 'top', 'sides', 'ends', 'none']),
-  /** Border style for each row */
+  /** Background color for each row */
   backgroundColor: PropTypes.oneOf(['faint', 'light']),
   /** Expects a `Table.TD` or `Table.TH` component */
   children: PropTypes.node,
