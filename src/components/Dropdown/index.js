@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import { Manager, Popper, Target } from 'react-popper';
 
 class Dropdown extends React.Component {
   constructor(props) {
@@ -74,30 +75,33 @@ class Dropdown extends React.Component {
     );
 
     return (
-      <div
+      <Manager
         data-ui-component={ true }
         className={ groupClass }
         data-test-section={ testSection }>
-        <button
-          type='button'
-          className={ buttonClass }
-          disabled={ isDisabled }
-          onClick={ this.handleToggle }
-          onBlur={ this.handleOnBlur }>
-          <div className='flex'>
-            <div className='flex--1 truncate'>{ buttonContent }</div>
-            <div className='text--right'><span className={ iconClass }></span></div>
-          </div>
-        </button>
-        <div
+        <Target>
+          <button
+            type='button'
+            className={ buttonClass }
+            disabled={ isDisabled }
+            onClick={ this.handleToggle }
+            onBlur={ this.handleOnBlur }>
+            <div className='flex'>
+              <div className='flex--1 truncate'>{ buttonContent }</div>
+              <div className='text--right'><span className={ iconClass }></span></div>
+            </div>
+          </button>
+        </Target>
+        <Popper
+          placement='bottom-start'
           className='oui-dropdown-children'
           style={{zIndex: zIndex, position: 'absolute', width: width}}
           onMouseOver={ this.handleMouseOverChildren }
           onMouseLeave={ this.handleMouseLeavingChildren }
           onClick={ this.handleToggle } >
           { this.state.isOpen && !isDisabled && children }
-        </div>
-      </div>
+        </Popper>
+      </Manager>
     );
   }
 }

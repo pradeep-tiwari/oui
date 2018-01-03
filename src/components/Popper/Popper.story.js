@@ -35,6 +35,27 @@ stories.add('default', withInfo('react <Popper /> component')(() => {
 }
 ));
 
+stories.add('dropdown', withInfo('react <Popper /> component')(() => {
+  return (
+    <Container>
+      <SubContainer>
+        <ScrollContainer>
+          <StyledManager>
+            <StyledTarget >
+              StyledTarget Box
+            </StyledTarget>
+            <StyledPopper placement='bottom-start' className="popper">
+              Left Content
+              <Arrow className="popper__arrow"/>
+            </StyledPopper>
+          </StyledManager>
+        </ScrollContainer>
+      </SubContainer>
+    </Container>
+  );
+}
+));
+
 
 const Container = styled.div`
   display: flex;

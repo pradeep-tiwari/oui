@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, number, select, text } from '@storybook/addon-knobs';
@@ -38,7 +39,7 @@ stories.add('with BlockList elements', withInfo()(() => {
         outline: 'outline',
         underline: 'underline'}, '') }
       buttonContent='Dropdown'
-      width={ text('width', '300') }>
+      width={ number('width', 300) }>
       <BlockList>
         {
           data.map((item, index) => {
@@ -115,53 +116,78 @@ stories.add('three dots', withInfo()(() => {
 
 stories.add('text behind', withInfo()(() => {
   return (
-    <div>
-      <Dropdown
-        isDisabled={ boolean('isDisabled', false) }
-        fullWidth={ boolean('fullWidth', false) }
+    <Container>
+      <SubContainer>
+        <ScrollContainer>
+          <Dropdown
+            isDisabled={ boolean('isDisabled', false) }
+            fullWidth={ boolean('fullWidth', false) }
 
-        buttonContent='Dropdown'
-        width={ number('width', 100) }>
-        <BlockList>
-          <BlockList.Category >
-            <BlockList.Item onClick={ action('click on complex item') }>
-              <div className="flex flex-align--center">
-                <div className="flex--1">
-                  <a href='#'>un link </a>
-                </div>
-              </div>
-            </BlockList.Item>
-          </BlockList.Category>
-          <BlockList.Category >
-            <BlockList.Item onClick={ action('click on complex item') }>
-              <div className="flex flex-align--center">
-                <div className="flex--1">
-                  <a href='#'>otro link</a>
-                </div>
-              </div>
-            </BlockList.Item>
-          </BlockList.Category>
-          <BlockList.Category >
-            <BlockList.Item onClick={ action('click on complex item') }>
-              <div className="flex flex-align--center">
-                <div className="flex--1">
-                  <a href='#'>un más</a>
-                </div>
-              </div>
-            </BlockList.Item>
-          </BlockList.Category>
-          <BlockList.Category >
-            <BlockList.Item onClick={ action('click on complex item') }>
-              <div className="flex flex-align--center">
-                <div className="flex--1">
-                  <a href='#'>el último</a>
-                </div>
-              </div>
-            </BlockList.Item>
-          </BlockList.Category>
-        </BlockList>
-      </Dropdown>
-      <h1>This text should be behind the open dropdown</h1>
-    </div>
+            buttonContent='Dropdown'
+            width={ number('width', 100) }>
+            <BlockList>
+              <BlockList.Category >
+                <BlockList.Item onClick={ action('click on complex item') }>
+                  <div className="flex flex-align--center">
+                    <div className="flex--1">
+                      <a href='#'>un link </a>
+                    </div>
+                  </div>
+                </BlockList.Item>
+              </BlockList.Category>
+              <BlockList.Category >
+                <BlockList.Item onClick={ action('click on complex item') }>
+                  <div className="flex flex-align--center">
+                    <div className="flex--1">
+                      <a href='#'>otro link</a>
+                    </div>
+                  </div>
+                </BlockList.Item>
+              </BlockList.Category>
+              <BlockList.Category >
+                <BlockList.Item onClick={ action('click on complex item') }>
+                  <div className="flex flex-align--center">
+                    <div className="flex--1">
+                      <a href='#'>un más</a>
+                    </div>
+                  </div>
+                </BlockList.Item>
+              </BlockList.Category>
+              <BlockList.Category >
+                <BlockList.Item onClick={ action('click on complex item') }>
+                  <div className="flex flex-align--center">
+                    <div className="flex--1">
+                      <a href='#'>el último</a>
+                    </div>
+                  </div>
+                </BlockList.Item>
+              </BlockList.Category>
+            </BlockList>
+          </Dropdown>
+        <h1>This text should be behind the open dropdown</h1>
+      </ScrollContainer>
+    </SubContainer>
+  </Container>
   );
 }));
+
+const Container = styled.div`
+  display: flex;
+  flex: 1;
+  height: 100vh;
+  background: #f6f6f6;
+`;
+
+const SubContainer = styled.div`
+  width: 400px;
+  height: 400px;
+  background: lightgrey;
+  margin: 100px auto;
+  overflow: scroll;
+  padding-top: 300px;
+`;
+
+const ScrollContainer = styled.div`
+  width: 1000px;
+  height: 1000px;
+`;
