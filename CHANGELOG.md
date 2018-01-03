@@ -6,6 +6,8 @@ This file is similar to the format suggested by [Keep a CHANGELOG](https://githu
 
 ## Unreleased
 - [Patch] - Make scrollbars--visible overflow rule !important to ensure scroll is always present. (#876)
+- [Patch] - Make steps in CONTRIBUTING.md more readable
+- [Patch] - Add documentation for half padding and margin override classes (#871)
 
 ## 28.2.2 - 2017-12-19
 - [Patch] - Fix CSS syntax error for scrollbars--visible.
