@@ -62,6 +62,7 @@ class Dropdown extends React.Component {
     );
 
     const buttonClass = classNames(
+      'push-half--left',
       'oui-button',
       { [`oui-button--${style}`]: style },
       { ['oui-button--full soft--left text--left']: fullWidth }
@@ -95,7 +96,14 @@ class Dropdown extends React.Component {
         <Popper
           placement='bottom-start'
           className='oui-dropdown-children'
-          style={{zIndex: zIndex, position: 'absolute', width: width}}
+          style={{
+            zIndex: zIndex, 
+            position: 'absolute', 
+            width: width, 
+            marginTop: 2, 
+            marginBottom: 2,
+            boxShadow: '0 2px 3px rgba(0,0,0,.1)'
+          }}
           onMouseOver={ this.handleMouseOverChildren }
           onMouseLeave={ this.handleMouseLeavingChildren }
           onClick={ this.handleToggle } >
