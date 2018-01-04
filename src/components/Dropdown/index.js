@@ -47,9 +47,9 @@ class Dropdown extends React.Component {
     const {
       buttonContent,
       children,
-      icon = true,
       isDisabled = false,
       fullWidth,
+      placement = 'bottom-start',
       style,
       testSection,
       width = 200,
@@ -62,17 +62,9 @@ class Dropdown extends React.Component {
     );
 
     const buttonClass = classNames(
-      'push-half--left',
       'oui-button',
       { [`oui-button--${style}`]: style },
       { ['oui-button--full soft--left text--left']: fullWidth }
-    );
-
-    const iconClass = classNames(
-      'push-half--left',
-      {
-        ['oui-arrow-inline--down']: icon,
-      }
     );
 
     return (
@@ -89,12 +81,11 @@ class Dropdown extends React.Component {
             onBlur={ this.handleOnBlur }>
             <div className='flex'>
               <div className='flex--1 truncate'>{ buttonContent }</div>
-              <div className='text--right'><span className={ iconClass }></span></div>
             </div>
           </button>
         </Target>
         <Popper
-          placement='bottom-start'
+          placement={ placement }
           className='oui-dropdown-children'
           style={{
             zIndex: zIndex, 
@@ -130,6 +121,20 @@ Dropdown.propTypes = {
   icon: PropTypes.bool,
   /** Disable button. */
   isDisabled: PropTypes.bool,
+  placement: PropTypes.oneOf([
+    'top',
+    'top-start',
+    'top-end',
+    'bottom',
+    'bottom-start',
+    'bottom-end',
+    'right',
+    'right-start',
+    'right-end',
+    'left',
+    'left-start',
+    'left-end'
+  ]),
   /** Button style, e.g. highlight, danger, outline. */
   style: PropTypes.string,
   /** For automated testing only. */
