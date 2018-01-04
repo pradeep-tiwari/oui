@@ -88,12 +88,12 @@ class Dropdown extends React.Component {
           placement={ placement }
           className='oui-dropdown-children'
           style={{
-            zIndex: zIndex, 
-            position: 'absolute', 
-            width: width, 
-            marginTop: 2, 
+            zIndex: zIndex,
+            position: 'absolute',
+            width: width,
+            marginTop: 2,
             marginBottom: 2,
-            boxShadow: '0 2px 3px rgba(0,0,0,.1)'
+            boxShadow: '0 2px 3px rgba(0,0,0,.1)',
           }}
           onMouseOver={ this.handleMouseOverChildren }
           onMouseLeave={ this.handleMouseLeavingChildren }
@@ -117,10 +117,9 @@ Dropdown.propTypes = {
   fullWidth: PropTypes.bool,
   /** Unused... */
   handleClick: PropTypes.func,
-  /** Show a dropdown arrow, true/false. */
-  icon: PropTypes.bool,
   /** Disable button. */
   isDisabled: PropTypes.bool,
+  /** Popper placement property */
   placement: PropTypes.oneOf([
     'top',
     'top-start',
@@ -133,7 +132,7 @@ Dropdown.propTypes = {
     'right-end',
     'left',
     'left-start',
-    'left-end'
+    'left-end',
   ]),
   /** Button style, e.g. highlight, danger, outline. */
   style: PropTypes.string,

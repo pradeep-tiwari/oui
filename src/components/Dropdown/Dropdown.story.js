@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean, number, select, text } from '@storybook/addon-knobs';
+import { withKnobs, boolean, number, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 
@@ -124,10 +124,10 @@ stories.add('text behind', withInfo()(() => {
               }
             </BlockList>
           </Dropdown>
-        <h1>This text should be behind the open dropdown</h1>
-      </ScrollContainer>
-    </SubContainer>
-  </Container>
+          <h1>This text should be behind the open dropdown</h1>
+        </ScrollContainer>
+      </SubContainer>
+    </Container>
   );
 }));
 
@@ -167,10 +167,10 @@ stories.add('with icon', withInfo()(() => {
               }
             </BlockList>
           </Dropdown>
-        <h1>This text should be behind the open dropdown</h1>
-      </ScrollContainer>
-    </SubContainer>
-  </Container>
+          <h1>This text should be behind the open dropdown</h1>
+        </ScrollContainer>
+      </SubContainer>
+    </Container>
   );
 }));
 
@@ -187,6 +187,7 @@ const SubContainer = styled.div`
   background: lightgrey;
   margin: 100px auto;
   overflow: scroll;
+  padding: 20px;
   padding-top: 300px;
 `;
 

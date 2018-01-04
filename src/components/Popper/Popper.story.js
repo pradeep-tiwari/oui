@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text, select } from '@storybook/addon-knobs';
+import { withKnobs, select } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 
 import { Manager, Popper, Target, Arrow } from 'react-popper';
@@ -13,7 +13,14 @@ const stories = storiesOf('Popper', module);
 stories
   .addDecorator(withKnobs);
 
-const options = { left: 'left', right: 'right', top: 'top', bottom: 'bottom', 'left-start': 'left-start', 'right-start': 'right-start', 'top-start': 'top-start', 'bottom-start': 'bottom-start', 'left-end': 'left-end', 'right-end': 'right-end', 'top-end': 'top-end', 'bottom-end': 'bottom-end'};
+const options = {
+  left: 'left', right: 'right', top: 'top', bottom: 'bottom',
+  'left-start': 'left-start', 'right-start': 'right-start',
+  'top-start': 'top-start', 'bottom-start': 'bottom-start',
+  'left-end': 'left-end', 'right-end': 'right-end', 'top-end': 'top-end',
+  'bottom-end': 'bottom-end',
+};
+
 stories.add('default', withInfo('react <Popper /> component')(() => {
   return (
     <Container>
@@ -23,7 +30,7 @@ stories.add('default', withInfo('react <Popper /> component')(() => {
             <StyledTarget >
               StyledTarget Box
             </StyledTarget>
-            <StyledPopper placement={`${select('placement', options, 'left')}`} className="popper">
+            <StyledPopper placement={ `${select('placement', options, 'left')}` } className="popper">
               Left Content
               <Arrow className="popper__arrow"/>
             </StyledPopper>
