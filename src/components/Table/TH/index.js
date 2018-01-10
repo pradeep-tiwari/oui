@@ -24,8 +24,7 @@ const TH = ({
       className={ classes }
       data-test-section={ testSection }
       style={ styles }
-      colSpan={ colSpan }
-      >
+      colSpan={ colSpan }>
       { children }
     </th>
   );
