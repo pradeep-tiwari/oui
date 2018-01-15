@@ -2,16 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { Manager, Popper, Target } from 'react-popper';
-import { compose, withState, withHandlers} from 'recompose';
-
-const withToggle = compose(
-  withState('isOpen', 'toggle', false),
-  withHandlers({
-    show: ({ toggle }) => (e) => toggle(true),
-    hide: ({ toggle }) => (e) => toggle(false),
-    toggle: ({ toggle }) => (e) => toggle((current) => !current),
-  })
-);
+import { withToggle } from '../../utils/recompose-utils';
 
 const Dropdown = withToggle(({
   buttonContent,
