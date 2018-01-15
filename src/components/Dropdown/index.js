@@ -2,59 +2,32 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { Manager, Popper, Target } from 'react-popper';
+import { compose, withState, withHandlers} from 'recompose';
 
-class Dropdown extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isOpen: false,
-      overChildren: false,
-    };
-    this.handleToggle = this.handleToggle.bind(this);
-    this.handleOnBlur = this.handleOnBlur.bind(this);
-    this.handleMouseOverChildren = this.handleMouseOverChildren.bind(this);
-    this.handleMouseLeavingChildren = this.handleMouseLeavingChildren.bind(this);
-  }
+const withToggle = compose(
+  withState('isOpen', 'toggle', false),
+  withHandlers({
+    show: ({ toggle }) => (e) => toggle(true),
+    hide: ({ toggle }) => (e) => toggle(false),
+    toggle: ({ toggle }) => (e) => toggle( (current) => !current )
+  })
+);
 
-  handleMouseOverChildren() {
-    this.setState({
-      overChildren: true,
-    });
-  }
-
-  handleMouseLeavingChildren() {
-    this.setState({
-      overChildren: false,
-    });
-  }
-
-  handleOnBlur() {
-    if (!this.state.overChildren) {
-      this.setState({
-        isOpen: false,
-      });
-    }
-  }
-
-  handleToggle(event) {
-    this.setState({
-      isOpen: !this.state.isOpen,
-      overChildren: false,
-    });
-  }
-
-  render() {
-    const {
-      buttonContent,
-      children,
-      isDisabled = false,
-      fullWidth,
-      placement = 'bottom-start',
-      style,
-      testSection,
-      width = 200,
-      zIndex = 999,
-    } = this.props;
+const Dropdown = withToggle(({
+  buttonContent,
+  children,
+  hide,
+  isDisabled = false,
+  isOpen,
+  fullWidth,
+  placement = 'bottom-start',
+  show,
+  style,
+  testSection,
+  width = 200,
+  zIndex = 999,
+  toggle,
+}) => {
 
     const groupClass = classNames(
       'oui-dropdown-group',
@@ -77,8 +50,8 @@ class Dropdown extends React.Component {
             type='button'
             className={ buttonClass }
             disabled={ isDisabled }
-            onClick={ this.handleToggle }
-            onBlur={ this.handleOnBlur }>
+            onClick={ toggle }
+            onBlur={ hide }>
             <div className='flex'>
               <div className='flex--1 truncate'>{ buttonContent }</div>
             </div>
@@ -95,15 +68,12 @@ class Dropdown extends React.Component {
             marginBottom: 2,
             boxShadow: '0 2px 3px rgba(0,0,0,.1)',
           }}
-          onMouseOver={ this.handleMouseOverChildren }
-          onMouseLeave={ this.handleMouseLeavingChildren }
-          onClick={ this.handleToggle } >
-          { this.state.isOpen && !isDisabled && children }
+          onClick={ hide } >
+          { isOpen && !isDisabled && children }
         </Popper>
       </Manager>
     );
-  }
-}
+})
 
 Dropdown.propTypes = {
   /** Button text, can be a string or element. */
