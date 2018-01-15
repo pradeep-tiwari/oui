@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { withToggle } from '../../utils/recompose-utils';
@@ -16,7 +16,6 @@ const Disclose = withToggle(({
     {
       ['border--sides border--bottom']: childrenStyle === 'border',
       ['border--bottom']: childrenStyle === 'divider' && isOpen,
-
     }
   );
   const linkClass = classNames(
