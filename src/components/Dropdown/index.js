@@ -9,7 +9,7 @@ const withToggle = compose(
   withHandlers({
     show: ({ toggle }) => (e) => toggle(true),
     hide: ({ toggle }) => (e) => toggle(false),
-    toggle: ({ toggle }) => (e) => toggle( (current) => !current )
+    toggle: ({ toggle }) => (e) => toggle((current) => !current),
   })
 );
 
@@ -29,51 +29,51 @@ const Dropdown = withToggle(({
   toggle,
 }) => {
 
-    const groupClass = classNames(
-      'oui-dropdown-group',
-      { ['width--1-1']: fullWidth }
-    );
+  const groupClass = classNames(
+    'oui-dropdown-group',
+    { ['width--1-1']: fullWidth }
+  );
 
-    const buttonClass = classNames(
-      'oui-button',
-      { [`oui-button--${style}`]: style },
-      { ['oui-button--full soft--left text--left']: fullWidth }
-    );
+  const buttonClass = classNames(
+    'oui-button',
+    { [`oui-button--${style}`]: style },
+    { ['oui-button--full soft--left text--left']: fullWidth }
+  );
 
-    return (
-      <Manager
-        data-ui-component={ true }
-        className={ groupClass }
-        data-test-section={ testSection }>
-        <Target>
-          <button
-            type='button'
-            className={ buttonClass }
-            disabled={ isDisabled }
-            onClick={ toggle }
-            onBlur={ hide }>
-            <div className='flex'>
-              <div className='flex--1 truncate'>{ buttonContent }</div>
-            </div>
-          </button>
-        </Target>
-        <Popper
-          placement={ placement }
-          className='oui-dropdown-children'
-          style={{
-            zIndex: zIndex,
-            position: 'absolute',
-            width: width,
-            marginTop: 2,
-            marginBottom: 2,
-            boxShadow: '0 2px 3px rgba(0,0,0,.1)',
-          }}
-          onClick={ hide } >
-          { isOpen && !isDisabled && children }
-        </Popper>
-      </Manager>
-    );
-})
+  return (
+    <Manager
+      data-ui-component={ true }
+      className={ groupClass }
+      data-test-section={ testSection }>
+      <Target>
+        <button
+          type='button'
+          className={ buttonClass }
+          disabled={ isDisabled }
+          onClick={ toggle }
+          onBlur={ hide }>
+          <div className='flex'>
+            <div className='flex--1 truncate'>{ buttonContent }</div>
+          </div>
+        </button>
+      </Target>
+      <Popper
+        placement={ placement }
+        className='oui-dropdown-children'
+        style={{
+          zIndex: zIndex,
+          position: 'absolute',
+          width: width,
+          marginTop: 2,
+          marginBottom: 2,
+          boxShadow: '0 2px 3px rgba(0,0,0,.1)',
+        }}
+        onClick={ hide } >
+        { isOpen && !isDisabled && children }
+      </Popper>
+    </Manager>
+  );
+});
 
 Dropdown.propTypes = {
   /** Button text, can be a string or element. */
