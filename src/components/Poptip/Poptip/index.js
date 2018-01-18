@@ -1,3 +1,4 @@
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -7,10 +8,12 @@ import classNames from 'classnames';
  * @returns {ReactElement}
  * @private
  */
-const Poptip = (props) => {
-  const classes = classNames({
-    'oui-pop--tip': true,
-    'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
+const Poptip = ({ bgColor = 'light', testSection, children }) => {
+  const classes = classNames(
+    {
+      'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
+      'oui-pop--tip': bgColor === 'dark',
+      'oui-pop--over': bgColor === 'light',
   });
 
   return (
@@ -18,8 +21,8 @@ const Poptip = (props) => {
       data-oui-component={ true }
       className={ classes }
       style={{ display: 'inline-block', opacity: 1, position: 'initial' }}
-      data-test-section={ props.testSection }>
-      { props.children }
+      data-test-section={ testSection }>
+      { children }
     </div>
   );
 };
@@ -29,6 +32,8 @@ Poptip.propTypes = {
   children: PropTypes.string.isRequired,
   /** Hook for automated JavaScript tests */
   testSection: PropTypes.string,
+  /** Background color */
+  bgColor: PropTypes.oneOf(['dark', 'light']),
 };
 
 export default Poptip;

@@ -31,10 +31,7 @@ stories
   .add('poptip to the right', withInfo()(() => (<div className="position--relative height--100">
     <Poptip
       content="Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!"
-      horizontalAttachment="left"
-      horizontalTargetAttachment="right"
-      verticalAttachment="middle"
-      verticalTargetAttachment="middle">
+      bgColor='dark'>
       <Button style="unstyled" width="default">
         <a>Poptip on the right</a>
       </Button>
@@ -42,11 +39,7 @@ stories
   </div>)))
   .add('poptip with advanced positioning', withInfo()(() => (<div className="position--relative height--100">
     <Poptip
-      content="Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!"
-      horizontalAttachment="left"
-      horizontalTargetAttachment="left"
-      verticalAttachment="top"
-      verticalTargetAttachment="bottom">
+      content={<div>hola a todos mis amigos</div>}>
       <Button width="default">
         Poptip With Advanced Positioning
       </Button>
