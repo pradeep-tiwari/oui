@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Poptip from './Poptip';
 
 import { Tooltip } from 'react-tippy';
 import 'react-tippy/dist/tippy.css';
@@ -11,7 +10,7 @@ import 'react-tippy/dist/tippy.css';
  * @returns {ReactElement}
  */
 
-const PoptipWrapper = ({
+const Poptip = ({
   children,
   content,
   disable,
@@ -22,7 +21,7 @@ const PoptipWrapper = ({
   <Tooltip
     arrow={ true }
     disable={ disable }
-    html={ <Poptip>{ content }</Poptip> }
+    html={ <div>{ content }</div> }
     position={ position }
     theme={ theme }
     trigger={ trigger }>
@@ -30,9 +29,9 @@ const PoptipWrapper = ({
   </Tooltip>
 );
 
-PoptipWrapper.displayName = 'Poptip';
+Poptip.displayName = 'Poptip';
 
-PoptipWrapper.propTypes = {
+Poptip.propTypes = {
   /** Content that, when hovered on, makes the Poptip appear */
   children: PropTypes.node.isRequired,
   /** content could be a node of a string */
@@ -60,4 +59,4 @@ PoptipWrapper.propTypes = {
   ]),
 };
 
-export default PoptipWrapper;
+export default Poptip;
