@@ -8,7 +8,7 @@ addons:
 before_deploy:
 # Start from scratch
 - rm -rfv dist
-- npm start
+- npm run build
 # Remove `devDependencies` from `package.json` before it goes to npm.
 - ./node_modules/.bin/json -I -f package.json -e 'this.devDependencies={}'
 # Prepare for deploying React documentation with SSH
