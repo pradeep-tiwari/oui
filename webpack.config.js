@@ -18,12 +18,12 @@ let plugins = [
 
 const config = {
   entry: {
-    'optimizely-oui': path.resolve(__dirname, './src/main.js'),
+    oui: path.resolve(__dirname, './src/main.js'),
     styles: path.resolve(__dirname, './src/oui/oui.scss'),
   },
   devtool: 'source-map',
   output: {
-    path: path.resolve(__dirname, `./dist/docs/oui/${version}/lib/`),
+    path: path.resolve(__dirname, `./dist`),
     filename: '[name].js',
     chunkFilename: '[name]-[hash].js',
     libraryTarget: 'umd',
