@@ -5,7 +5,6 @@ const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const path = require('path');
-const { version } = require('./package.json');
 
 let plugins = [
   require('autoprefixer'),
