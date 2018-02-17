@@ -22,7 +22,7 @@ const config = {
   },
   devtool: 'source-map',
   output: {
-    path: path.resolve(__dirname, `./dist`),
+    path: path.resolve(__dirname, './dist'),
     filename: '[name].js',
     chunkFilename: '[name]-[hash].js',
     libraryTarget: 'umd',
