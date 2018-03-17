@@ -1,12 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+import Slider from 'react-rangeslider';
 
-// import Label from '../Label';
-
-const Rangeslider = ({
-  onClick,
-  onChange,
-}) => {
+const Rangeslider = (props) => {
   return (
     <div className="oui-rangeslider">
       <div className="oui-grid">
@@ -26,28 +22,24 @@ const Rangeslider = ({
             <div className="gridline gridline-half grid-h3"></div>
             <div className="gridline gridline-half grid-h4"></div>
           </div>
-          <input
-            data-traffic-group="1"
-            type="range"
-            min="0"
-            max="100"
-            step="1"
-            defaultValue="50"
-            onChange={ onChange }
-          />
         </div>
       </div>
+      <Slider
+        min={ 0 }
+        max={ 100 }
+        step={ 1 }
+        orientation="horizontal"
+        { ...props }
+      />
     </div>
   );
 };
 
 Rangeslider.propTypes = {
-  // checked true means the toggle is on off means off
-  checked: PropTypes.bool,
-  /** Function that fires when the radio input is clicked */
   onChange: PropTypes.func,
-  // onClick function
-  onClick: PropTypes.func,
+  onChangeComplete: PropTypes.func,
+  onChangeStart: PropTypes.func,
+  value: PropTypes.number,
 };
 
 export default Rangeslider;

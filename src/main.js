@@ -19,6 +19,7 @@ export { default as Popover } from './components/Popover';
 export { default as Poptip } from './components/Poptip';
 export { default as Radio } from './components/Radio';
 export { default as Table } from './components/Table';
+export { default as RangeSlider } from './components/Rangeslider';
 export { default as TabNav } from './components/TabNav';
 export { default as Textarea } from './components/Textarea';
 export { default as TextField } from './components/TextField';
