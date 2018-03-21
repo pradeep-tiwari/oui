@@ -4,7 +4,7 @@ import Slider from 'react-rangeslider';
 
 const Rangeslider = (props) => {
   return (
-    <div className="oui-rangeslider">
+    <div className="oui-rangeslider position--relative" data-test-section={ props.testSection }>
       <div className="oui-grid">
         <div className="oui-grid__cell">
           <label className="oui-label light-text">0%</label>
@@ -28,6 +28,8 @@ const Rangeslider = (props) => {
         min={ 0 }
         max={ 100 }
         step={ 1 }
+        value={ 35 }
+        tooltip={ false }
         orientation="horizontal"
         { ...props }
       />
@@ -36,9 +38,15 @@ const Rangeslider = (props) => {
 };
 
 Rangeslider.propTypes = {
+  /** onChange function */
   onChange: PropTypes.func,
+  /** onChangeComplete function */
   onChangeComplete: PropTypes.func,
+  /** onChangeStart function */
   onChangeStart: PropTypes.func,
+  /** Hook for automated JavaScript tests */
+  testSection: PropTypes.string,
+  /** The initial value */
   value: PropTypes.number,
 };
 

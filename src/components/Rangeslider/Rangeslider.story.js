@@ -17,6 +17,11 @@ stories
 
 stories.add('default', withInfo()(() => {
   return (
-    <Rangeslider />
+    <div>
+      <input type="text" className="oui-text-input push-double--bottom" />
+      <Rangeslider />
+      <input type="text" className="oui-text-input" />
+    </div>
+
   );
 }));
