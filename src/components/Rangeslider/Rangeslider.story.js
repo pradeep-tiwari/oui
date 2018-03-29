@@ -22,6 +22,5 @@ stories.add('default', withInfo()(() => {
       <Rangeslider />
       <input type="text" className="oui-text-input" />
     </div>
-
   );
 }));
