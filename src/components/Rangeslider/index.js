@@ -1,18 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-// function resizeRangeDisplay(val) {
-//   document.getElementsByClassName('range-display-overlay')[0].style.left = val+'%';
-// }
-
 const Rangeslider = (props) => {
   return (
     <div className="oui-rangeslider" data-test-section={ props.testSection }>
-      <div className="lego-grid">
-        <div className="lego-grid__cell position--relative">
+      <div className="oui-grid">
+        <div className="oui-grid__cell position--relative">
           <div className="flex">
-            <label className="lego-label muted flex--1">0%</label>
-            <label className="lego-label muted">100%</label>
+            <label className="oui-label muted flush flex--1">0%</label>
+            <label className="oui-label muted flush">100%</label>
           </div>
           <div className="range-display">
             <div className="range-display range-display-overlay"></div>
@@ -34,6 +30,10 @@ const Rangeslider = (props) => {
     </div>
   );
 };
+
+// function resizeRangeDisplay(val) {
+//   document.getElementsByClassName('range-display-overlay')[0].style.left = val+'%';
+// }
 
 Rangeslider.propTypes = {
   /** onChange function */

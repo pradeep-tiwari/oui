@@ -60,7 +60,7 @@
   }
   .range-display {
     height: 35px;
-    background-image: url('data:image/svg+xml;utf-8,<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256"><path fill="#23a44f" d="M0 256h256V0z"/></svg>');
+    background-image: url('data:image/svg+xml;utf-8,<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256"><path fill="'+map-fetch($color, ui, good-news)+'" d="M0 256h256V0z"/></svg>');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     position: absolute;
@@ -83,12 +83,11 @@
     left: 0;
     right: 0px;
     height: 8px;
-    background-color: #F6F6F7;
-    border: 1px solid #CDD0D8;
+    background-color: map-fetch($color, background, faint);
+    border: 1px solid map-fetch($button, type, base, border);
     bottom: -8px;
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
-    border-top-color: #23a44f;
     border-top: none;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2) inset;
   }
@@ -96,10 +95,11 @@
     position: absolute;
     width: calc(100% - 24px);
     margin-left: 12px;
-    height: 36px;
+    height: 38px;
+    top: 20px;
   }
   .range-grid .gridline {
-    background-color: #ccc;
+    background-color: map-fetch($button, type, base, border);
     opacity: 1;
     position: absolute;
     left: 0px;
