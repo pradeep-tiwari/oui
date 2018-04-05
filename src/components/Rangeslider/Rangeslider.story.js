@@ -21,7 +21,6 @@ stories.add('default', withInfo()(() => {
       <input type="text" className="oui-text-input push-double--bottom" />
       <Rangeslider
         value={ number('value', 50) }
-        onChange={ () => {} }
       />
       <input type="text" className="oui-text-input" />
     </div>
