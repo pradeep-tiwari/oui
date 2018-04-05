@@ -1,5 +1,5 @@
 import React from 'react';
-import Toggle from '../index';
+import RangeSlider from '../index';
 import { shallow } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 
@@ -8,15 +8,15 @@ describe('components/Toggle', () => {
 
   beforeEach(() => {
     component = shallow(
-      <Toggle />
+      <RangeSlider />
     );
   });
 
-  it('should render an `Toggle` with correct props', () => {
+  it('should render component same as snapshot', () => {
     expect(shallowToJson(component)).toMatchSnapshot();
   });
 
-  it('should render an `Toggle` with correct props', () => {
+  it('should render component with correct props', () => {
     expect(component.length).toBe(1);
   });
 
