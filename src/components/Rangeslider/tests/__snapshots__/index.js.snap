@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/Toggle should render component same as snapshot 1`] = `
+exports[`components/RangeSlider should render component same as snapshot 1`] = `
 <div
   className="oui-rangeslider"
+  data-test-section="myTestSection"
 >
   <div
     className="oui-grid"
@@ -31,7 +32,7 @@ exports[`components/Toggle should render component same as snapshot 1`] = `
           className="range-display range-display-overlay"
           style={
             Object {
-              "left": "undefined%",
+              "left": "50%",
             }
           }
         />
@@ -72,8 +73,10 @@ exports[`components/Toggle should render component same as snapshot 1`] = `
         data-traffic-group="1"
         max="100"
         min="0"
+        onChange={[Function]}
         step="1"
         type="range"
+        value={50}
       />
     </div>
   </div>
