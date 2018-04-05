@@ -11,6 +11,21 @@ This file is similar to the format suggested by [Keep a CHANGELOG](https://githu
 ### Added
 - [Feature] Added `left-pad`, `header`, and `plain` styling to `TabNav`
 
+## 30.0.3 - 2018-03-21
+### Fixed
+- [Patch] Add data-test-section for Switch component
+
+## 30.0.2 - 2018-03-19
+### Fixed
+- [Patch] Fix Switch component position bug by adding relative wrapper
+
+## 30.0.1 - 2018-03-16
+### Fixed
+- [Patch] Export Switch component from main.js
+
+## 30.0.0 - 2018-03-15
+- [Feature] Breaking change: Rename `Toggle` to `Switch` component and add final CSS with focus state (#930)
+
 ## 29.4.1 - 2018-03-09
 ### Added
 - [Feature] Added `left-pad`, `header`, and `plain` styling to `TabNav`
@@ -21,7 +36,7 @@ This file is similar to the format suggested by [Keep a CHANGELOG](https://githu
 ## 29.4.0 - 2018-03-02
 - [Fix] Fix children onClick handlers in Dropdown component
 - [Fix] Correctly import tippy.css into oui.scss main
-- [Path] Update babel to support decorators
+- [Patch] Update babel to support decorators
 
 ## 29.3.2 - 2018-02-22
 - [Fix] Fix Code and CopyButton components  
