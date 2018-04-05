@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean } from '@storybook/addon-knobs';
+import { withKnobs, number } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 
 import Rangeslider from './index.js';
@@ -19,7 +19,10 @@ stories.add('default', withInfo()(() => {
   return (
     <div>
       <input type="text" className="oui-text-input push-double--bottom" />
-      <Rangeslider />
+      <Rangeslider
+        value={ number('value', 50) }
+        onChange={ () => {} }
+      />
       <input type="text" className="oui-text-input" />
     </div>
   );
