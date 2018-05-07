@@ -8,7 +8,6 @@ import { withInfo } from '@storybook/addon-info';
 
 import Dropdown from './index.js';
 import BlockList from '../BlockList';
-import TextField from '../TextField';
 import Icon from 'react-oui-icons';
 
 const data = [
