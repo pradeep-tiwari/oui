@@ -31,7 +31,7 @@ const Link = ({
       data-test-section={ testSection }
       data-track-id={ testSection }
       onClick={ onClick }
-      {...(newWindow ? { target: '_blank', rel: 'noopener' } : {})}
+      { ...(newWindow ? { target: '_blank', rel: 'noopener' } : {}) }
       disabled={ isDisabled }>
       { children }
     </a>
@@ -45,7 +45,7 @@ Link.propTypes = {
   href: PropTypes.string,
   /** Disable link and interactivity */
   isDisabled: PropTypes.bool,
-  /** new */
+  /** Open link in new window */
   newWindow: PropTypes.bool,
   /** Click handler function */
   onClick: PropTypes.func,
