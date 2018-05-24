@@ -38,8 +38,15 @@ const TextField = ({
   );
 
   let classes = classnames(
-    'oui-text-input', {'oui-text-input--search': isFilter}
+    'oui-text-input',
+    {'oui-text-input--search': isFilter},
+    {'text--right': (type === 'number' || type === 'percent')}
   );
+
+  let inputType = type;
+  if (type === 'percent') {
+    inputType = 'number';
+  }
 
   return (
     /* eslint-disable react/jsx-no-bind */
@@ -54,24 +61,27 @@ const TextField = ({
           { label }
         </Label>
       }
-      <input
-        className={ classes }
-        type={ type }
-        value={ value }
-        defaultValue={ defaultValue }
-        placeholder={ placeholder }
-        required={ isRequired }
-        readOnly={ isReadOnly }
-        disabled={ isDisabled }
-        onInput={ onInput }
-        onChange={ onChange }
-        onBlur={ onBlur }
-        onKeyDown={ onKeyDown }
-        onFocus={ onFocus }
-        min={ min }
-        max={ max }
-        data-test-section={ testSection }
-      />
+      <span className="flex flex-align--center">
+        <input
+          className={ classes }
+          type={ inputType }
+          value={ value }
+          defaultValue={ defaultValue }
+          placeholder={ placeholder }
+          required={ isRequired }
+          readOnly={ isReadOnly }
+          disabled={ isDisabled }
+          onInput={ onInput }
+          onChange={ onChange }
+          onBlur={ onBlur }
+          onKeyDown={ onKeyDown }
+          onFocus={ onFocus }
+          min={ min }
+          max={ max }
+          data-test-section={ testSection }
+        />
+        { type === 'percent' && <span className="push-half--left push--right">%</span> }
+      </span>
       { note && <div className="oui-form-note">{ note }</div> }
     </div>
   );
@@ -130,6 +140,7 @@ TextField.propTypes = {
     'password',
     'date',
     'number',
+    'percent',
     'email',
     'url',
     'search',
