@@ -37,10 +37,12 @@ const TextField = ({
     {'oui-form-bad-news': displayError}
   );
 
-  let classes = classnames(
+  const inputClassNames = classnames(
     'oui-text-input',
-    {'oui-text-input--search': isFilter},
-    {'text--right': (type === 'number' || type === 'percent')}
+    {
+      'oui-text-input--search': isFilter,
+      'text--right': (type === 'number' || type === 'percent'),
+    }
   );
 
   let inputType = type;
@@ -63,7 +65,7 @@ const TextField = ({
       }
       <span className="flex flex-align--center">
         <input
-          className={ classes }
+          className={ inputClassNames }
           type={ inputType }
           value={ value }
           defaultValue={ defaultValue }
