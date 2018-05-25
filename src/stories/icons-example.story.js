@@ -17,28 +17,26 @@ stories
 stories.add('all icons', () => {
   const iconsElements = icons.map((icon, index) => {
     const Box = styled.div`
-    border: 1px dashed #ccc;
-    border-radius: 8px;
     box-sizing: border-box;
     display: flex;
     height: 100px;
     justify-content: center;
     margin: 5px;
-    padding: 20px 10px
     text-align: center;
     width: 100px;
     &:after {
-      color: white;
+      color: #666;
       transition: all 0.4s ease;
       content: '${icon.title}';
       font-family: Helvetica;
-      font-size: 0.5rem;
+      font-size: 9px;
       max-width: 90px;
       position: absolute;
       margin-top: 70px;
+      opacity: .5;
     }
     &:hover:after {
-      color: #666;
+      opacity: .5;
     }
   `;
     return (
@@ -48,7 +46,7 @@ stories.add('all icons', () => {
           description={ icon.title }
           name={ icon.title.split(' ').join('-') }
           fill={ text('color', 'black') }
-          size={ select('size', {small: 'small', medium: 'medium', large: 'large'}, 'medium') }
+          size={ select('size', {small: 'small', medium: 'medium', large: 'large'}, 'large') }
         />
       </Box>
     );

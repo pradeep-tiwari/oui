@@ -8,6 +8,7 @@ This file is similar to the format suggested by [Keep a CHANGELOG](https://githu
 ### Added
 - [Feature] New `type=percent` prop for <TextField> component that adds `%` and handles vertical centering automatically.
 - [Patch] Fix `<TextField type=number>` to align text right.
+- [Patch] Sort all stories by alpha order.
 
 ### Changed
 - [Patch] Remove Gatsby to simplify documentation and migrate to Storybook for everything.

@@ -16,7 +16,7 @@ setOptions({
   showDownPanel: true,
   showSearchBox: false,
   downPanelInRight: true,
-  sortStoriesByKind: false,
+  sortStoriesByKind: true,
 });
 
 const req = require.context('../src/', true, /story\.js$/);
