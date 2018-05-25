@@ -9,6 +9,9 @@ This file is similar to the format suggested by [Keep a CHANGELOG](https://githu
 - [Feature] New `type=percent` prop for <TextField> component that adds `%` and handles vertical centering automatically.
 - [Patch] Fix `<TextField type=number>` to align text right.
 
+### Changed
+- [Patch] Remove Gatsby to simplify documentation and migrate to Storybook for everything.
+
 ## 31.3.0 - 2018-05-10
 ### Added
 - [Feature] Expose isAnimated prop to disable animation in Poptip
