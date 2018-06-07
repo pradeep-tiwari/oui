@@ -5,11 +5,11 @@ import { Manager, Popper, Target } from 'react-popper';
 import { withState } from 'recompose';
 import { withToggle } from '../../utils/recompose-utils';
 
-import DropdownContents from './DropdownContents.js';
-import DropdownListItem from './DropdownListItem.js';
-import DropdownBlockLink from './DropdownBlockLink.js';
-import DropdownBlockLinkText from './DropdownBlockLinkText.js';
-import DropdownBlockLinkSecondaryText from './DropdownBlockLinkSecondaryText.js';
+import DropdownContents from './DropdownContents';
+import DropdownListItem from './DropdownListItem';
+import DropdownBlockLink from './DropdownBlockLink';
+import DropdownBlockLinkText from './DropdownBlockLinkText';
+import DropdownBlockLinkSecondaryText from './DropdownBlockLinkSecondaryText';
 
 class DropdownActivator extends React.Component {
   static propTypes = {
@@ -20,14 +20,14 @@ class DropdownActivator extends React.Component {
 
   render() {
     // loop through children and add props to them
-    // we need this so that we can pass the context props to the children
+    // we need this so that we can pass the props to the children
     // passed into the activator
     const childrenWithProps = React.Children.map(this.props.children,
       (child) => {
         return React.cloneElement(child, {
           // trigger the dropdown if the child element is clicked on
           onClick: this.props.handleToggle,
-          // onBlur: this.props.handleOnBlur,
+          onBlur: this.props.handleOnBlur,
         });
       }
     );

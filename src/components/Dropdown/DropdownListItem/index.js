@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 
 export default function DropdownListItem(props) {
   const classes = classNames({
-    'hard--sides': this.props.hardSides,
-    'hard--top': this.props.hardTop,
+    'hard--sides': props.hardSides,
+    'hard--top': props.hardTop,
     'oui-dropdown__item': true,
   });
 

@@ -7,11 +7,11 @@ import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 
 import Dropdown from './index.js';
-import DropdownContents from './DropdownContents.js';
-import DropdownListItem from './DropdownListItem.js';
-import DropdownBlockLink from './DropdownBlockLink.js';
-import DropdownBlockLinkText from './DropdownBlockLinkText.js';
-import DropdownBlockLinkSecondaryText from './DropdownBlockLinkSecondaryText.js';
+import DropdownContents from './DropdownContents';
+import DropdownListItem from './DropdownListItem';
+import DropdownBlockLink from './DropdownBlockLink';
+import DropdownBlockLinkText from './DropdownBlockLinkText';
+import DropdownBlockLinkSecondaryText from './DropdownBlockLinkSecondaryText';
 import Button from '../Button';
 import BlockList from '../BlockList';
 import Icon from 'react-oui-icons';
