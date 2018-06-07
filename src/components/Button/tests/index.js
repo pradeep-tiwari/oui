@@ -26,6 +26,19 @@ describe('components/Button', () => {
     expect(obj.func).toHaveBeenCalled();
   });
 
+  it('should call function that is passed in as `onBlur` after losing focus', () => {
+    const obj = { func: () => {} };
+    spyOn(obj, 'func').and.stub();
+
+    const component = shallow(
+      <Button onBlur={ obj.func }>Hello!</Button>
+    );
+
+    component.simulate('blur');
+
+    expect(obj.func).toHaveBeenCalled();
+  });
+
   it('should add an `aria-label` when provided', () => {
     const component = shallow(
       <Button ariaLabel="a11y">Hello!</Button>

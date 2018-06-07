@@ -7,6 +7,12 @@ import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 
 import Dropdown from './index.js';
+import DropdownContents from './DropdownContents.js';
+import DropdownListItem from './DropdownListItem.js';
+import DropdownBlockLink from './DropdownBlockLink.js';
+import DropdownBlockLinkText from './DropdownBlockLinkText.js';
+import DropdownBlockLinkSecondaryText from './DropdownBlockLinkSecondaryText.js';
+import Button from '../Button';
 import BlockList from '../BlockList';
 import Icon from 'react-oui-icons';
 
@@ -148,6 +154,40 @@ stories.add('Z-index', withInfo()(() => {
           </Dropdown>
           <h1>This text should be behind the open dropdown</h1>
         </ScrollContainer>
+      </SubContainer>
+    </Container>
+  );
+}));
+
+stories.add('List', withInfo()(() => {
+  return (
+    <Container className="background--faint">
+      <SubContainer>
+        <Dropdown
+          isDisabled={ boolean('isDisabled', false) }
+          activator={
+            <Button>Click to activate</Button>
+          }
+          placement={ 'top-start' }
+          width={ number('width', 300) }>
+          <DropdownContents
+            minWidth={ 300 }
+            direction={ 'up' }>
+            <DropdownListItem>
+              <DropdownBlockLink onClick={ action('click dropdown block link') }>
+                <DropdownBlockLinkText text={ 'This is a label' } />
+                <DropdownBlockLinkSecondaryText secondaryText={ 'This is a smaller description' } />
+              </DropdownBlockLink>
+            </DropdownListItem>
+            <DropdownListItem>
+              <DropdownBlockLink onClick={ action('click dropdown block link 2') }>
+                <DropdownBlockLinkText text={ 'This is a second label' } />
+                <DropdownBlockLinkSecondaryText secondaryText={ 'This is a second smaller description' } />
+              </DropdownBlockLink>
+            </DropdownListItem>
+          </DropdownContents>
+        </Dropdown>
+        <h1>This text should be behind the open dropdown</h1>
       </SubContainer>
     </Container>
   );

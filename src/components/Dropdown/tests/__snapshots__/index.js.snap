@@ -92,6 +92,19 @@ exports[`components/Dropdown should not use .oui-arrow-inline--down when icon is
 </withHandlers(withState(Dropdown))>
 `;
 
+exports[`components/Dropdown should render an activator node when passed as a prop 1`] = `
+<withHandlers(withState(Dropdown))
+  activator={
+    <button>
+      Click me
+    </button>
+  }
+  displayError={true}
+  isOpen={false}
+  toggle={[Function]}
+/>
+`;
+
 exports[`components/Dropdown should render children when isOpen is true 1`] = `
 <withHandlers(withState(Dropdown))
   buttonContent="Dropdown"

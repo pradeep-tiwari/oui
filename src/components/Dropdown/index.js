@@ -5,6 +5,30 @@ import { Manager, Popper, Target } from 'react-popper';
 import { withState } from 'recompose';
 import { withToggle } from '../../utils/recompose-utils';
 
+class DropdownActivator extends React.Component {
+  static propTypes = {
+    children: PropTypes.node,
+    handleOnBlur: PropTypes.func,
+    handleToggle: PropTypes.func,
+  };
+
+  render() {
+    // loop through children and add props to them
+    // we need this so that we can pass the context props to the children
+    // passed into the activator
+    const childrenWithProps = React.Children.map(this.props.children,
+      (child) => {
+        return React.cloneElement(child, {
+          // trigger the dropdown if the child element is clicked on
+          onClick: this.props.handleToggle,
+          // onBlur: this.props.handleOnBlur,
+        });
+      }
+    );
+    return <div>{ childrenWithProps }</div>;
+  }
+}
+
 @withState('overChildren', 'setOverChildren', false)
 class Dropdown extends React.Component {
   handleOnBlur = () => {
@@ -24,6 +48,7 @@ class Dropdown extends React.Component {
 
   render() {
     const {
+      activator,
       arrowIcon,
       buttonContent,
       children,
@@ -41,7 +66,8 @@ class Dropdown extends React.Component {
     const groupClass = classNames(
       'oui-dropdown-group',
       {['width--1-1']: fullWidth},
-      {['oui-form-bad-news']: displayError}
+      {['oui-form-bad-news']: displayError},
+      {['is-active']: isOpen},
     );
 
     const buttonClass = classNames(
@@ -66,21 +92,34 @@ class Dropdown extends React.Component {
         className={ groupClass }
         data-test-section={ testSection }>
         <Target>
-          <button
-            type='button'
-            className={ buttonClass }
-            disabled={ isDisabled }
-            onClick={ this.handleToggle }
-            onBlur={ this.handleOnBlur }>
-            <div className='flex'>
-              <div className='flex--1 truncate'>{ buttonContent }</div>
-              {
-                !!arrowIcon && arrowIcon !== 'none' && (
-                  <div className='text--right'><span className={ iconClass }/></div>
-                )
-              }
-            </div>
-          </button>
+          {
+            buttonContent && (
+              <button
+                type='button'
+                className={ buttonClass }
+                disabled={ isDisabled }
+                onClick={ this.handleToggle }
+                onBlur={ this.handleOnBlur }>
+                <div className='flex'>
+                  <div className='flex--1 truncate'>{ buttonContent }</div>
+                  {
+                    !!arrowIcon && arrowIcon !== 'none' && (
+                      <div className='text--right'><span className={ iconClass }/></div>
+                    )
+                  }
+                </div>
+              </button>
+            )
+          }
+          {
+            activator && (
+              <DropdownActivator
+                handleToggle={ this.handleToggle }
+                handleOnBlur={ this.handleOnBlur }>
+                { this.props.activator }
+              </DropdownActivator>
+            )
+          }
         </Target>
         <Popper
           placement={ placement }
@@ -104,6 +143,8 @@ class Dropdown extends React.Component {
 }
 
 Dropdown.propTypes = {
+  /** React element that when clicked activates the dropdown */
+  activator: PropTypes.node,
   /** Arrow icon direction:
     * - Defaults to 'none', which hides the arrow
     * - passing a prop value of false also hides the arrow
