@@ -5,6 +5,12 @@ import { Manager, Popper, Target } from 'react-popper';
 import { withState } from 'recompose';
 import { withToggle } from '../../utils/recompose-utils';
 
+import DropdownContents from './DropdownContents.js';
+import DropdownListItem from './DropdownListItem.js';
+import DropdownBlockLink from './DropdownBlockLink.js';
+import DropdownBlockLinkText from './DropdownBlockLinkText.js';
+import DropdownBlockLinkSecondaryText from './DropdownBlockLinkSecondaryText.js';
+
 class DropdownActivator extends React.Component {
   static propTypes = {
     children: PropTypes.node,
@@ -211,5 +217,11 @@ Dropdown.propTypes = {
 Dropdown.defaultProps = {
   arrowIcon: 'none',
 };
+
+Dropdown.DropdownContents = DropdownContents;
+Dropdown.DropdownListItem = DropdownListItem;
+Dropdown.DropdownBlockLink = DropdownBlockLink;
+Dropdown.DropdownBlockLinkText = DropdownBlockLinkText;
+Dropdown.DropdownBlockLinkSecondaryText = DropdownBlockLinkSecondaryText;
 
 export default withToggle(Dropdown);
