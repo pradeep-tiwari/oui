@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export default function DropdownBlockLinkText(props) {
   const testSection = props.testSection ? 'block-link-text-' + props.testSection : null;
   return (
-    <span data-test-section={ testSection }>
+    <span { ...(testSection ? { 'data-test-section': testSection } : {}) }>
       { props.text }
     </span>
   );

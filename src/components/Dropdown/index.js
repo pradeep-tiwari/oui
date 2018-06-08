@@ -149,7 +149,9 @@ class Dropdown extends React.Component {
 }
 
 Dropdown.propTypes = {
-  /** React element that when clicked activates the dropdown */
+  /** React element that when clicked activates the dropdown
+   * Either this prop OR buttonContent should be used, not both
+   */
   activator: PropTypes.node,
   /** Arrow icon direction:
     * - Defaults to 'none', which hides the arrow
@@ -163,7 +165,9 @@ Dropdown.propTypes = {
     'right',
     'up',
   ]),
-  /** Button text, can be a string or element. */
+  /** Button text, can be a string or element.
+   * Either this prop OR activator should be used, not both
+   */
   buttonContent: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.element,

@@ -9,7 +9,7 @@ export default function DropdownBlockLinkSecondaryText(props) {
       { props.isWarning &&
         <Icon name='exclamation' size='small' />
       }
-      <div data-test-section={ testSection }>
+      <div { ...(testSection ? { 'data-test-section': testSection } : {}) }>
         { props.secondaryText }
       </div>
     </div>

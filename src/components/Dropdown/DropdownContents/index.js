@@ -21,7 +21,10 @@ export default function DropdownContents(props) {
   });
 
   return (
-    <ul className={ classes } style={ styleProps } data-test-section={ props.testSection }>
+    <ul
+      className={ classes }
+      style={ styleProps }
+      { ...(props.testSection ? { 'data-test-section': props.testSection } : {}) }>
       { props.children }
     </ul>
   );
@@ -31,7 +34,7 @@ DropdownContents.propTypes = {
   /** Whether contents can scroll */
   canScroll: PropTypes.bool,
   /** Nodes to display within */
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   /** Direction of contents */
   direction: PropTypes.oneOf(['left', 'right', 'up']),
   /** Whether to wrap contents or not */
@@ -46,5 +49,8 @@ DropdownContents.propTypes = {
 };
 
 DropdownContents.defaultProps = {
+  canScroll: false,
   direction: 'left',
+  isNoWrap: false,
+  testSection: '',
 };

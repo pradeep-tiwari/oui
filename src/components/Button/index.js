@@ -89,6 +89,11 @@ Button.propTypes = {
   ]),
 };
 
+Button.defaultProps = {
+  onBlur: () => {},
+  onClick: () => {},
+};
+
 Button.displayName = 'Button';
 
 export default Button;

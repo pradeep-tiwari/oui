@@ -43,8 +43,8 @@ export default class DropdownBlockLink extends React.Component {
           'oui-dropdown__block-link': this.props.isLink,
         }) }
         style={ styleProps }
-        data-test-section={ this.props.testSection }
-        data-track-id={ this.props.trackId }
+        { ...(this.props.testSection ? { 'data-test-section': this.props.testSection } : {}) }
+        { ...(this.props.trackId ? { 'data-track-id': this.props.trackId } : {}) }
         onClick={ this.onClick }>
         { this.props.children }
       </div>
