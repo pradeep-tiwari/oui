@@ -218,10 +218,12 @@ Dropdown.defaultProps = {
   arrowIcon: 'none',
 };
 
-Dropdown.DropdownContents = DropdownContents;
-Dropdown.DropdownListItem = DropdownListItem;
-Dropdown.DropdownBlockLink = DropdownBlockLink;
-Dropdown.DropdownBlockLinkText = DropdownBlockLinkText;
-Dropdown.DropdownBlockLinkSecondaryText = DropdownBlockLinkSecondaryText;
+const DropdownWithToggle = withToggle(Dropdown)
 
-export default withToggle(Dropdown);
+DropdownWithToggle.Contents = DropdownContents;
+DropdownWithToggle.ListItem = DropdownListItem;
+DropdownWithToggle.BlockLink = DropdownBlockLink;
+DropdownWithToggle.BlockLinkText = DropdownBlockLinkText;
+DropdownWithToggle.BlockLinkSecondaryText = DropdownBlockLinkSecondaryText;
+
+export default DropdownWithToggle;

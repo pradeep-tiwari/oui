@@ -7,11 +7,6 @@ import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 
 import Dropdown from './index.js';
-import DropdownContents from './DropdownContents';
-import DropdownListItem from './DropdownListItem';
-import DropdownBlockLink from './DropdownBlockLink';
-import DropdownBlockLinkText from './DropdownBlockLinkText';
-import DropdownBlockLinkSecondaryText from './DropdownBlockLinkSecondaryText';
 import Button from '../Button';
 import BlockList from '../BlockList';
 import Icon from 'react-oui-icons';
@@ -170,22 +165,22 @@ stories.add('List', withInfo()(() => {
           }
           placement={ 'top-start' }
           width={ number('width', 300) }>
-          <DropdownContents
+          <Dropdown.Contents
             minWidth={ 300 }
             direction={ 'up' }>
-            <DropdownListItem>
-              <DropdownBlockLink onClick={ action('click dropdown block link') }>
-                <DropdownBlockLinkText text={ 'This is a label' } />
-                <DropdownBlockLinkSecondaryText secondaryText={ 'This is a smaller description' } />
-              </DropdownBlockLink>
-            </DropdownListItem>
-            <DropdownListItem>
-              <DropdownBlockLink onClick={ action('click dropdown block link 2') }>
-                <DropdownBlockLinkText text={ 'This is a second label' } />
-                <DropdownBlockLinkSecondaryText secondaryText={ 'This is a second smaller description' } />
-              </DropdownBlockLink>
-            </DropdownListItem>
-          </DropdownContents>
+            <Dropdown.ListItem>
+              <Dropdown.BlockLink onClick={ action('click dropdown block link') }>
+                <Dropdown.BlockLinkText text={ 'This is a label' } />
+                <Dropdown.BlockLinkSecondaryText secondaryText={ 'This is a smaller description' } />
+              </Dropdown.BlockLink>
+            </Dropdown.ListItem>
+            <Dropdown.ListItem>
+              <Dropdown.BlockLink onClick={ action('click dropdown block link 2') }>
+                <Dropdown.BlockLinkText text={ 'This is a second label' } />
+                <Dropdown.BlockLinkSecondaryText secondaryText={ 'This is a second smaller description' } />
+              </Dropdown.BlockLink>
+            </Dropdown.ListItem>
+          </Dropdown.Contents>
         </Dropdown>
         <h1>This text should be behind the open dropdown</h1>
       </SubContainer>
