@@ -218,7 +218,7 @@ Dropdown.defaultProps = {
   arrowIcon: 'none',
 };
 
-const DropdownWithToggle = withToggle(Dropdown)
+const DropdownWithToggle = withToggle(Dropdown);
 
 DropdownWithToggle.Contents = DropdownContents;
 DropdownWithToggle.ListItem = DropdownListItem;
