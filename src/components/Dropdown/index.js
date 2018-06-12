@@ -11,32 +11,11 @@ import DropdownBlockLink from './DropdownBlockLink';
 import DropdownBlockLinkText from './DropdownBlockLinkText';
 import DropdownBlockLinkSecondaryText from './DropdownBlockLinkSecondaryText';
 
-class DropdownActivator extends React.Component {
-  static propTypes = {
-    children: PropTypes.node,
-    handleOnBlur: PropTypes.func,
-    handleToggle: PropTypes.func,
-  };
-
-  render() {
-    // loop through children and add props to them
-    // we need this so that we can pass the props to the children
-    // passed into the activator
-    const childrenWithProps = React.Children.map(this.props.children,
-      (child) => {
-        return React.cloneElement(child, {
-          // trigger the dropdown if the child element is clicked on
-          onClick: this.props.handleToggle,
-          onBlur: this.props.handleOnBlur,
-        });
-      }
-    );
-    return <div>{ childrenWithProps }</div>;
-  }
-}
-
+@withToggle
 @withState('overChildren', 'setOverChildren', false)
 class Dropdown extends React.Component {
+  static displayName = 'Dropdown';
+
   handleOnBlur = () => {
     if (!this.props.overChildren) {
       this.props.hide();
@@ -118,13 +97,11 @@ class Dropdown extends React.Component {
             )
           }
           {
-            activator && (
-              <DropdownActivator
-                handleToggle={ this.handleToggle }
-                handleOnBlur={ this.handleOnBlur }>
-                { this.props.activator }
-              </DropdownActivator>
-            )
+            activator && React.cloneElement(activator, {
+              // trigger the dropdown if the child element is clicked on
+              onClick: this.handleToggle,
+              onBlur: this.handleOnBlur,
+            })
           }
         </Target>
         <Popper
@@ -222,12 +199,10 @@ Dropdown.defaultProps = {
   arrowIcon: 'none',
 };
 
-const DropdownWithToggle = withToggle(Dropdown);
+Dropdown.Contents = DropdownContents;
+Dropdown.ListItem = DropdownListItem;
+Dropdown.BlockLink = DropdownBlockLink;
+Dropdown.BlockLinkText = DropdownBlockLinkText;
+Dropdown.BlockLinkSecondaryText = DropdownBlockLinkSecondaryText;
 
-DropdownWithToggle.Contents = DropdownContents;
-DropdownWithToggle.ListItem = DropdownListItem;
-DropdownWithToggle.BlockLink = DropdownBlockLink;
-DropdownWithToggle.BlockLinkText = DropdownBlockLinkText;
-DropdownWithToggle.BlockLinkSecondaryText = DropdownBlockLinkSecondaryText;
-
-export default DropdownWithToggle;
+export default Dropdown;
