@@ -26,7 +26,7 @@ describe('components/SelectDropdown', function() {
   describe('without a filter', function() {
     beforeEach(function() {
       component = mount(<SelectDropdown isFilterable={ false } items={ items } value={ 'value 2' } onChange={ onChange } />);
-    })
+    });
 
     it('should render all items in dropdown', function() {
       const activator = component.find('Button');
@@ -60,13 +60,13 @@ describe('components/SelectDropdown', function() {
       activator.simulate('click');
       const input = component.find('Input');
       expect(input).toHaveLength(0);
-    })
-  })
+    });
+  });
 
   describe('with a filter', function() {
     beforeEach(function() {
       component = mount(<SelectDropdown isFilterable={ true } items={ items } value={ 'value 2' } onChange={ onChange } />);
-    })
+    });
     it('should filter items in dropdown', function() {
       const activator = component.find('Button');
       activator.simulate('click');
@@ -83,5 +83,5 @@ describe('components/SelectDropdown', function() {
       input.simulate('change', {target: {value: 'INVALID_VALUE'}});
       expect(component.find('SelectOption')).toHaveLength(0);
     });
-  })
+  });
 });
