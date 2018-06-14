@@ -1,7 +1,8 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean } from '@storybook/addon-knobs';
+import { withKnobs } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
 
@@ -16,35 +17,59 @@ stories
     </div>
   ));
 
+const items = [
+  {
+    label: 'Cat',
+    description: 'A small feline.',
+    value: 'cat',
+  },
+  {
+    label: 'Dog',
+    description: 'Not a bear.',
+    value: 'dog',
+  },
+  {
+    label: 'Bear',
+    description: 'Likes honey',
+    value: 'bear',
+  },
+  {
+    label: 'Squirrel',
+    description: 'Smarter than it looks',
+    value: 'squirrel',
+  },
+];
+
 stories.add('default', withInfo()(() => {
-  const items = [
-    {
-      label: 'Cat',
-      description: 'A small feline.',
-      value: 'cat',
-    },
-    {
-      label: 'Dog',
-      description: 'Not a bear.',
-      value: 'dog',
-    },
-    {
-      label: 'Bear',
-      description: 'Likes honey',
-      value: 'bear',
-    },
-    {
-      label: 'Squirrel',
-      description: 'Smarter than it looks',
-      value: 'squirrel',
-    },
-  ];
 
   return (
-    <SelectDropdown
-      items={ items }
-      value={ 'dog' }
-      onChange={ action('SelectDropdown value changed') }
-    />
+    <Container>
+      <SelectDropdown
+        items={ items }
+        value={ 'dog' }
+        onChange={ action('SelectDropdown value changed') }
+        width={ '400px ' }
+      />
+    </Container>
   );
 }));
+
+stories.add('filter', withInfo()(() => {
+  return (
+    <Container>
+      <SelectDropdown
+        items={ items }
+        value={ 'dog' }
+        onChange={ action('SelectDropdown value changed') }
+        isFilterable={ true }
+        width={ '400px ' }
+      />
+    </Container>
+  );
+}));
+
+const Container = styled.div`
+  display: flex;
+  flex: 1;
+  height: 100vh;
+`;

@@ -10,13 +10,26 @@ import Dropdown from '../Dropdown';
 class SelectDropdown extends React.Component {
   static propTypes = {
     /**
-     * Boolean that determines whether or not the selector has the filter feature.
+     * Style value that is passed to the OUI button that controls the dropdown.
      */
-    isFilterable: PropTypes.bool,
+    buttonStyle: PropTypes.string,
+    /**
+     * Dropdown direction.
+     */
+    dropdownDirection: PropTypes.oneOf(['right', 'left']),
     /**
      * Placeholder text for the filter input.
      */
     inputPlaceholder: PropTypes.string,
+    /**
+     * The select is greyed out if it is disabled.
+     */
+    isDisabled: PropTypes.bool,
+    /**
+     * Boolean that determines whether or
+     * not the selector has the filter feature.
+     */
+    isFilterable: PropTypes.bool,
     /**
      * Dropdown items that can be selected from the select dropdown.
      */
@@ -30,29 +43,6 @@ class SelectDropdown extends React.Component {
       ]).isRequired,
     })).isRequired,
     /**
-     * Value of currently selected item.
-     */
-    value: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number,
-      PropTypes.bool,
-    ]).isRequired,
-    /**
-     * Function that is called when user selects another item from dropdown list.
-     */
-    onChange: PropTypes.func.isRequired,
-    /**
-     * Width of the activator container.
-     */
-    width: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number,
-    ]),
-    /**
-     * The select is greyed out if it is disabled.
-     */
-    isDisabled: PropTypes.bool,
-    /**
      * The minimum width of the dropdown list; any valid CSS width value.
      */
     minDropdownWidth: PropTypes.oneOfType([
@@ -60,9 +50,10 @@ class SelectDropdown extends React.Component {
       PropTypes.number,
     ]),
     /**
-     * Dropdown direction.
+     * Function that is called when user selects
+     * an item from dropdown list.
      */
-    dropdownDirection: PropTypes.oneOf(['right', 'left']),
+    onChange: PropTypes.func.isRequired,
     /**
      * Identifier used to create data-test-section attributes for testing.
      */
@@ -72,9 +63,20 @@ class SelectDropdown extends React.Component {
      */
     trackId: PropTypes.string,
     /**
-     * Style value that is passed to the OUI button that controls the dropdown.
+     * Value of currently selected item.
      */
-    buttonStyle: PropTypes.string,
+    value: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+      PropTypes.bool,
+    ]).isRequired,
+    /**
+     * Width of the activator container.
+     */
+    width: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+    ]),
     /**
      * zIndex of dropdown group
      */
@@ -114,8 +116,8 @@ class SelectDropdown extends React.Component {
     return (
       <Dropdown.Contents minWidth={ minDropdownWidth } direction={ dropdownDirection }>
         { isFilterable && (
-          <Dropdown.ListItem>
-            <form className="soft-half--ends lego-search">
+          <Dropdown.ListItem hideOnClick={ false }>
+            <form className="soft-half--ends oui-search">
               <Input
                 type="text"
                 isFilter={ true }
@@ -153,18 +155,18 @@ class SelectDropdown extends React.Component {
       <Dropdown
         width={ width }
         zIndex={ zIndex }
-        activator={(
+        activator={ (
           <Button
             isDisabled={ this.props.isDisabled }
             style={ buttonStyle }
             testSection={ this.props.testSection }
             width="full">
             <div className="flex flex-align--center" data-track-id={ this.props.trackId }>
-              <span style={ {overflow: 'hidden'} } className="flex flex--1">{ selectedItem.label }</span>
-              <span className="push--left lego-arrow-inline--down" />
+              <span style={{overflow: 'hidden'}} className="flex flex--1">{ selectedItem.label }</span>
+              <span className="push--left oui-arrow-inline--down" />
             </div>
           </Button>
-        )}>
+        ) }>
         { this.renderContents() }
       </Dropdown>
     );
@@ -177,6 +179,20 @@ class SelectOption extends React.Component {
      * Description of select item.
      */
     description: PropTypes.string,
+    /** Toggle dropdown open/closed */
+    handleToggle: PropTypes.func,
+    /**
+     * Whether or not item has been selected or not.
+     */
+    isSelected: PropTypes.bool.isRequired,
+    /**
+     * Label of select item.
+     */
+    label: PropTypes.string.isRequired,
+    /**
+     * Function that is called when user selects another item.
+     */
+    onChange: PropTypes.func.isRequired,
     /**
      * Value of select item.
      */
@@ -185,18 +201,6 @@ class SelectOption extends React.Component {
       PropTypes.number,
       PropTypes.bool,
     ]).isRequired,
-    /**
-     * Label of select item.
-     */
-    label: PropTypes.string.isRequired,
-    /**
-     * Whether or not item has been selected or not.
-     */
-    isSelected: PropTypes.bool.isRequired,
-    /**
-     * Function that is called when user selects another item.
-     */
-    onChange: PropTypes.func.isRequired,
   };
 
   onClick = () => {
@@ -204,9 +208,9 @@ class SelectOption extends React.Component {
   };
 
   render() {
-    const { isSelected, label, description, value } = this.props;
+    const { isSelected, label, description, value, handleToggle } = this.props;
     return (
-      <Dropdown.ListItem hideOnClick={ true }>
+      <Dropdown.ListItem hideOnClick={ true } handleToggle={ handleToggle }>
         <Dropdown.BlockLink
           isLink={ !isSelected }
           onClick={ this.onClick }

@@ -11,4 +11,4 @@ export const isFilterTermInItem = function isFilterTermInItem(stringToFind, cont
     }
   }
   return true;
-}
+};
