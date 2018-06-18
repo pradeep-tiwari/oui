@@ -8,6 +8,10 @@ This file is similar to the format suggested by [Keep a CHANGELOG](https://githu
 ### Changed
 - [Patch] Add index.js back from OUI version `7.0.0` for `design-dot` OUI upgrade to latest version. (#962)
 
+### Added
+- [Feature] DropdownContents, DropdownListItem, DropdownBlockLink, DropdownBlockLinkText, DropdownBlockLinkSecondaryText components added to Dropdown 
+- [Feature] Add onBlur prop to Button
+
 ## 31.4.0 - 2018-05-25
 ### Added
 - [Feature] New `type=percent` prop for <TextField> component that adds `%` and handles vertical centering automatically.
