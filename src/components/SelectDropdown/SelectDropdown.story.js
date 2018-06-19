@@ -25,7 +25,6 @@ const items = [
   },
   {
     label: 'Dog',
-    description: 'Not a bear.',
     value: 'dog',
   },
   {

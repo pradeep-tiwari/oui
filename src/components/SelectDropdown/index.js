@@ -37,8 +37,8 @@ class SelectDropdown extends React.Component {
       description: PropTypes.string,
       label: PropTypes.string.isRequired,
       value: PropTypes.oneOfType([
-        PropTypes.string.isRequired,
-        PropTypes.number.isRequired,
+        PropTypes.string,
+        PropTypes.number,
         PropTypes.bool,
       ]).isRequired,
     })).isRequired,
@@ -85,6 +85,7 @@ class SelectDropdown extends React.Component {
 
   static defaultProps = {
     buttonStyle: 'outline',
+    inputPlaceholder: '',
     isFilterable: false,
     dropdownDirection: 'right',
     width: '100%',
@@ -103,7 +104,6 @@ class SelectDropdown extends React.Component {
   };
 
   filterTermValue = (value) => {
-
     return isFilterTermInItem(this.state.searchTerm, value);
   };
 
@@ -154,7 +154,7 @@ class SelectDropdown extends React.Component {
     return (
       <Dropdown
         width={ width }
-        zIndex={ zIndex }
+        { ...(zIndex ? { zIndex } : {}) }
         activator={ (
           <Button
             isDisabled={ this.props.isDisabled }
@@ -180,7 +180,7 @@ class SelectOption extends React.Component {
      */
     description: PropTypes.string,
     /** Toggle dropdown open/closed */
-    handleToggle: PropTypes.func,
+    handleToggle: PropTypes.func.isRequired,
     /**
      * Whether or not item has been selected or not.
      */
@@ -225,6 +225,10 @@ class SelectOption extends React.Component {
       </Dropdown.ListItem>
     );
   }
+}
+
+SelectOption.defaultProps = {
+  description: '',
 }
 
 export default SelectDropdown;
