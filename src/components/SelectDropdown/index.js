@@ -229,7 +229,7 @@ class SelectOption extends React.Component {
 
 SelectOption.defaultProps = {
   description: '',
-}
+};
 
 export default SelectDropdown;
 
