@@ -8,6 +8,9 @@ This file is similar to the format suggested by [Keep a CHANGELOG](https://githu
 ### Changed
 - [Feature] Limit input percentage type to min=0 and max=100. (#966)
 
+### Added
+- [Feature] Add color transition on link hover. (DESIGN-65)
+
 ## 31.5.0 - 2018-06-19
 ### Changed
 - [Patch] Update reset CSS to hide number-input-spinners. (#964)
