@@ -48,7 +48,7 @@ Run `yarn list` for an entire list.
   GitHub issue number is the number of the GitHub issue, if applicable, preceded by a `#`. Ideally, each contribution should have a corresponding issue that provides more context.
 
 4. `git push` your changes to GitHub.
-5. Open a pull request comparing your feature `branch-name` against `devel`. Add at least one reviewer.
+5. Open a pull request comparing your feature `branch-name` against `devel`.
 
 **Confused by Patch, Feature, and Release?** We've [written a blog post](https://medium.com/design-optimizely/how-to-version-your-ui-library-1c7a1b7ee23a) to explain the differences in more detail.
 
