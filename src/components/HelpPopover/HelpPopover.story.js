@@ -16,21 +16,19 @@ stories
   ));
 
 stories
-  .add('default', withInfo()(() => (<div>
-    <div className="position--relative height--100 text--center">
-      <HelpPopover popoverTitle="This is a popover title">
-        <p>
-          This is a popover description. 🤓
-        </p>
-      </HelpPopover>
-    </div>
-  </div>)))
+  .add('default', withInfo()(() => (
+    <HelpPopover popoverTitle="This is a popover title">
+      This is a popover description. 🤓
+    </HelpPopover>
+  )))
   .add('hover', withInfo()(() => (<div>
     <div className="position--relative height--100 text--center">
-      <HelpPopover popoverTitle="This is a popover title" behavior="hover">
-        <p>
-         You hovered! 🤓
-        </p>
+      <HelpPopover
+        popoverTitle="This is a popover title"
+        behavior="hover"
+        horizontalAttachment="left"
+        verticalAttachment="middle">
+       You hovered! 🤓
       </HelpPopover>
     </div>
   </div>)));
