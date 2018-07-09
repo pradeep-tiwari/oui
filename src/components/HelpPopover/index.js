@@ -58,8 +58,6 @@ HelpPopover.propTypes = {
 
 HelpPopover.defaultProps = {
   behavior: 'click',
-  horizontalAttachment: 'center',
-  verticalAttachment: 'top',
   iconSize: 'medium',
   isConstrainedToScreen: true,
   testSection: 'help-popover',
