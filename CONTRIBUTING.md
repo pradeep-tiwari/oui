@@ -53,9 +53,9 @@ Both UI Engineers and the Frontend team have permission to release OUI via `npm 
 
     ```
     ## Unreleased
-    
-    ## 30.1.0 - 2018-04-13
-    - [Release/Feature/Patch] Describe your change here. (#GITHUB_ISSUE)
+
+    ## 31.0.0 - 2018-04-13
+    - [Release] Added a cool breaking change. (#999)
     ```
 4. Commit to master: `git add . && git commit -a -m 'Prep for new release version x.y.z'`
 5. Run one of these depending on the highest importance issue this release:
