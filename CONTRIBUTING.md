@@ -62,4 +62,4 @@ Don't forget to do these before you create a new release!
     * Select the new tag version
     * Leave “Release title” blank
     * Paste in “Unreleased” contributions from the `CHANGELOG.md` release notes
-7. Bump the OUI version number in Optimizely's `package.json` and use
+7. Bump the OUI version number in Optimizely's [`package.json`](https://github.com/optimizely/optimizely/blob/devel/src/www/frontend/package.json) and test to ensure compatibility.
