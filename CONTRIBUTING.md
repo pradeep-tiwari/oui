@@ -29,7 +29,7 @@ Then you can run and develop locally:
     ```
 4. `git push` your changes to GitHub
 5. Open a pull request of your branch, add at least one reviewer
-    > **Making a breaking change?** [Update the Optimizely app](https://github.com/optimizely/oui/issues/360) to prevent unreleased changes from blocking future releases.
+    > **Making a breaking change?** Please [update the Optimizely app](https://github.com/optimizely/oui/issues/360) and bump the `package.json` OUI version to prevent unreleased changes from blocking future releases.
 
 ## :warning: Pre-Release
 
