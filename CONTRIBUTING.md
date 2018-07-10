@@ -29,7 +29,7 @@ Then you can run and develop locally:
     ```
 4. `git push` your changes to GitHub
 5. Open a pull request of your branch, add at least one reviewer
-
+    > **Making a breaking change?** [Update the Optimizely app](https://github.com/optimizely/oui/issues/360) to prevent unreleased changes from blocking future releases.
 
 ## :warning: Pre-Release
 
@@ -38,7 +38,6 @@ Don't forget these before you create a release:
 1. Re-build Storybook documentation: `yarn build-storybook`
 1. Export your component in main.js: `export { default as TheName } from './components/TheName';`
 1. Include details in `Changelog.md` of your changes and the related GitHub issue
-1. [Update the Optimizely app](https://github.com/optimizely/oui/issues/360) to prevent unreleased changes from blocking future releases
 
 
 ## :ship: Release a New Version
