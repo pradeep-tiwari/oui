@@ -19,8 +19,8 @@ Then you can run and develop locally:
 ## :pencil: Develop
 
 1. Create branch: `git checkout -b username/branch-name`
-2. Commit your changes: `git commit -a -m 'Added new button styles`
-3. Update `CHANGELOG.md` and append your changes to the "Unreleased" section:
+2. Make and commit your changes
+3. Update `CHANGELOG.md` and note your changes underneath the "Unreleased" section:
 
     ```
     ## Unreleased
