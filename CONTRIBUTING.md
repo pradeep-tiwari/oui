@@ -20,7 +20,7 @@ Then you can run and develop locally:
 
 1. Create branch: `git checkout -b username/branch-name`
 2. Make and commit your changes
-3. Update `CHANGELOG.md` and note your changes underneath the "Unreleased" section:
+3. Update `CHANGELOG.md` and note your changes underneath the "Unreleased" section (please do not add a new version number here, this is done during release):
 
     ```
     ## Unreleased
@@ -46,7 +46,7 @@ Both UI Engineers and the Frontend team have permission to release OUI via `npm 
 
 1. Get latest code: `git checkout devel && git pull && git checkout master && git pull`
 2. Merge your changes: `git merge devel`
-3. Add a new header to `CHANGELOG.md` under “Unreleased” with the [new version number](https://medium.com/design-optimizely/how-to-version-your-ui-library-1c7a1b7ee23a) (please avoid adding a new version number here, this is done during release):
+3. Add a new header to `CHANGELOG.md` under “Unreleased” with the [new version number](https://medium.com/design-optimizely/how-to-version-your-ui-library-1c7a1b7ee23a):
 
     ```
     ## Unreleased
