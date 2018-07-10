@@ -10,7 +10,6 @@ import classNames from 'classnames';
 const Link = ({
   children,
   href,
-  onClick,
   isDisabled = false,
   newWindow = false,
   style,
@@ -23,6 +22,19 @@ const Link = ({
     'pointer-events--none': isDisabled,
   });
 
+  if (!href) {
+    return (
+      <span
+        data-ui-component={ true }
+        className={ classes }
+        data-test-section={ testSection }
+        data-track-id={ testSection }
+        disabled={ isDisabled }>
+        { children }
+      </span>
+    );
+  }
+
   return (
     <a
       data-ui-component={ true }
@@ -30,7 +42,6 @@ const Link = ({
       className={ classes }
       data-test-section={ testSection }
       data-track-id={ testSection }
-      onClick={ onClick }
       { ...(newWindow ? { target: '_blank', rel: 'noopener noreferrer' } : {}) }
       disabled={ isDisabled }>
       { children }
@@ -47,8 +58,6 @@ Link.propTypes = {
   isDisabled: PropTypes.bool,
   /** Open link in new window */
   newWindow: PropTypes.bool,
-  /** Click handler function */
-  onClick: PropTypes.func,
   /** Link style options */
   style: PropTypes.oneOf([
     'default',
