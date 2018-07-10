@@ -28,7 +28,7 @@ Then you can run and develop locally:
     - [Release/Feature/Patch] Add your change here. (#GITHUB_ISSUE)
     ```
 4. `git push` your changes to GitHub
-5. Open a pull request of your branch, add at least one reviewer
+5. [Open a pull request](https://github.com/optimizely/oui/compare) of your branch, add at least one reviewer
     > **Making a breaking change?** Please [update the Optimizely app](https://github.com/optimizely/oui/issues/360) and bump the `package.json` OUI version to prevent unreleased changes from blocking future releases.
 
 ## :warning: Pre-Release
