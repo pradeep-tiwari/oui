@@ -1,5 +1,7 @@
 # Contributing to OUI
 
+OUI is an open source repo where anyone can contribute, and only Optimizely employees have permission to create an npm release.
+
 ## :pushpin: 1. Install & Run
 
 Requires [Node](https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable)
