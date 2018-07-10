@@ -1,6 +1,6 @@
 # Contributing to OUI
 
-## 1. :pushpin: Install & Run
+## :pushpin: 1. Install & Run
 
 Requires [Node](https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable)
 
@@ -14,7 +14,7 @@ Then you can run and develop locally:
 * `yarn test` - test code for syntax errors
 
 
-## 2. :pencil: Develop
+## :pencil: 2. Develop
 
 1. Create branch: `git checkout -b username/branch-name`
 2. Commit your changes: `git commit -a -m 'Added new button styles`
@@ -29,7 +29,7 @@ Then you can run and develop locally:
 5. Open a pull request of your branch, add at least one reviewer
 
 
-## 3. :warning: Pre-Release
+## :warning: 3. Pre-Release
 
 Don't forget these before you create a release:
 
@@ -39,7 +39,7 @@ Don't forget these before you create a release:
 1. [Update the Optimizely app](https://github.com/optimizely/oui/issues/360) to prevent unreleased changes from blocking future releases
 
 
-## 4. :ship: Release a New Version
+## :ship: 4. Release a New Version
 
 Both UI Engineers and the Frontend team have permission to release OUI via `npm version ...`:
 
