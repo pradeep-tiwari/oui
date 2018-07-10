@@ -46,7 +46,7 @@ Both UI Engineers and the Frontend team have permission to release OUI via `npm 
 
 1. Get latest code: `git checkout devel && git pull && git checkout master && git pull`
 2. Merge your changes: `git merge devel`
-3. Add a new header to `CHANGELOG.md` under “Unreleased” with the [new version number](https://medium.com/design-optimizely/how-to-version-your-ui-library-1c7a1b7ee23a):
+3. Add a new header to `CHANGELOG.md` under “Unreleased” with the [new version number](https://medium.com/design-optimizely/how-to-version-your-ui-library-1c7a1b7ee23a) (please avoid adding a new version number here, this is done during release):
 
     ```
     ## Unreleased
