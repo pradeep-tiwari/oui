@@ -20,13 +20,16 @@ Then you can run and develop locally:
 
 1. Create branch: `git checkout -b username/branch-name`
 2. Make and commit your changes
-3. Update `CHANGELOG.md` and note your changes underneath the "Unreleased" section (please do not add a new version number here, this is done during release):
+3. Update `CHANGELOG.md` and note your changes underneath the "Unreleased" section:
 
     ```
     ## Unreleased
     ### Added/Changed/Deprecated/Removed/Fixed/Security
     - [Release/Feature/Patch] Add your change here. (#GITHUB_ISSUE)
     ```
+
+    > **Note:** please do not add a new version number header here, this is done during release only.
+
 4. `git push` your changes to GitHub
 5. [Open a pull request](https://github.com/optimizely/oui/compare) of your branch, add at least one reviewer
     > **Making a breaking change?** Please [update the Optimizely app](https://github.com/optimizely/oui/issues/360) and bump the `package.json` OUI version to prevent unreleased changes from blocking future releases.
