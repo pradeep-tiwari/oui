@@ -29,7 +29,7 @@ Then you can run and develop locally:
 5. Open a pull request of your branch, add at least one reviewer
 
 
-### 3. :warning: Pre-Release
+## 3. :warning: Pre-Release
 
 Don't forget these before you create a release:
 
