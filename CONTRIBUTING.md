@@ -1,6 +1,6 @@
 # Contributing to OUI
 
-## :pushpin: Install & Run
+## 1. :pushpin: Install & Run
 
 Requires [Node](https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable)
 
@@ -14,10 +14,10 @@ Then you can run and develop locally:
 * `yarn test` - test code for syntax errors
 
 
-## :pencil: Develop
+## 2. :pencil: Develop
 
 1. Create branch: `git checkout -b username/branch-name`
-2. Commit your changes `git commit -a -m 'Added new button styles`
+2. Commit your changes: `git commit -a -m 'Added new button styles`
 3. Update `CHANGELOG.md` and append your changes to the "Unreleased" section:
 
     ```
@@ -28,19 +28,20 @@ Then you can run and develop locally:
 4. `git push` your changes to GitHub
 5. Open a pull request of your branch, add at least one reviewer
 
-    **Merging a breaking change?** Have a UI Engineer [update the Optimizely app](https://github.com/optimizely/oui/issues/360) to prevent getting in a state where backward compatible commits are blocked by complicated unreleased changes.
 
+### 3. :warning: Pre-Release
 
-## :warning: Pre-Release
-
-Don't forget to do these before you create a new release!
+Don't forget these before you create a release:
 
 1. Re-build Storybook documentation: `yarn build-storybook`
 1. Export your component in main.js: `export { default as TheName } from './components/TheName';`
-1. Update the Changelog.md:
+1. Include details in `Changelog.md` of your changes and the related GitHub issue
+1. [Update the Optimizely app](https://github.com/optimizely/oui/issues/360) to prevent unreleased changes from blocking future releases
 
 
-## :ship: Release a New Version
+## 4. :ship: Release a New Version
+
+Both UI Engineers and the Frontend team have permission to release OUI via `npm version ...`:
 
 1. Get latest code: `git checkout devel && git pull && git checkout master && git pull`
 2. Merge your changes: `git merge devel`
@@ -52,7 +53,6 @@ Don't forget to do these before you create a new release!
     ## 30.1.0 - 2018-04-13
     ...
     ```
-
 4. Commit to master: `git add . && git commit -a -m 'Prep for new release version x.y.z'`
 5. Run one of these depending on the highest importance issue this release:
     * `[Patch]` changes: `npm version patch`
