@@ -6,6 +6,26 @@ This file is similar to the format suggested by [Keep a CHANGELOG](https://githu
 
 ## Unreleased
 
+## 31.7.2 - 2018-07-11
+### Fixed
+- [Patch] Undo breaking changes to Dropdown, remove filter functionality from SelectDropdown that required Dropdown's breaking changes
+
+## 31.7.1 - 2018-07-09
+### Fixed
+- [Patch] Export HelpPopover component from main.js
+
+## 31.7.0 - 2018-07-09
+### Added
+- [Feature] Added HelpPopover component (#984)
+
+## 31.6.2 - 2018-07-05
+### Added
+- [Feature] Added note to Input
+- [Feature] Added note and Label to Textarea
+
+### Fixed
+- [Patch] Fix `<Link newWindow>` to add a `rel='noreferrer'`
+
 ## 31.6.1 - 2018-06-26
 ### Changed
 - [Patch] Export SelectDropdown
