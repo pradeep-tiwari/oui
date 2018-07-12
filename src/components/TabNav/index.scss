@@ -195,3 +195,32 @@
     }
   }
 }
+
+.oui-tabs--dashboard {
+  margin-left: -(spacer(4));
+  margin-right: -(spacer(4));
+
+  &--half {
+    margin-left: -(spacer(2));
+    margin-right: -(spacer(2));
+  }
+
+  .#{$namespace}tabs-nav__item,
+  .oui-tabs-nav__item {
+    padding-top: 0;
+    border: none;
+    background: none;
+
+    &.is-active {
+      color: #555;
+
+      &:after {
+        background: #0081BA;
+      }
+    }
+
+    &:first-child {
+      margin-left: spacer(2.5);
+    }
+  }
+}
