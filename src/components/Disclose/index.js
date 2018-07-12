@@ -20,13 +20,13 @@ const Disclose = ({
     }
   );
   const linkClass = classNames(
-    'oui-disclose__link link--dark soft-half flush',
+    'oui-disclose__link link--dark flush',
     {
       ['background--faint display--block']: headerStyle === 'header',
       ['border--all background--faint display--block']: headerStyle === 'header-bordered',
     }
   );
-  const arrow = isOpen ? 'oui-disclose is-active' : 'oui-disclose';
+  const arrow = isOpen ? 'oui-disclose soft-half is-active' : 'oui-disclose soft-half';
   return (
     <div className={ arrow } style={{marginTop: '-1px'}}>
       <a onClick={ toggle } className={ linkClass }>

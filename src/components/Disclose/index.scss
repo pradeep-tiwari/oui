@@ -17,7 +17,7 @@
 ///   </div>
 ////
 
-.#{$namespace}disclose, 
+.#{$namespace}disclose,
 .oui-disclose {
   @extend %kill-last-child-margin;
 
@@ -28,17 +28,11 @@
   }
 
   &__symbol {
-    transition: transform map-fetch($transition-duration, base);
-    width: spacer(1);
-    display: inline-block;
-    // This makes clicking the arrow icon still open the disclose object.
+    // transition: transform map-fetch($transition-duration, fast);
+    @extend %oui-arrow-inline;
+    transform: rotate(-135deg);
+    // Allows click of arrow to pass down to disclose object.
     pointer-events: none;
-
-    &::before {
-      line-height: 1;
-      font-size: map-fetch($font, size, base);
-      content: '\25B8';
-    }
   }
 
   &--right {
@@ -67,12 +61,13 @@
     }
 
     .oui-disclose__content > :last-child {
-        padding-bottom: 20px;
+      padding-bottom: 20px;
     }
 
     .#{$namespace}disclose__symbol,
     .oui-disclose__symbol {
-      transform: rotate(90deg);
+      transform: rotate(-45deg);
+      vertical-align: 9%;
     }
 
   }
