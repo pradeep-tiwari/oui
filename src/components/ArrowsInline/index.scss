@@ -23,19 +23,18 @@ $border-colored: 2px solid currentColor;
   border-top: none;
   border-right: none;
   vertical-align: middle;
-  transform-origin: 45% 45%;
-  // transform-origin: center;
+  margin-left: 4px; // magic number for consistency with previous arrow
 
   &--up {
     @extend %oui-arrow-inline;
     transform: rotate(135deg);
-    vertical-align: -2%;
+    vertical-align: -5%;
   }
 
   &--down {
     @extend %oui-arrow-inline;
     transform: rotate(-45deg);
-    vertical-align: 6%;
+    vertical-align: 7%;
   }
 
   &--right {
