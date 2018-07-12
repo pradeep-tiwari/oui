@@ -28,11 +28,12 @@
   }
 
   &__symbol {
-    // transition: transform map-fetch($transition-duration, fast);
+    transition: transform map-fetch($transition-duration, fast), vertical-align map-fetch($transition-duration, fast);
     @extend %oui-arrow-inline;
     transform: rotate(-135deg);
-    // Allows click of arrow to pass down to disclose object.
-    pointer-events: none;
+    margin-left: 2px; // Magic number for symbol alignment with content.
+    pointer-events: none; // Allows arrow click to be passed to disclose object.
+    vertical-align: 0;
   }
 
   &--right {
@@ -43,7 +44,7 @@
     }
   }
 
-  // By default item is closed.
+  // Item is closed by default.
 
   &__content {
     display: none;
