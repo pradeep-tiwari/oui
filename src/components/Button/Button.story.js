@@ -78,9 +78,7 @@ stories
     return (
       <Button style="underline">
         Underline Button
-        <span className="push-half--left">
-          <ArrowsInline direction="down" />
-        </span>
+        <ArrowsInline direction="down" />
       </Button>);
   })
   .add('sizes variations', () => {
