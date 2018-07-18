@@ -12,7 +12,7 @@ deploy:
 - provider: npm
   skip_cleanup: true
   api_key:
-    secure: lHK9LAw3CJ+yEpdLLU6qgfWtjm9l8MoWQVsvx9z2uVSUtKguZMgT6oD8Y660h40TxtSnD4B/+2ST/50++k+tAN/2AFAoH5N5dpQdR7wzzF+hmuYkz/zRpL0MXuc+Nj3GpORaq4gSOMT3mH8BCAXFNI7jtBdvGF89N3Ag7u1zsMU=
+    secure: g4CaeOUkpUSmt0TmRx9qdhktn7ldCPmdCKyltAV6eJeceSHCTdEZAwNTmAI2sWf+SOeXyEbqlAViWWScZcrLCaW8E5CVu4KoIOw2XtqK4/4GRRSs683z5OPxuxoTht+BOTNOxifbJEP4RtJyzI27oO1rgUuqUmG4+qcTqnwpQR4=
   email:
     secure: cKTOKErgXo7WcyaqQFzBIGBpEz5X+MwtN/wHXNmLDU6BJ98IKfRcOS2oY8jG/JFoy+EQDdC8iwLfN7+z8gysMoVVbZYm/sKKLg2UXEBCe02p1mJlPDh/o/E+9ofNe1PMv/o1j4CY3YBfaVA+HB7WCGyKivu6tFgFOuoxbPdOleA=
   on:
